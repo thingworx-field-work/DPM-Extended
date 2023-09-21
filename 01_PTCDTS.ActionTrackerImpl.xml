@@ -1,0 +1,3058 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Entities build="b1495" majorVersion="9" minorVersion="3" modelPersistenceProviderPackage="MssqlPersistenceProviderPackage" revision="8" schemaVersion="1134" universal=""><StyleDefinitions/><Networks/><PersistenceProviderPackages/><Mashups><Mashup aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isFlex="true" aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="Mashup containing the action list grid. {PTC.ActionTracker.Grid_MU}" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:36.875Z" name="PTCDTS.ActionTrackerImpl.Grid_MU" projectName="PTCDTS.ActionTrackerImpl" rows="0.0" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Mashup Mobile Settings" isHidden="true" isMultiRow="false" name="MobileSettings" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Disable Zoom" baseType="BOOLEAN" description="Disables zooming in and out within the mashup" name="disableZoom" ordinal="0"/><FieldDefinition aspect.defaultValue="true" aspect.friendlyName="Full Screen Mode" baseType="BOOLEAN" description="Open the mashup in full screen mode" name="fullScreenMode" ordinal="0"/><FieldDefinition aspect.friendlyName="Height" baseType="STRING" description="The height of the mashup page" name="height" ordinal="0"/><FieldDefinition aspect.defaultValue="device-height" aspect.friendlyName="Height Type" baseType="STRING" description="Use the height of the device display, or a custom height (in px)" name="heightType" ordinal="0"/><FieldDefinition aspect.defaultValue="1.0" aspect.friendlyName="Initial Scale" baseType="NUMBER" description="The initial zoom scale when the mashup is loaded for the first time" name="initialScale" ordinal="0"/><FieldDefinition aspect.friendlyName="Shortcut Icon Title" baseType="STRING" description="A title for the mashup shortcut on the iOS home screen" name="iosShortcutIconTitle" ordinal="0"/><FieldDefinition aspect.defaultValue="black-translucent" aspect.friendlyName="Status Bar Appearance" baseType="STRING" description="The style of the iOS status bar" name="iosStatusBarAppearance" ordinal="0"/><FieldDefinition aspect.defaultValue="10.0" aspect.friendlyName="Maximum Scale" baseType="NUMBER" description="The maximum scale that users can zoom out to" name="maximumScale" ordinal="0"/><FieldDefinition aspect.defaultValue="0.1" aspect.friendlyName="Minimum Scale" baseType="NUMBER" description="The minimum scale that users can zoom out to" name="minimumScale" ordinal="0"/><FieldDefinition aspect.friendlyName="Width" baseType="STRING" description="The width of the mashup page" name="width" ordinal="0"/><FieldDefinition aspect.defaultValue="device-width" aspect.friendlyName="Width Type" baseType="STRING" description="Use the width of the device display, or a custom width (in px)" name="widthType" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><disableZoom>false</disableZoom><fullScreenMode>true</fullScreenMode><height><![CDATA[device-height]]></height><heightType><![CDATA[device-height]]></heightType><initialScale>1.0</initialScale><iosShortcutIconTitle/><iosStatusBarAppearance><![CDATA[black-translucent]]></iosStatusBarAppearance><maximumScale>10.0</maximumScale><minimumScale>0.1</minimumScale><width><![CDATA[device-width]]></width><widthType><![CDATA[device-width]]></widthType></Row></Rows></ConfigurationTable></ConfigurationTables><ParameterDefinitions><FieldDefinition aspect.bindingDirection="BOTH" aspect.isMandatory="false" baseType="DATETIME" description="" name="EndDate" ordinal="0"/><FieldDefinition aspect.bindingDirection="BOTH" aspect.isMandatory="false" baseType="STRING" description="" name="Equipment" ordinal="0"/><FieldDefinition aspect.bindingDirection="BOTH" aspect.isMandatory="false" baseType="THINGNAME" description="" name="Manager" ordinal="0"/><FieldDefinition aspect.bindingDirection="BOTH" aspect.isMandatory="false" baseType="MASHUPNAME" description="" name="MashupName" ordinal="0"/><FieldDefinition aspect.bindingDirection="BOTH" aspect.isMandatory="false" baseType="STRING" description="" name="Owner" ordinal="0"/><FieldDefinition aspect.bindingDirection="BOTH" aspect.dataShape="PTC.ReasonCode.ReasonCategory" aspect.isMandatory="false" baseType="INFOTABLE" description="" name="ReasonCategTable" ordinal="0"/><FieldDefinition aspect.bindingDirection="BOTH" aspect.dataShape="PTC.Action.ActionResult" aspect.isMandatory="false" baseType="INFOTABLE" description="" name="SelectedAction" ordinal="0"/><FieldDefinition aspect.bindingDirection="BOTH" aspect.isMandatory="false" baseType="DATETIME" description="" name="StartDate" ordinal="0"/><FieldDefinition aspect.bindingDirection="BOTH" aspect.isMandatory="false" baseType="STRING" description="" name="Status" ordinal="0"/></ParameterDefinitions><Things/><ThingShapes/><ThingTemplates/><mashupContent><![CDATA[{
+  "CustomMashupCss" : "",
+  "Data" : {
+    "DynamicThingShapes_PTC.ActionTracker.Management_TS" : {
+      "DataName" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+      "EntityName" : "PTC.ActionTracker.Management_TS",
+      "EntityType" : "DynamicThingShapes",
+      "Id" : "38a8394e-a683-4756-8d92-176701aa927e",
+      "RefreshInterval" : 0,
+      "Services" : [ {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "c2e69a62-df55-48fa-b852-a61744fee05c",
+        "Name" : "QueryActions",
+        "Parameters" : { },
+        "Properties" : {
+          "CustomErrorMessage" : "[server-message]",
+          "CustomSuccessMessage" : "",
+          "ShowErrorMessage" : true,
+          "ShowSuccessMessage" : false
+        },
+        "RefreshInterval" : 0,
+        "Target" : "QueryActions"
+      }, {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "923040d5-92dd-48f9-ae01-8b8d29f2a1b1",
+        "Name" : "GetAddActionMashupConfiguration",
+        "Parameters" : { },
+        "Properties" : {
+          "CustomErrorMessage" : "[server-message]",
+          "CustomSuccessMessage" : "",
+          "ShowErrorMessage" : true,
+          "ShowSuccessMessage" : false
+        },
+        "RefreshInterval" : 0,
+        "Target" : "GetAddActionMashupConfiguration"
+      }, {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "e213369d-2335-43f4-ba0f-bc8d47460f0b",
+        "Name" : "GetEditActionMashupConfiguration",
+        "Parameters" : { },
+        "Properties" : {
+          "CustomErrorMessage" : "[server-message]",
+          "CustomSuccessMessage" : "",
+          "ShowErrorMessage" : true,
+          "ShowSuccessMessage" : false
+        },
+        "RefreshInterval" : 0,
+        "Target" : "GetEditActionMashupConfiguration"
+      }, {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "bd2e5771-4bad-41bd-bd66-8683b2cb5531",
+        "Name" : "SetViewActionDisabledState",
+        "Parameters" : { },
+        "Properties" : {
+          "CustomErrorMessage" : "[server-message]",
+          "CustomSuccessMessage" : "",
+          "ShowErrorMessage" : true,
+          "ShowSuccessMessage" : false
+        },
+        "RefreshInterval" : 0,
+        "Target" : "SetViewActionDisabledState"
+      }, {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "08ec78b4-45a0-4c89-a337-006a2c238428",
+        "Name" : "DeleteActions",
+        "Parameters" : { },
+        "Properties" : {
+          "CustomErrorMessage" : "[server-message]",
+          "CustomSuccessMessage" : "",
+          "ShowErrorMessage" : true,
+          "ShowSuccessMessage" : false
+        },
+        "RefreshInterval" : 0,
+        "Target" : "DeleteActions"
+      }, {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "458f89cc-ad1d-42b0-bdd5-979b4ebfdd7e",
+        "Name" : "GetDeleteConfirmationTokenLabel",
+        "Parameters" : { },
+        "Properties" : {
+          "CustomErrorMessage" : "[server-message]",
+          "CustomSuccessMessage" : "",
+          "ShowErrorMessage" : true,
+          "ShowSuccessMessage" : false
+        },
+        "RefreshInterval" : 0,
+        "Target" : "GetDeleteConfirmationTokenLabel"
+      }, {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "ea572cd8-5dcd-4743-8363-147104d73905",
+        "Name" : "LoadActions",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "LoadActions"
+      } ]
+    },
+    "Session" : {
+      "DataName" : "Session",
+      "EntityName" : "",
+      "EntityType" : "Session",
+      "Id" : "session",
+      "Services" : [ {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "GetGlobalSessionValues"
+      } ]
+    },
+    "Things_PTCDTS.ActionTrackerImpl.Manager" : {
+      "DataName" : "Things_PTCDTS.ActionTrackerImpl.Manager",
+      "EntityName" : "PTCDTS.ActionTrackerImpl.Manager",
+      "EntityType" : "Things",
+      "Id" : "6db4092f-0c6c-49ec-8bac-2cdc8e127e45",
+      "RefreshInterval" : 0,
+      "Services" : [ {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "20a864b7-866f-4a93-a17b-ecd951b17e43",
+        "Name" : "LoadActionsWithHoursSaved",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "LoadActionsWithHoursSaved"
+      } ]
+    },
+    "UserExtensions" : {
+      "DataName" : "UserExtensions",
+      "EntityName" : "",
+      "EntityType" : "UserExtensions",
+      "Id" : "UserExtensions",
+      "Services" : [ {
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "RefreshInterval" : 0,
+        "Target" : "GetCurrentUserExtensionProperties"
+      } ]
+    }
+  },
+  "DataBindings" : [ {
+    "Id" : "7458fb02-bcd1-4454-805a-e2559688ab45",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "NoRowsSelected",
+      "SourcePropertyBaseType" : "BOOLEAN",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Disabled",
+      "TargetPropertyBaseType" : "BOOLEAN",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "UI",
+    "SourceDetails" : "",
+    "SourceId" : "infotableselector-45",
+    "SourceSection" : "",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcsbutton-26",
+    "TargetSection" : ""
+  }, {
+    "Id" : "a40fc03a-6dc0-4c97-8acf-076081e3cac2",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Output",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Input2",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "UI",
+    "SourceId" : "expression2-78",
+    "SourceSection" : "",
+    "TargetArea" : "UI",
+    "TargetId" : "eventsrouter-77",
+    "TargetSection" : ""
+  }, {
+    "Id" : "e1331741-9891-4cb3-b893-9a0051651682",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Output",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Input1",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "UI",
+    "SourceId" : "expression2-68",
+    "SourceSection" : "",
+    "TargetArea" : "UI",
+    "TargetId" : "eventsrouter-77",
+    "TargetSection" : ""
+  }, {
+    "Id" : "cc944a58-32a5-42cc-81db-d986467320a3",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Manager",
+      "SourcePropertyBaseType" : "THINGNAME",
+      "SourcePropertyType" : "property",
+      "TargetProperty" : "value",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "TargetPropertyType" : "Entity"
+    } ],
+    "SourceArea" : "Mashup",
+    "SourceId" : "mashup-root",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "EntityName",
+    "TargetSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS"
+  }, {
+    "Id" : "35bcdc2e-0b40-4002-9efd-218e325ed839",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "result",
+      "SourcePropertyBaseType" : "MASHUPNAME",
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "input",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "GetAddActionMashupConfiguration",
+    "SourceSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "TargetArea" : "UI",
+    "TargetId" : "expression2-78",
+    "TargetSection" : ""
+  }, {
+    "Id" : "2067b235-432f-49f1-acd3-fc18f9ed2e05",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "result",
+      "SourcePropertyBaseType" : "MASHUPNAME",
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "input",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "GetEditActionMashupConfiguration",
+    "SourceSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "TargetArea" : "UI",
+    "TargetId" : "expression2-68",
+    "TargetSection" : ""
+  }, {
+    "Id" : "ee7ee8f1-54f9-41e5-bc17-f6aaa7ca5b3a",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Output",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "MashupName",
+      "TargetPropertyBaseType" : "MASHUPNAME",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "UI",
+    "SourceId" : "eventsrouter-77",
+    "SourceSection" : "",
+    "TargetArea" : "Mashup",
+    "TargetId" : "mashup-root",
+    "TargetSection" : ""
+  }, {
+    "Id" : "b2eebc5b-b348-4128-89d2-8c9774e12b49",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "SelectedRows",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "SelectedAction",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "UI",
+    "SourceDetails" : "",
+    "SourceId" : "ptcsgrid-106",
+    "SourceSection" : "",
+    "TargetArea" : "Mashup",
+    "TargetId" : "mashup-root",
+    "TargetSection" : ""
+  }, {
+    "Id" : "b99531af-e3e4-4b71-ba1a-4efb9b1bba6b",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "SelectedRows",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "selectedRows",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "UI",
+    "SourceDetails" : "",
+    "SourceId" : "ptcsgrid-106",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "SetViewActionDisabledState",
+    "TargetSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS"
+  }, {
+    "Id" : "5b3081ce-fbba-47ef-a604-d67067b12565",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "result",
+      "SourcePropertyBaseType" : "BOOLEAN",
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Disabled",
+      "TargetPropertyBaseType" : "BOOLEAN",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "SetViewActionDisabledState",
+    "SourceSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcsbutton-107",
+    "TargetSection" : ""
+  }, {
+    "Id" : "5d42348f-6378-478f-8a47-22389fbddfb8",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "SelectedRows",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "actions",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "UI",
+    "SourceDetails" : "",
+    "SourceId" : "ptcsgrid-106",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "DeleteActions",
+    "TargetSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS"
+  }, {
+    "Id" : "4780fd24-c1b4-481a-acdf-f06699ae32f8",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "NoRowsSelected",
+      "SourcePropertyBaseType" : "BOOLEAN",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "input",
+      "TargetPropertyBaseType" : "BOOLEAN",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "UI",
+    "SourceDetails" : "",
+    "SourceId" : "infotableselector-45",
+    "SourceSection" : "",
+    "TargetArea" : "UI",
+    "TargetId" : "expression2-108",
+    "TargetSection" : ""
+  }, {
+    "Id" : "7ea82c25-74e8-4502-b952-34ad9a340055",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Output",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "CustomClass",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "UI",
+    "SourceId" : "expression2-108",
+    "SourceSection" : "",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcsbutton-26",
+    "TargetSection" : ""
+  }, {
+    "Id" : "12eff669-3dc3-4793-b16a-f2658cb9557a",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "result",
+      "SourcePropertyBaseType" : "BOOLEAN",
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "input",
+      "TargetPropertyBaseType" : "BOOLEAN",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "SetViewActionDisabledState",
+    "SourceSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "TargetArea" : "UI",
+    "TargetId" : "expression2-109",
+    "TargetSection" : ""
+  }, {
+    "Id" : "694c3701-7cfe-4f21-9cc9-d488bcd1890a",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Output",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "CustomClass",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "UI",
+    "SourceId" : "expression2-109",
+    "SourceSection" : "",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcsbutton-107",
+    "TargetSection" : ""
+  }, {
+    "Id" : "64f7913d-77f5-4ef5-bd77-5694060eb630",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "SelectedRows",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "selectedRows",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "UI",
+    "SourceDetails" : "",
+    "SourceId" : "ptcsgrid-106",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "GetDeleteConfirmationTokenLabel",
+    "TargetSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS"
+  }, {
+    "Id" : "e897c5ad-1031-4aa1-9897-023a860fc9e2",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "result",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "MessageText",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "GetDeleteConfirmationTokenLabel",
+    "SourceSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcsconfirmation-76",
+    "TargetSection" : ""
+  }, {
+    "Id" : "9e8d70f8-2bc5-4d53-9af1-86e9a32ca6ee",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Text",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "property",
+      "TargetProperty" : "searchTerm",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "UI",
+    "SourceId" : "ptcstextfield-22",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsData",
+    "TargetSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS"
+  }, {
+    "Id" : "eb3f85fd-648d-4435-b0f3-0ac61ec34640",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "actionsData",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "QueryActions",
+    "SourceSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsWithHoursSaved",
+    "TargetSection" : "Things_PTCDTS.ActionTrackerImpl.Manager"
+  }, {
+    "Id" : "034795ff-21ef-41ae-b288-6f3325bb0ea8",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "ReasonCategTable",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "reasonCategoriesTable",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "Mashup",
+    "SourceDetails" : "",
+    "SourceId" : "mashup-root",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsWithHoursSaved",
+    "TargetSection" : "Things_PTCDTS.ActionTrackerImpl.Manager"
+  }, {
+    "Id" : "2d6d5631-6720-4cd1-b81a-e61830e80a56",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Equipment",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "equipment",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "Mashup",
+    "SourceDetails" : "",
+    "SourceId" : "mashup-root",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsWithHoursSaved",
+    "TargetSection" : "Things_PTCDTS.ActionTrackerImpl.Manager"
+  }, {
+    "Id" : "6c77c320-0512-4c44-a9df-484365f172c0",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Status",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "status",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "Mashup",
+    "SourceDetails" : "",
+    "SourceId" : "mashup-root",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsWithHoursSaved",
+    "TargetSection" : "Things_PTCDTS.ActionTrackerImpl.Manager"
+  }, {
+    "Id" : "8ad7c618-88c1-48b7-b3f8-d21ff59156eb",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Owner",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "owner",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "Mashup",
+    "SourceDetails" : "",
+    "SourceId" : "mashup-root",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsWithHoursSaved",
+    "TargetSection" : "Things_PTCDTS.ActionTrackerImpl.Manager"
+  }, {
+    "Id" : "fb6dcd84-accf-4fe5-8ee9-c3abe0e7aa18",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "StartDate",
+      "SourcePropertyBaseType" : "DATETIME",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "startDate",
+      "TargetPropertyBaseType" : "DATETIME",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "Mashup",
+    "SourceDetails" : "",
+    "SourceId" : "mashup-root",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsWithHoursSaved",
+    "TargetSection" : "Things_PTCDTS.ActionTrackerImpl.Manager"
+  }, {
+    "Id" : "4116b213-daa4-4f2d-9791-5ecc76093dcf",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "EndDate",
+      "SourcePropertyBaseType" : "DATETIME",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "endDate",
+      "TargetPropertyBaseType" : "DATETIME",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "Mashup",
+    "SourceDetails" : "",
+    "SourceId" : "mashup-root",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsWithHoursSaved",
+    "TargetSection" : "Things_PTCDTS.ActionTrackerImpl.Manager"
+  }, {
+    "Id" : "c3295fb1-5f48-43cb-9f46-412a493cb9b2",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Text",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "searchTerm",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "UI",
+    "SourceDetails" : "",
+    "SourceId" : "ptcstextfield-22",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsWithHoursSaved",
+    "TargetSection" : "Things_PTCDTS.ActionTrackerImpl.Manager"
+  }, {
+    "Id" : "62a680e0-2ee6-4094-b0ec-2bf348f211ba",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Output",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "property",
+      "TargetProperty" : "timeZoneId",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "UI",
+    "SourceId" : "expression2-110",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "QueryActions",
+    "TargetSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS"
+  }, {
+    "Id" : "7ccb8af0-514b-45bc-ae23-26eeeda16ae9",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "Output",
+      "SourcePropertyBaseType" : "STRING",
+      "SourcePropertyType" : "property",
+      "TargetProperty" : "timeZoneId",
+      "TargetPropertyBaseType" : "STRING",
+      "TargetPropertyType" : "Parameter"
+    } ],
+    "SourceArea" : "UI",
+    "SourceId" : "expression2-110",
+    "SourceSection" : "",
+    "TargetArea" : "Data",
+    "TargetId" : "LoadActionsWithHoursSaved",
+    "TargetSection" : "Things_PTCDTS.ActionTrackerImpl.Manager"
+  }, {
+    "Id" : "1ba8b7bf-990f-44c1-ba53-2e02d18786b7",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "LoadActionsWithHoursSaved",
+    "SourceSection" : "Things_PTCDTS.ActionTrackerImpl.Manager",
+    "TargetArea" : "UI",
+    "TargetId" : "infotableselector-45",
+    "TargetSection" : ""
+  }, {
+    "Id" : "d48b0dad-dd31-435a-af61-39a7f5614faa",
+    "PropertyMaps" : [ {
+      "SourceProperty" : "",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "TargetPropertyType" : "property"
+    } ],
+    "SourceArea" : "Data",
+    "SourceDetails" : "AllData",
+    "SourceId" : "LoadActionsWithHoursSaved",
+    "SourceName" : "LoadActionsWithHoursSaved",
+    "SourceSection" : "Things_PTCDTS.ActionTrackerImpl.Manager",
+    "TargetArea" : "UI",
+    "TargetId" : "ptcsgrid-106",
+    "TargetSection" : ""
+  } ],
+  "DesignTimePermissions" : { },
+  "Events" : [ {
+    "EventHandlerArea" : "UI",
+    "EventHandlerId" : "ptcsconfirmation-76",
+    "EventHandlerService" : "OpenConfirmation",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-26",
+    "EventTriggerSection" : "",
+    "Id" : "9fb4c3eb-d7d9-4316-b359-27ce99d6e25e"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "SearchActions",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Changed",
+    "EventTriggerId" : "ptcstextfield-22",
+    "EventTriggerSection" : "",
+    "Id" : "a0381ada-8dd0-41c3-af5b-8f8766599949"
+  }, {
+    "EventHandlerArea" : "UI",
+    "EventHandlerId" : "infotableselector-45",
+    "EventHandlerService" : "ClearSelectedRows",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-25",
+    "EventTriggerSection" : "",
+    "Id" : "94ef423d-9cac-4753-a242-f2474dfe7dd7"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "QueryActions",
+    "EventTriggerArea" : "Mashup",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "8b97bba1-3125-43d2-952e-1e66ff796b78"
+  }, {
+    "EventHandlerArea" : "UI",
+    "EventHandlerId" : "expression2-78",
+    "EventHandlerService" : "Evaluate",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-25",
+    "EventTriggerSection" : "",
+    "Id" : "e4462746-bda2-4dd4-9488-4032086be292"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "GetAddActionMashupConfiguration",
+    "EventTriggerArea" : "Mashup",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "3198f617-b7b8-4c70-be42-454e87bc6a29"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "GetEditActionMashupConfiguration",
+    "EventTriggerArea" : "Mashup",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "f11359d4-04bb-48af-a501-42dcfe96c265"
+  }, {
+    "EventHandlerArea" : "UI",
+    "EventHandlerId" : "expression2-68",
+    "EventHandlerService" : "Evaluate",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Clicked",
+    "EventTriggerId" : "ptcsbutton-107",
+    "EventTriggerSection" : "",
+    "Id" : "060cd46a-84c5-4b8b-a8ab-bba7b4bf0fcf"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "SetViewActionDisabledState",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "EventTriggerId" : "ptcsgrid-106",
+    "EventTriggerSection" : "",
+    "Id" : "9806a0e8-934d-4348-b06c-10f31c80f7f4"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "DeleteActions",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "ActionClick",
+    "EventTriggerId" : "ptcsconfirmation-76",
+    "EventTriggerSection" : "",
+    "Id" : "6d9b0c6e-28f0-44cb-8159-128485af7958"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "QueryActions",
+    "EventTriggerArea" : "Data",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "EventTriggerId" : "DeleteActions",
+    "EventTriggerSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "Id" : "482dccef-cd12-481a-8a9a-d852cd41997f"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "GetDeleteConfirmationTokenLabel",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "EventTriggerId" : "ptcsgrid-106",
+    "EventTriggerSection" : "",
+    "Id" : "308d4525-12ea-4d4a-b029-ca99e1e8b98c"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "SetViewActionDisabledState",
+    "EventTriggerArea" : "Mashup",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "47e34efe-a5a7-45d0-820a-6447a8241da0"
+  }, {
+    "EventHandlerArea" : "UI",
+    "EventHandlerId" : "expression2-110",
+    "EventHandlerService" : "Evaluate",
+    "EventTriggerArea" : "Mashup",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "e7bcdfec-eba2-4628-842a-81d73416d5cb"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "LoadActionsData",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Changed",
+    "EventTriggerId" : "ptcstextfield-22",
+    "EventTriggerSection" : "",
+    "Id" : "9fe20772-644a-415c-9c8b-e7972609d516"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "EventHandlerService" : "LoadActionsData",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "EnterKeyPressed",
+    "EventTriggerId" : "ptcstextfield-22",
+    "EventTriggerSection" : "",
+    "Id" : "7d985e39-cee0-4340-8f1a-70608d321ada"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.ActionTrackerImpl.Manager",
+    "EventHandlerService" : "LoadActionsWithHoursSaved",
+    "EventTriggerArea" : "Mashup",
+    "EventTriggerEvent" : "Loaded",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "702b9665-2953-48d5-ab21-85274a4ef8ca"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.ActionTrackerImpl.Manager",
+    "EventHandlerService" : "LoadActionsWithHoursSaved",
+    "EventTriggerArea" : "Mashup",
+    "EventTriggerEvent" : "RefreshRequested",
+    "EventTriggerId" : "mashup-root",
+    "EventTriggerSection" : "",
+    "Id" : "30746b69-81fa-43f4-99a0-eedacb29d19a"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.ActionTrackerImpl.Manager",
+    "EventHandlerService" : "LoadActionsWithHoursSaved",
+    "EventTriggerArea" : "Data",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "EventTriggerId" : "DeleteActions",
+    "EventTriggerSection" : "DynamicThingShapes_PTC.ActionTracker.Management_TS",
+    "Id" : "3e951a07-0c1f-41ee-af44-0651cd3b7d32"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.ActionTrackerImpl.Manager",
+    "EventHandlerService" : "LoadActionsWithHoursSaved",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "Changed",
+    "EventTriggerId" : "ptcstextfield-22",
+    "EventTriggerSection" : "",
+    "Id" : "37104e01-5b77-4702-a7d8-675b99738345"
+  }, {
+    "EventHandlerArea" : "Data",
+    "EventHandlerId" : "Things_PTCDTS.ActionTrackerImpl.Manager",
+    "EventHandlerService" : "LoadActionsWithHoursSaved",
+    "EventTriggerArea" : "UI",
+    "EventTriggerEvent" : "EnterKeyPressed",
+    "EventTriggerId" : "ptcstextfield-22",
+    "EventTriggerSection" : "",
+    "Id" : "87b2f57b-83cd-4f9c-a647-2c45371661ca"
+  } ],
+  "Reminders" : [ ],
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Properties" : {
+      "AddToDashboardButton" : "SimplePlus",
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "Area" : "Mashup",
+      "BGImage" : "",
+      "BGImageRepeat" : "no-repeat",
+      "BGImageSize" : "auto",
+      "Columns" : 0,
+      "ConfigureGadgetButton" : "SimpleGear",
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "DisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Height" : 618,
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false,
+      "IsPrintLayout" : false,
+      "Left" : 0,
+      "Margin" : "5",
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "MinHeight" : 0,
+      "MinWidth" : 0,
+      "ResponsiveLayout" : true,
+      "Rows" : 0,
+      "ShowDataLoading" : true,
+      "Style" : "DefaultMashupStyle",
+      "StyleProperties" : {
+        "data" : {
+          "flexcontainer-32" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "border-color" : "#C2C7CE",
+                  "border-style" : "solid",
+                  "border-width" : "1px"
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-39" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#D8DBDE"
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-4" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#F7F7F7"
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-5" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "#F7F7F7"
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-6" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "inherit"
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "flexcontainer-7" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "background" : "inherit"
+                }
+              }
+            },
+            "widget" : "flex-container"
+          },
+          "ptcsbutton-107" : {
+            "parts" : {
+              "$" : {
+                "hover" : {
+                  "background" : "inherit",
+                  "border-color" : "inherit",
+                  "color" : "rgba(0,0,0,1)"
+                },
+                "pressed" : {
+                  "background" : "inherit",
+                  "border-color" : "inherit"
+                }
+              }
+            },
+            "widget" : "ptcs-button"
+          },
+          "ptcsbutton-25" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "color" : "#6e717c"
+                },
+                "hover" : {
+                  "background" : "inherit",
+                  "border-color" : "inherit",
+                  "color" : "rgba(0,0,0,1)"
+                },
+                "pressed" : {
+                  "background" : "inherit",
+                  "border-color" : "inherit"
+                }
+              }
+            },
+            "widget" : "ptcs-button"
+          },
+          "ptcsbutton-26" : {
+            "parts" : {
+              "$" : {
+                "$" : {
+                  "color" : "#f25454"
+                },
+                "hover" : {
+                  "background" : "inherit",
+                  "border-color" : "inherit",
+                  "color" : "rgba(194,36,15,1)"
+                },
+                "pressed" : {
+                  "background" : "inherit",
+                  "border-color" : "inherit"
+                }
+              }
+            },
+            "widget" : "ptcs-button"
+          },
+          "ptcsgrid-106" : {
+            "parts" : {
+              "header-cell" : {
+                "$" : {
+                  "color" : "#6E717C",
+                  "font-size" : "16px"
+                }
+              }
+            },
+            "widget" : "ptcs-grid"
+          }
+        },
+        "meta" : {
+          "type" : "WidgetStyler",
+          "version" : "1.0"
+        }
+      },
+      "StyleTheme" : "PTC Convergence Theme",
+      "Title" : "",
+      "TitleBar" : false,
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "TitleBarText" : "Gadget Title Here",
+      "Top" : 0,
+      "Type" : "mashup",
+      "UseMasterTheme" : false,
+      "UseTheme" : false,
+      "UseThemeForHybrids" : false,
+      "Visible" : true,
+      "Width" : 1024,
+      "Z-index" : 10,
+      "__TypeDisplayName" : "Mashup",
+      "_currentParameterDefs" : [ {
+        "Aspects" : {
+          "bindingDirection" : "BOTH",
+          "isMandatory" : false
+        },
+        "BaseType" : "MASHUPNAME",
+        "Description" : "",
+        "ParameterName" : "MashupName"
+      }, {
+        "Aspects" : {
+          "bindingDirection" : "BOTH",
+          "dataShape" : "PTC.ReasonCode.ReasonCategory",
+          "isMandatory" : false
+        },
+        "BaseType" : "INFOTABLE",
+        "Description" : "",
+        "ParameterName" : "ReasonCategTable"
+      }, {
+        "Aspects" : {
+          "bindingDirection" : "BOTH",
+          "isMandatory" : false
+        },
+        "BaseType" : "STRING",
+        "Description" : "",
+        "ParameterName" : "Equipment"
+      }, {
+        "Aspects" : {
+          "bindingDirection" : "BOTH",
+          "isMandatory" : false
+        },
+        "BaseType" : "STRING",
+        "Description" : "",
+        "ParameterName" : "Status"
+      }, {
+        "Aspects" : {
+          "bindingDirection" : "BOTH",
+          "isMandatory" : false
+        },
+        "BaseType" : "STRING",
+        "Description" : "",
+        "ParameterName" : "Owner"
+      }, {
+        "Aspects" : {
+          "bindingDirection" : "BOTH",
+          "isMandatory" : false
+        },
+        "BaseType" : "DATETIME",
+        "Description" : "",
+        "ParameterName" : "EndDate"
+      }, {
+        "Aspects" : {
+          "bindingDirection" : "BOTH",
+          "isMandatory" : false
+        },
+        "BaseType" : "DATETIME",
+        "Description" : "",
+        "ParameterName" : "StartDate"
+      }, {
+        "Aspects" : {
+          "bindingDirection" : "BOTH",
+          "isMandatory" : false
+        },
+        "BaseType" : "THINGNAME",
+        "DefaultValue" : "PTC.ActionTracker.Manager",
+        "Description" : "",
+        "ParameterName" : "Manager"
+      }, {
+        "Aspects" : {
+          "bindingDirection" : "BOTH",
+          "dataShape" : "PTC.Action.ActionResult",
+          "isMandatory" : false
+        },
+        "BaseType" : "INFOTABLE",
+        "Description" : "",
+        "ParameterName" : "SelectedAction"
+      } ],
+      "id_index" : 109,
+      "supportsAutoResize" : true,
+      "suppressWidgetPositioning" : false,
+      "suppressWidgetResize" : false
+    },
+    "Widgets" : [ {
+      "Properties" : {
+        "Area" : "UI",
+        "CollapseTabIcon" : "",
+        "DisplayName" : "container-2",
+        "EnableContainerUnload" : false,
+        "EnableExpandCollapse" : false,
+        "ExpandCollapseTabLocation" : "inside",
+        "ExpandTabIcon" : "",
+        "Expanded" : true,
+        "Id" : "flexcontainer-2",
+        "LastContainer" : true,
+        "LazyLoading" : false,
+        "Margin" : "",
+        "Overlay" : false,
+        "ResponsiveLayout" : true,
+        "Scrolling" : "auto-scroll",
+        "ShowDataLoading" : true,
+        "ShowExpandCollapseTab" : false,
+        "SourceURL" : "",
+        "Style" : "DefaultContainerStyle",
+        "StyleProperties" : { },
+        "Type" : "flexcontainer",
+        "UseTheme" : true,
+        "Visible" : true,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Responsive Container",
+        "align-content" : "flex-start",
+        "align-items" : "flex-start",
+        "flex-basis" : "auto",
+        "flex-direction" : "column",
+        "flex-grow" : 1,
+        "flex-max-height" : "",
+        "flex-max-width" : "",
+        "flex-min-height" : "",
+        "flex-min-width" : "",
+        "flex-shrink" : 1,
+        "flex-size" : "default",
+        "flex-wrap" : "nowrap",
+        "iconClass" : "widgets-flexcontainer",
+        "isLocked" : true,
+        "justify-content" : "flex-start",
+        "positioning" : "responsive",
+        "userCannotRemove" : true
+      },
+      "Widgets" : [ {
+        "Properties" : {
+          "Area" : "UI",
+          "CollapseTabIcon" : "",
+          "DisplayName" : "container-20",
+          "EnableContainerUnload" : false,
+          "EnableExpandCollapse" : false,
+          "ExpandCollapseTabLocation" : "inside",
+          "ExpandTabIcon" : "",
+          "Expanded" : true,
+          "Id" : "flexcontainer-20",
+          "LastContainer" : false,
+          "LazyLoading" : false,
+          "Margin" : "",
+          "Overlay" : false,
+          "ResponsiveLayout" : false,
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "SourceURL" : "",
+          "Style" : "DefaultContainerStyle",
+          "StyleProperties" : { },
+          "Type" : "flexcontainer",
+          "UseTheme" : true,
+          "Visible" : true,
+          "Z-index" : 10,
+          "__TypeDisplayName" : "Responsive Container",
+          "align-content" : "flex-start",
+          "align-items" : "center",
+          "flex-basis" : "auto",
+          "flex-direction" : "row",
+          "flex-grow" : 1,
+          "flex-max-height" : "110px",
+          "flex-max-width" : "",
+          "flex-min-height" : "110px",
+          "flex-min-width" : "",
+          "flex-shrink" : 1,
+          "flex-size" : "fixed",
+          "flex-wrap" : "nowrap",
+          "iconClass" : "widgets-flexcontainer-fixed",
+          "isLocked" : false,
+          "justify-content" : "flex-start",
+          "positioning" : "responsive",
+          "userCannotRemove" : false
+        },
+        "Widgets" : [ {
+          "Properties" : {
+            "Area" : "UI",
+            "Counter" : false,
+            "CriteriaMessage" : "",
+            "CriteriaMessageDetails" : "",
+            "CustomClass" : "AT_SearchTextField",
+            "Disabled" : false,
+            "DisplayName" : "ptcs-textfield-22",
+            "HasText" : false,
+            "HintText" : "[[PTC.ActionTracker.Search]]",
+            "Id" : "ptcstextfield-22",
+            "Label" : "",
+            "LabelAlignment" : "left",
+            "LastContainer" : false,
+            "Left" : 134,
+            "Margin" : "20",
+            "MaxLengthFailureMessage" : "${value} characters is the maximum",
+            "MaxNumberOfCharacters" : 100,
+            "MinLengthFailureMessage" : "${value} characters is the minimum",
+            "Password" : false,
+            "ReadOnly" : false,
+            "RequiredMessage" : "A value is required",
+            "ResponsiveLayout" : false,
+            "ShowClearText" : true,
+            "ShowDataLoading" : true,
+            "ShowValidationCriteria" : false,
+            "ShowValidationFailure" : false,
+            "ShowValidationSuccess" : false,
+            "SuccessMessage" : "",
+            "SuccessMessageDetails" : "",
+            "TabSequence" : -1,
+            "TextAlignment" : "left",
+            "Top" : 41,
+            "Type" : "ptcstextfield",
+            "UseTheme" : true,
+            "ValidationCriteriaIcon" : "cds:icon_info",
+            "ValidationFailureIcon" : "cds:icon_error",
+            "ValidationState" : "undefined",
+            "ValidationSuccessIcon" : "cds:icon_success",
+            "ValueRequired" : false,
+            "Visible" : true,
+            "Width" : 273,
+            "Z-index" : 11,
+            "__TypeDisplayName" : "Text Field"
+          },
+          "Widgets" : [ ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "ButtonType" : "transparent",
+            "ContextID" : "",
+            "Disabled" : false,
+            "DisplayName" : "ptcs-button-25",
+            "Icon" : "/Thingworx/MediaEntities/PTC.ActionTracker.CreateAction_MD",
+            "Id" : "ptcsbutton-25",
+            "Label" : "[[PTC.ActionTracker.CreateAction]]",
+            "LabelAlignment" : "center",
+            "LastContainer" : false,
+            "Left" : 24,
+            "Margin" : "0 10 0 0",
+            "MultiLine" : false,
+            "ResponsiveLayout" : false,
+            "ShowDataLoading" : true,
+            "TabSequence" : 0,
+            "Top" : 61,
+            "Type" : "ptcsbutton",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Button"
+          },
+          "Widgets" : [ ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "ButtonType" : "transparent",
+            "ContextID" : "",
+            "Disabled" : false,
+            "DisplayName" : "ptcs-button-107",
+            "Icon" : "/Thingworx/MediaEntities/PTC.ActionTracker.ViewAction_MD",
+            "Id" : "ptcsbutton-107",
+            "Label" : "[[PTC.ActionTracker.ViewAction]]",
+            "LabelAlignment" : "center",
+            "LastContainer" : false,
+            "Left" : 79,
+            "Margin" : "0 5 0 5",
+            "MultiLine" : false,
+            "ResponsiveLayout" : false,
+            "ShowDataLoading" : false,
+            "TabSequence" : 0,
+            "Top" : 41,
+            "Type" : "ptcsbutton",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Button"
+          },
+          "Widgets" : [ ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "ButtonType" : "transparent",
+            "ContextID" : "",
+            "Disabled" : false,
+            "DisplayName" : "ptcs-button-26",
+            "Icon" : "/Thingworx/MediaEntities/PTC.ActionTracker.DeleteAction_MD",
+            "Id" : "ptcsbutton-26",
+            "Label" : "[[PTC.ActionTracker.Delete]]",
+            "LabelAlignment" : "center",
+            "LastContainer" : false,
+            "Left" : 129,
+            "Margin" : "0 20 0 10",
+            "MultiLine" : false,
+            "ResponsiveLayout" : false,
+            "ShowDataLoading" : true,
+            "TabSequence" : 0,
+            "Top" : 51,
+            "Type" : "ptcsbutton",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Button"
+          },
+          "Widgets" : [ ]
+        }, {
+          "Properties" : {
+            "AnyRowsSelected" : false,
+            "Area" : "UI",
+            "DisplayName" : "infotableselector-45",
+            "Height" : 28,
+            "Id" : "infotableselector-45",
+            "LastContainer" : false,
+            "Left" : 389,
+            "Margin" : "5",
+            "NoRowsSelected" : false,
+            "ResponsiveLayout" : false,
+            "ShowDataLoading" : true,
+            "Top" : 66,
+            "Type" : "infotableselector",
+            "Visible" : true,
+            "Width" : 105,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Infotable Selector"
+          },
+          "Widgets" : [ ]
+        } ]
+      }, {
+        "Properties" : {
+          "Area" : "UI",
+          "CollapseTabIcon" : "",
+          "DisplayName" : "container-39",
+          "EnableContainerUnload" : false,
+          "EnableExpandCollapse" : false,
+          "ExpandCollapseTabLocation" : "inside",
+          "ExpandTabIcon" : "",
+          "Expanded" : true,
+          "Id" : "flexcontainer-39",
+          "LastContainer" : false,
+          "LazyLoading" : false,
+          "Margin" : "",
+          "Overlay" : false,
+          "ResponsiveLayout" : false,
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "SourceURL" : "",
+          "Style" : "DefaultContainerStyle",
+          "StyleProperties" : { },
+          "Type" : "flexcontainer",
+          "UseTheme" : true,
+          "Visible" : true,
+          "Z-index" : 10,
+          "__TypeDisplayName" : "Responsive Container",
+          "align-content" : "flex-start",
+          "align-items" : "flex-start",
+          "flex-basis" : "auto",
+          "flex-direction" : "row",
+          "flex-grow" : 1,
+          "flex-max-height" : "2px",
+          "flex-max-width" : "",
+          "flex-min-height" : "2px",
+          "flex-min-width" : "",
+          "flex-shrink" : 1,
+          "flex-size" : "fixed",
+          "flex-wrap" : "nowrap",
+          "iconClass" : "widgets-flexcontainer-fixed",
+          "isLocked" : false,
+          "justify-content" : "flex-start",
+          "positioning" : "responsive",
+          "userCannotRemove" : false
+        },
+        "Widgets" : [ ]
+      }, {
+        "Properties" : {
+          "Area" : "UI",
+          "CollapseTabIcon" : "",
+          "DisplayName" : "container-19",
+          "EnableContainerUnload" : false,
+          "EnableExpandCollapse" : false,
+          "ExpandCollapseTabLocation" : "inside",
+          "ExpandTabIcon" : "",
+          "Expanded" : true,
+          "Id" : "flexcontainer-19",
+          "LastContainer" : true,
+          "LazyLoading" : false,
+          "Margin" : "",
+          "Overlay" : false,
+          "ResponsiveLayout" : false,
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "SourceURL" : "",
+          "Style" : "DefaultContainerStyle",
+          "StyleProperties" : { },
+          "Type" : "flexcontainer",
+          "UseTheme" : true,
+          "Visible" : true,
+          "Z-index" : 10,
+          "__TypeDisplayName" : "Responsive Container",
+          "align-content" : "flex-start",
+          "align-items" : "flex-start",
+          "flex-basis" : "auto",
+          "flex-direction" : "row",
+          "flex-grow" : 1,
+          "flex-max-height" : "",
+          "flex-max-width" : "",
+          "flex-min-height" : "",
+          "flex-min-width" : "",
+          "flex-shrink" : 1,
+          "flex-size" : "default",
+          "flex-wrap" : "nowrap",
+          "iconClass" : "widgets-flexcontainer",
+          "isLocked" : true,
+          "justify-content" : "flex-start",
+          "positioning" : "responsive",
+          "userCannotRemove" : false
+        },
+        "Widgets" : [ {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-41",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-41",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : false,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "",
+            "flex-max-width" : "20px",
+            "flex-min-height" : "",
+            "flex-min-width" : "20px",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-105",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-105",
+            "LastContainer" : true,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "",
+            "flex-max-width" : "",
+            "flex-min-height" : "",
+            "flex-min-width" : "",
+            "flex-shrink" : 1,
+            "flex-size" : "default",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer",
+            "isLocked" : true,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ {
+            "Properties" : {
+              "AddButtonText" : "[[add]]",
+              "AddRowButtonText" : "[[add]]",
+              "AddRowFormTitle" : "[[AddRecord]]",
+              "AllowDisabledNodes" : false,
+              "AlwaysExpanded" : false,
+              "ApplyButtonText" : "[[apply]]",
+              "Area" : "UI",
+              "AutoScroll" : false,
+              "BindDataText" : "[[bindData]]",
+              "CacheRuntimeChanges" : false,
+              "CancelButtonText" : "[[cancel]]",
+              "CancelEditButtonText" : "[[cancel]]",
+              "CancelLabel" : "[[cancel]]",
+              "ClearFilteredSelection" : false,
+              "ColumnFormat" : {
+                "formatInfo" : [ {
+                  "AllowEdit" : false,
+                  "Description" : "Name of the status definition.",
+                  "FieldName" : "statusDefinitionName",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "FieldName" : "statusDefinitionName",
+                      "StateDefinition" : "PTC.ActionTracker.ActionState_ST",
+                      "StateDefinitionType" : "string",
+                      "StateFormats" : [ {
+                        "comparator" : "==",
+                        "defaultValue" : "Not Started",
+                        "state" : "PTC.ActionTracker.NotStartedCircle_SY",
+                        "stateName" : "",
+                        "value" : "NotStarted"
+                      }, {
+                        "comparator" : "==",
+                        "defaultValue" : "In Progress",
+                        "state" : "PTC.ActionTracker.InProgress_SY",
+                        "stateName" : "",
+                        "value" : "InProgress"
+                      }, {
+                        "comparator" : "==",
+                        "defaultValue" : "At Risk",
+                        "state" : "PTC.ActionTracker.AtRisk_SY",
+                        "stateName" : "",
+                        "value" : "AtRisk"
+                      }, {
+                        "comparator" : "==",
+                        "defaultValue" : "Overdue",
+                        "state" : "PTC.ActionTracker.Overdue_SY",
+                        "stateName" : "",
+                        "value" : "Overdue"
+                      }, {
+                        "comparator" : "==",
+                        "defaultValue" : "Complete",
+                        "state" : "PTC.ActionTracker.Complete_SY",
+                        "stateName" : "",
+                        "value" : "Complete"
+                      }, {
+                        "state" : "PTC.ActionTracker.NotStartedCircle_SY",
+                        "stateName" : ""
+                      } ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "[[PTC.ActionTracker.Status]]",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : false,
+                  "inLayout" : true,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : true
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "name",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "[[PTC.ActionTracker.Title]]",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : false,
+                  "inLayout" : true,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : true
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "hoursSaved",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "Hours Saved",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : false,
+                  "inLayout" : true,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : true
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Name of the model.",
+                  "FieldName" : "modelName",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "[[PTC.ActionTracker.Equipment]]",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : false,
+                  "inLayout" : true,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : true
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Name of the reason category.",
+                  "FieldName" : "reasonCategoryName",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "[[PTC.ActionTracker.LossCategory]]",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : false,
+                  "inLayout" : true,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : true
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Name of the reason.",
+                  "FieldName" : "reasonName",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "[[PTC.ActionTracker.Reason]]",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : false,
+                  "inLayout" : true,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : true
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "owner",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "[[PTC.ActionTracker.Owner]]",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : false,
+                  "inLayout" : true,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : true
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "endDate",
+                  "FormatOptions" : {
+                    "FormatString" : "[[dateTimeFormat_Default]]",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "DATETIME",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "endDate",
+                  "Width" : "auto",
+                  "cellEditor" : "datepicker",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "description",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "description",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "actualTime",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "actualTime",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "uid",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "uid",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Unique identifier of the site",
+                  "FieldName" : "siteUid",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "siteUid",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Unique identifier of the reason category",
+                  "FieldName" : "reasonCategoryUid",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "reasonCategoryUid",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "statusUid",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "statusUid",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Unique identifier of the equipment",
+                  "FieldName" : "equipmentUid",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "equipmentUid",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "createdDate",
+                  "FormatOptions" : {
+                    "FormatString" : "[[dateTimeFormat_Default]]",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "DATETIME",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "createdDate",
+                  "Width" : "auto",
+                  "cellEditor" : "datepicker",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Unique identifier of the reasonType",
+                  "FieldName" : "reasonTypeUid",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "reasonTypeUid",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "reasonUid",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "reasonUid",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "completionDate",
+                  "FormatOptions" : {
+                    "FormatString" : "[[dateTimeFormat_Default]]",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "DATETIME",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "completionDate",
+                  "Width" : "auto",
+                  "cellEditor" : "datepicker",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "startDate",
+                  "FormatOptions" : {
+                    "FormatString" : "[[dateTimeFormat_Default]]",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "DATETIME",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "startDate",
+                  "Width" : "auto",
+                  "cellEditor" : "datepicker",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "targetTime",
+                  "FormatOptions" : {
+                    "FormatString" : "0.00",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "NUMBER",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "targetTime",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "reasonTreeNodeUid",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "reasonTreeNodeUid",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Unique identifier of the model.",
+                  "FieldName" : "modelUid",
+                  "FormatOptions" : {
+                    "FormatString" : "0",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "LONG",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "modelUid",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Calculated baseline hours based on user input date range",
+                  "FieldName" : "baselineHours",
+                  "FormatOptions" : {
+                    "FormatString" : "0.00",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "NUMBER",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "baselineHours",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "User selected start date used for baseline calculation",
+                  "FieldName" : "baselineStartDate",
+                  "FormatOptions" : {
+                    "FormatString" : "[[dateTimeFormat_Default]]",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "DATETIME",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "baselineStartDate",
+                  "Width" : "auto",
+                  "cellEditor" : "datepicker",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "User selected end date used for baseline calculation",
+                  "FieldName" : "baselineEndDate",
+                  "FormatOptions" : {
+                    "FormatString" : "[[dateTimeFormat_Default]]",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "DATETIME",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "baselineEndDate",
+                  "Width" : "auto",
+                  "cellEditor" : "datepicker",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "Display name of the status definition",
+                  "FieldName" : "statusDefinitionDisplayName",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "statusDefinitionDisplayName",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "model thing name",
+                  "FieldName" : "thingName",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "thingName",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "endDateDisplay",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "endDateDisplay",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "createdDateDisplay",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "createdDateDisplay",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "completionDateDisplay",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "completionDateDisplay",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "",
+                  "FieldName" : "startDateDisplay",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "startDateDisplay",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "User selected start date used for baseline calculation",
+                  "FieldName" : "baselineStartDateDisplay",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "baselineStartDateDisplay",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                }, {
+                  "AllowEdit" : false,
+                  "Description" : "User selected end date used for baseline calculation",
+                  "FieldName" : "baselineEndDateDisplay",
+                  "FormatOptions" : {
+                    "FormatString" : "full",
+                    "formatInfo" : {
+                      "StateFormats" : [ ]
+                    },
+                    "formatText" : "[[HyperlinkName]]",
+                    "renderer" : "STRING",
+                    "roundingEnabled" : true,
+                    "showDependentField" : false
+                  },
+                  "Title" : "baselineEndDateDisplay",
+                  "Width" : "auto",
+                  "cellEditor" : "textfield",
+                  "cellHorizontalAlignment" : "left",
+                  "columnMinimumWidth" : 75,
+                  "editable" : false,
+                  "excludeFromRowEdit" : false,
+                  "expressionValidator" : "validator2",
+                  "headerHorizontalAlignment" : "left",
+                  "hidden" : true,
+                  "inLayout" : false,
+                  "initialSort" : "none",
+                  "required" : false,
+                  "routeLinks" : false,
+                  "sortable" : false
+                } ]
+              },
+              "ColumnsMenuOptions" : "none",
+              "ColumnsMenuVisibleItems" : 6,
+              "DateLabel" : "[[date]]",
+              "DefaultSelectedRows" : "",
+              "DeleteRowButtonText" : "[[delete]]",
+              "DisableChildNodes" : false,
+              "DisplayButtonText" : "[[display]]",
+              "DisplayName" : "ptcs-grid-106",
+              "EditButton" : false,
+              "EditButtonText" : "[[edit]]",
+              "EditControlLabel" : "[[edit]]",
+              "EditControlType" : "link",
+              "EditControlVisibility" : "hover",
+              "EditLevel" : "cell",
+              "ExpandCollapseAll" : false,
+              "ExpandCollapseIcon" : "singlecaret",
+              "ExpandLoadedRows" : false,
+              "FillContainer" : true,
+              "FilterHintText" : "[[filter]]",
+              "FilterWidth" : 273,
+              "FocusNavigationMode" : "row-first",
+              "HasChildrenFieldName" : "hasChildren",
+              "HeaderVerticalAlignment" : "top",
+              "Height" : 176,
+              "HideHeaderRow" : false,
+              "HighlightDraftState" : false,
+              "HoursLabel" : "[[hours]]",
+              "IDFieldName" : "id",
+              "IDPathSeparator" : ":;",
+              "Id" : "ptcsgrid-106",
+              "IncludeRowExpansionParents" : false,
+              "IsEditable" : false,
+              "Label" : "",
+              "LabelAlignment" : "left",
+              "LabelType" : "sub-header",
+              "LastContainer" : false,
+              "Left" : 119,
+              "Margin" : "5",
+              "MaxRowsMessage" : "[[Widgets.TreeGrid.MaxRowsMessage]]",
+              "MaxRowsMessageTitle" : "[[Widgets.TreeGrid.MaxRowsMessageTitle]]",
+              "MeridiemLabel" : "AM/PM",
+              "MinRowHeight" : 48,
+              "MinutesLabel" : "[[minutes]]",
+              "MonthLabel" : "[[months]]",
+              "NoDataToDisplayText" : "[[noDataToDisplay]]",
+              "NoMatchesText" : "[[noMatches]]",
+              "NoResultsText" : "[[noResults]]",
+              "ParentIDFieldName" : "parentId",
+              "PreserveRowExpansion" : false,
+              "PreventRowWrapInNav" : false,
+              "PrimaryColumnFixedSize" : false,
+              "ReorderColumns" : false,
+              "ResetButtonText" : "[[reset]]",
+              "ResizeColumns" : true,
+              "ResponsiveLayout" : true,
+              "RowAddButton" : false,
+              "RowDeleteButton" : false,
+              "RowEditFormTitle" : "[[EditRecord]]",
+              "RowFormat_StateParameters" : [ ],
+              "RowSelection" : "multiple",
+              "RowsVerticalAlignment" : "center",
+              "SaveEditButtonText" : "[[save]]",
+              "SecondsLabel" : "[[seconds]]",
+              "SelectFocusedItem" : false,
+              "SelectLabel" : "[[select]]",
+              "SelectParentOnly" : false,
+              "SelectedItemText" : "[[rowSelected]]",
+              "SelectedItemsText" : "[[rowsSelected]]",
+              "SelectedRowsChangedCallback" : true,
+              "SelectionCheckboxHeaderAlignment" : "middle",
+              "SelectionCheckboxRowAlignment" : "middle",
+              "ShowColumnFeature" : true,
+              "ShowDataLoading" : true,
+              "ShowFilter" : false,
+              "ShowFooter" : false,
+              "ShowHeaderRowInFooter" : false,
+              "ShowResetButton" : false,
+              "ShowRowNumbers" : false,
+              "ShowValidationCriteria" : false,
+              "ShowValidationFailure" : false,
+              "ShowValidationSuccess" : false,
+              "SingleLineHeader" : true,
+              "SingleLineRows" : true,
+              "SortSelectionColumn" : false,
+              "TabSequence" : 0,
+              "Top" : 101,
+              "TriggerEventOnConfigChange" : true,
+              "Type" : "ptcsgrid",
+              "UpdateButtonText" : "[[update]]",
+              "UseTheme" : true,
+              "Visible" : true,
+              "Width" : 464,
+              "YearLabel" : "[[years]]",
+              "Z-index" : 10,
+              "__TypeDisplayName" : "Grid (Preview)"
+            },
+            "Widgets" : [ ]
+          } ]
+        }, {
+          "Properties" : {
+            "Area" : "UI",
+            "CollapseTabIcon" : "",
+            "DisplayName" : "container-42",
+            "EnableContainerUnload" : false,
+            "EnableExpandCollapse" : false,
+            "ExpandCollapseTabLocation" : "inside",
+            "ExpandTabIcon" : "",
+            "Expanded" : true,
+            "Id" : "flexcontainer-42",
+            "LastContainer" : false,
+            "LazyLoading" : false,
+            "Margin" : "",
+            "Overlay" : false,
+            "ResponsiveLayout" : false,
+            "ShowDataLoading" : true,
+            "ShowExpandCollapseTab" : false,
+            "SourceURL" : "",
+            "Style" : "DefaultContainerStyle",
+            "StyleProperties" : { },
+            "Type" : "flexcontainer",
+            "UseTheme" : true,
+            "Visible" : true,
+            "Z-index" : 10,
+            "__TypeDisplayName" : "Responsive Container",
+            "align-content" : "flex-start",
+            "align-items" : "flex-start",
+            "flex-basis" : "auto",
+            "flex-direction" : "row",
+            "flex-grow" : 1,
+            "flex-max-height" : "",
+            "flex-max-width" : "20px",
+            "flex-min-height" : "",
+            "flex-min-width" : "20px",
+            "flex-shrink" : 1,
+            "flex-size" : "fixed",
+            "flex-wrap" : "nowrap",
+            "iconClass" : "widgets-flexcontainer-fixed",
+            "isLocked" : false,
+            "justify-content" : "flex-start",
+            "positioning" : "responsive",
+            "userCannotRemove" : false
+          },
+          "Widgets" : [ ]
+        } ]
+      } ]
+    }, {
+      "Properties" : {
+        "Area" : "UI",
+        "AutoEvaluate" : false,
+        "DataChangeType" : "ALWAYS",
+        "DisplayName" : "ActionEditNav",
+        "Expression" : "input",
+        "FireOnFirstValue" : false,
+        "Height" : 28,
+        "Id" : "expression2-68",
+        "LastContainer" : false,
+        "Left" : null,
+        "Margin" : "5",
+        "OutputBaseType" : "STRING",
+        "ResponsiveLayout" : false,
+        "ShowDataLoading" : true,
+        "Top" : null,
+        "Type" : "expression2",
+        "Visible" : true,
+        "Width" : 200,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Expression",
+        "_currentParameterDefs" : [ {
+          "BaseType" : "STRING",
+          "Description" : "",
+          "ParameterName" : "input",
+          "bindingDirection" : "Target",
+          "bindingType" : "Property",
+          "isBindingSource" : false,
+          "isBindingTarget" : true,
+          "name" : "input"
+        } ]
+      },
+      "Widgets" : [ ]
+    }, {
+      "Properties" : {
+        "ActionButtonLabel" : "[[PTC.ActionTracker.Delete]]",
+        "ActionButtonPosition" : "left",
+        "ActionButtonTooltipField" : "",
+        "ActionButtonType" : "danger",
+        "ActionPosition" : "left",
+        "Area" : "UI",
+        "CancelButtonLabel" : "[[PTC.ActionTracker.Cancel]]",
+        "CancelButtonTooltipField" : "",
+        "CloseButtonTooltipField" : "close",
+        "ConfHeight" : "260px",
+        "ConfWidth" : "600px",
+        "DialogHeight" : "220",
+        "DialogWidth" : "600",
+        "DisplayCloseButton" : true,
+        "DisplayName" : "DeleteConfirmationModal",
+        "DisplaySecondaryAction" : false,
+        "Id" : "ptcsconfirmation-76",
+        "LastContainer" : false,
+        "Left" : null,
+        "Margin" : "5",
+        "MessageText" : null,
+        "Mode" : "closed",
+        "PrimaryButtonStyle" : "primary",
+        "ResponsiveLayout" : false,
+        "SecondButtonLabel" : "Action",
+        "SecondButtonTooltipField" : "",
+        "ShowDataLoading" : true,
+        "TitleText" : "[[PTC.ActionTracker.DeleteModalTitle]]",
+        "Top" : null,
+        "Type" : "ptcsconfirmation",
+        "UseTheme" : true,
+        "Visible" : true,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Confirmation"
+      },
+      "Widgets" : [ ]
+    }, {
+      "Properties" : {
+        "Area" : "UI",
+        "DataShape" : "",
+        "DataType" : "STRING",
+        "DisplayName" : "ActionAddViewNav",
+        "Id" : "eventsrouter-77",
+        "LastContainer" : false,
+        "Left" : null,
+        "Margin" : "5",
+        "NumberOfInputs" : "2",
+        "ResponsiveLayout" : false,
+        "ShowDataLoading" : true,
+        "Top" : null,
+        "Type" : "eventsrouter",
+        "Visible" : true,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Events Router"
+      },
+      "Widgets" : [ ]
+    }, {
+      "Properties" : {
+        "Area" : "UI",
+        "AutoEvaluate" : false,
+        "DataChangeType" : "ALWAYS",
+        "DisplayName" : "ActionAddNav",
+        "Expression" : "input",
+        "FireOnFirstValue" : false,
+        "Height" : 28,
+        "Id" : "expression2-78",
+        "LastContainer" : false,
+        "Left" : null,
+        "Margin" : "5",
+        "OutputBaseType" : "STRING",
+        "ResponsiveLayout" : false,
+        "ShowDataLoading" : true,
+        "Top" : null,
+        "Type" : "expression2",
+        "Visible" : true,
+        "Width" : 200,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Expression",
+        "_currentParameterDefs" : [ {
+          "BaseType" : "STRING",
+          "Description" : "",
+          "ParameterName" : "input",
+          "bindingDirection" : "Target",
+          "bindingType" : "Property",
+          "isBindingSource" : false,
+          "isBindingTarget" : true,
+          "name" : "input"
+        } ]
+      },
+      "Widgets" : [ ]
+    }, {
+      "Properties" : {
+        "Area" : "UI",
+        "AutoEvaluate" : true,
+        "DataChangeType" : "ALWAYS",
+        "DisplayName" : "SetDeleteIconFilter",
+        "Expression" : "(input == true) ? \"AT_FilterButtonIcon\" : \"\"",
+        "FireOnFirstValue" : false,
+        "Height" : 28,
+        "Id" : "expression2-108",
+        "LastContainer" : false,
+        "Left" : null,
+        "Margin" : "5",
+        "OutputBaseType" : "STRING",
+        "ResponsiveLayout" : false,
+        "ShowDataLoading" : true,
+        "Top" : null,
+        "Type" : "expression2",
+        "Visible" : true,
+        "Width" : 200,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Expression",
+        "_currentParameterDefs" : [ {
+          "BaseType" : "BOOLEAN",
+          "DefaultValue" : false,
+          "Description" : "",
+          "ParameterName" : "input",
+          "bindingDirection" : "Target",
+          "bindingType" : "Property",
+          "isBindingSource" : false,
+          "isBindingTarget" : true,
+          "shown" : true
+        } ]
+      },
+      "Widgets" : [ ]
+    }, {
+      "Properties" : {
+        "Area" : "UI",
+        "AutoEvaluate" : true,
+        "DataChangeType" : "ALWAYS",
+        "DisplayName" : "SetViewIconFilter",
+        "Expression" : "(input == true) ? \"AT_FilterButtonIcon\" : \"\"",
+        "FireOnFirstValue" : false,
+        "Height" : 28,
+        "Id" : "expression2-109",
+        "LastContainer" : false,
+        "Left" : null,
+        "Margin" : "5",
+        "OutputBaseType" : "STRING",
+        "ResponsiveLayout" : false,
+        "ShowDataLoading" : true,
+        "Top" : null,
+        "Type" : "expression2",
+        "Visible" : true,
+        "Width" : 200,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Expression",
+        "_currentParameterDefs" : [ {
+          "BaseType" : "BOOLEAN",
+          "DefaultValue" : false,
+          "Description" : "",
+          "ParameterName" : "input",
+          "bindingDirection" : "Target",
+          "bindingType" : "Property",
+          "isBindingSource" : false,
+          "isBindingTarget" : true,
+          "shown" : true
+        } ]
+      },
+      "Widgets" : [ ]
+    }, {
+      "Properties" : {
+        "Area" : "UI",
+        "AutoEvaluate" : true,
+        "DataChangeType" : "VALUE",
+        "DisableInitialOutput" : false,
+        "DisplayName" : "GetTimeZone",
+        "Expression" : "Output = Intl.DateTimeFormat().resolvedOptions().timeZone;",
+        "FireOnFirstValue" : false,
+        "Height" : 28,
+        "Id" : "expression2-110",
+        "LastContainer" : false,
+        "Left" : null,
+        "Margin" : "5",
+        "OutputBaseType" : "STRING",
+        "ResponsiveLayout" : false,
+        "ShowDataLoading" : true,
+        "Top" : null,
+        "Type" : "expression2",
+        "Visible" : true,
+        "Width" : 200,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Expression",
+        "_currentParameterDefs" : [ ]
+      },
+      "Widgets" : [ ]
+    } ]
+  },
+  "mashupType" : "mashup"
+}]]></mashupContent><preview/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.875Z" user="SuperUser"/></ConfigurationChanges></Mashup></Mashups><ScriptFunctionLibraries/><Projects><Project artifactId="" aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.projectType="Component" dependsOn="{&quot;extensions&quot;:&quot;PTC.Action:1.2.1,PTC.ActionTracker:1.2.1,infotableselector_ExtensionPackage:3.0.2,PTC.ReasonCode:1.2.1&quot;,&quot;projects&quot;:&quot;PTC.ActionTracker:0.0.0&quot;}" description="" documentationContent="" groupId="" homeMashup="" lastModifiedDate="2023-08-29T15:25:36.877Z" minPlatformVersion="" name="PTCDTS.ActionTrackerImpl" packageVersion="1.0.0" projectName="PTCDTS.ActionTrackerImpl" publishResult="" state="DRAFT" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.877Z" user="SuperUser"/></ConfigurationChanges></Project></Projects><Users/><DirectoryServices/><Widgets/><MediaEntities/><Groups><Group aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:36.864Z" name="PTCDTS.ActionTrackerImpl.Default_UG" projectName="PTCDTS.ActionTrackerImpl" scimDisplayName="" scimExternalId="" scimId="" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><Members><Members><Member name="PTCDTS.Base.Permissions.Default_UG" type="Group"/></Members></Members><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.864Z" user="SuperUser"/></ConfigurationChanges></Group><Group aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:36.866Z" name="PTCDTS.ActionTrackerImpl.Admin_UG" projectName="PTCDTS.ActionTrackerImpl" scimDisplayName="" scimExternalId="" scimId="" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><Members><Members><Member name="PTCDTS.Base.Permissions.ApplicationAdmin_UG" type="Group"/></Members></Members><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.866Z" user="SuperUser"/></ConfigurationChanges></Group></Groups><PersistenceProviders/><ModelTags/><LocalizationTables/><Dashboards/><StyleThemes/><DataShapes><DataShape aspect.isEditableExtensionObject="true" aspect.isExtension="true" baseDataShape="" description="Data Shape containing the properties to be displayed for the union of Action table with other data sources. {PTC.Action.ActionResult}" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:36.868Z" name="PTCDTS.Action.ActionResult" projectName="PTCDTS.ActionTrackerImpl" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><FieldDefinitions><FieldDefinition baseType="LONG" description="" name="actualTime" ordinal="0"/><FieldDefinition baseType="DATETIME" description="User selected end date used for baseline calculation" name="baselineEndDate" ordinal="12"/><FieldDefinition baseType="STRING" description="User selected end date used for baseline calculation" name="baselineEndDateDisplay" ordinal="20"/><FieldDefinition baseType="NUMBER" description="Calculated baseline hours based on user input date range" name="baselineHours" ordinal="10"/><FieldDefinition baseType="DATETIME" description="User selected start date used for baseline calculation" name="baselineStartDate" ordinal="11"/><FieldDefinition baseType="STRING" description="User selected start date used for baseline calculation" name="baselineStartDateDisplay" ordinal="19"/><FieldDefinition baseType="DATETIME" description="" name="completionDate" ordinal="0"/><FieldDefinition baseType="STRING" description="" name="completionDateDisplay" ordinal="17"/><FieldDefinition baseType="DATETIME" description="" name="createdDate" ordinal="0"/><FieldDefinition baseType="STRING" description="" name="createdDateDisplay" ordinal="16"/><FieldDefinition baseType="STRING" description="" name="description" ordinal="0"/><FieldDefinition baseType="DATETIME" description="" name="endDate" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="endDateDisplay" ordinal="15"/><FieldDefinition baseType="LONG" description="Unique identifier of the equipment" name="equipmentUid" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="hoursSaved" ordinal="21"/><FieldDefinition baseType="STRING" description="Name of the model." name="modelName" ordinal="6"/><FieldDefinition baseType="LONG" description="Unique identifier of the model." name="modelUid" ordinal="9"/><FieldDefinition baseType="STRING" description="" name="name" ordinal="0"/><FieldDefinition baseType="STRING" description="" name="owner" ordinal="0"/><FieldDefinition baseType="STRING" description="Name of the reason category." name="reasonCategoryName" ordinal="7"/><FieldDefinition baseType="LONG" description="Unique identifier of the reason category" name="reasonCategoryUid" ordinal="0"/><FieldDefinition baseType="STRING" description="Name of the reason." name="reasonName" ordinal="8"/><FieldDefinition aspect.isPrimaryKey="false" baseType="LONG" description="" name="reasonTreeNodeUid" ordinal="4"/><FieldDefinition baseType="LONG" description="Unique identifier of the reasonType" name="reasonTypeUid" ordinal="0"/><FieldDefinition baseType="LONG" description="" name="reasonUid" ordinal="0"/><FieldDefinition baseType="LONG" description="Unique identifier of the site" name="siteUid" ordinal="0"/><FieldDefinition baseType="DATETIME" description="" name="startDate" ordinal="0"/><FieldDefinition baseType="STRING" description="" name="startDateDisplay" ordinal="18"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Display name of the status definition" name="statusDefinitionDisplayName" ordinal="13"/><FieldDefinition baseType="STRING" description="Name of the status definition." name="statusDefinitionName" ordinal="5"/><FieldDefinition baseType="LONG" description="" name="statusUid" ordinal="0"/><FieldDefinition baseType="NUMBER" description="" name="targetTime" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="model thing name" name="thingName" ordinal="14"/><FieldDefinition baseType="LONG" description="" name="uid" ordinal="0"/></FieldDefinitions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.868Z" user="SuperUser"/></ConfigurationChanges></DataShape></DataShapes><Things><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" description="Bridgestone Action Tracker" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:36.880Z" name="PTCDTS.ActionTrackerImpl.Manager" projectName="PTCDTS.ActionTrackerImpl" published="false" tags="" thingTemplate="PTCDTS.ActionTrackerImpl.Manager_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table used to identify managers that the building block should use" isMultiRow="true" name="ManagerConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="MashupConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="MASHUPNAME" description="name of the mashup to configure" name="mashupName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for dynamic menus. Menu Items can be specified here and they will show up for the given menu name. " isMultiRow="true" name="MenuConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuItemMashupName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="menuName" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="An optional field to indicate the ordering of the menu items" name="menuOrderPreference" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the optional section that groups like menus together" name="menuSectionKey" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the menu label" name="menuTitleKey" ordinal="1"/><FieldDefinition aspect.dataShape="PTC.Base.ComponentMenuConfiguration" aspect.isPrimaryKey="false" baseType="INFOTABLE" description="" name="submenu" ordinal="6"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="OwnersGroups" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="GROUPNAME" description="Group's name for the owners" name="ownerGroup" ordinal="1"/></FieldDefinitions></DataShape><Rows><Row><ownerGroup><![CDATA[PTC.Action.Owners_UG]]></ownerGroup></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for any Things that need to be configured. This allows for OOTB things to be customized, and the new version that should be used can be configured here" isMultiRow="true" name="ThingConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="THINGNAME" description="Name of the Thing entity or Mashup entity that is to be configured" name="thingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions><ServiceDefinition aspect.isAsync="false" category="" description="Load actions list on Action Tracker main page based on filter criteria and search input." isAllowOverride="true" isLocalOnly="false" isOpen="false" isPrivate="false" name="LoadActionsWithHoursSaved"><ResultType aspect.dataShape="PTCDTS.Action.ActionResult" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition aspect.dataShape="PTC.Action.ActionResult" baseType="INFOTABLE" description="" name="actionsData" ordinal="1"/><FieldDefinition baseType="DATETIME" description="" name="endDate" ordinal="5"/><FieldDefinition baseType="STRING" description="" name="equipment" ordinal="6"/><FieldDefinition baseType="STRING" description="" name="owner" ordinal="9"/><FieldDefinition baseType="INFOTABLE" description="" name="reasonCategoriesTable" ordinal="7"/><FieldDefinition baseType="STRING" description="" name="searchTerm" ordinal="2"/><FieldDefinition baseType="DATETIME" description="" name="startDate" ordinal="4"/><FieldDefinition baseType="STRING" description="" name="status" ordinal="8"/><FieldDefinition baseType="STRING" description="" name="timeZoneId" ordinal="3"/></ParameterDefinitions></ServiceDefinition></ServiceDefinitions><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="LoadActionsWithHoursSaved"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[try {
+	var result = DataShapes["PTC.Action.ActionResult"].CreateValues();
+
+	let reasonCategoriesRows = 0;
+	if (reasonCategoriesTable != undefined) {
+		reasonCategoriesRows = reasonCategoriesTable.getRowCount();
+	}
+
+	if (reasonCategoriesRows > 0 || equipment || status || owner) {
+		let query = queryBuilder(equipment, reasonCategoriesTable, reasonCategoriesRows, status, owner);
+
+		result = Resources["InfoTableFunctions"].Query({
+			t: actionsData,
+			query: query
+		});
+	} else {
+		result = me.QueryActions({
+			owner: owner,
+			startDate: startDate,
+			endDate: endDate,
+			status: status,
+			equipment: equipment,
+			reasonCategoriesTable: reasonCategoriesTable,
+			timeZoneId: timeZoneId
+		});
+	}
+	if (searchTerm != "" && searchTerm != undefined && searchTerm != null) {
+		result = me.SearchActions({
+			actions: result,
+			searchTerm: searchTerm,
+			timeZoneId: timeZoneId
+		});
+	}
+    
+    result.AddField({name: "hoursSaved", baseType: "STRING"});
+    result.rows.toArray().forEach(row => {
+        let reasonCategoryUidTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+            infoTableName: "InfoTable",
+            dataShapeName: "PTC.ReasonCode.ReasonCategory"
+        });
+		reasonCategoryUidTable.AddRow({uid: row.reasonCategoryUid});
+        
+        let chartTrendTable = me.ProcessTrendDisplay({
+            isSingleAction: true,
+            reasonCategoryUid: reasonCategoryUidTable,
+            endDate: row.endDate,
+            includeEndDateEdge: true,
+            timeZoneId: timeZoneId,
+            modelUid: row.modelUid,
+            reasonTreeNodeUid: row.reasonTreeNodeUid,
+            startDate: row.startDate
+        });
+        
+        let hoursSaved = me.QueryHoursSaved({
+            chartTrendTable: chartTrendTable,
+            reasonCategoryUid: row.reasonCategoryUid,
+            baselineStartDate: row.baselineStartDate,
+            timeZoneId: timeZoneId,
+            baselineNumber: row.baselineHours,
+            baselineEndDate: row.baselineEndDate,
+            modelUid: row.modelUid,
+            reasonTreeNodeUid: row.reasonTreeNodeUi
+        });
+        row.hoursSaved = hoursSaved;
+    });
+
+
+} catch (err) {
+	logger.error("Thing [{}] Service [{}] error at line [{}] : {}", me.name, err.fileName, err.lineNumber, err);
+	throw me.LocalizeToken({
+		token: "PTC.Base.ErrorMessage"
+	});
+}
+
+function queryBuilder(equipment, reasonCategoriesTable, reasonCategoriesRows, status, owner) {
+	const query = {
+		filters: {
+			type: 'AND',
+			filters: []
+		}
+	};
+	const filters = query.filters.filters;
+
+	if (equipment) {
+		filters.push({
+			fieldName: 'modelName',
+			type: 'EQ',
+			value: equipment
+		});
+	}
+
+	if (reasonCategoriesRows > 0) {
+		let reasonCategories = [];
+		for (var i = 0; i < reasonCategoriesRows; i++) {
+			reasonCategories.push(reasonCategoriesTable.rows[i].displayName);
+		}
+		filters.push({
+			fieldName: "reasonCategoryName",
+			type: 'IN',
+			values: reasonCategories
+		});
+	}
+
+	if (status) {
+		filters.push({
+			fieldName: 'statusDefinitionName',
+			type: 'EQ',
+			value: status
+		});
+	}
+
+	if (owner) {
+		filters.push({
+			fieldName: 'owner',
+			type: 'EQ',
+			value: owner
+		});
+	}
+	return query;
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.880Z" user="SuperUser"/></ConfigurationChanges></Thing><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" description="Bridgestone Action Tracker" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:36.879Z" name="PTCDTS.ActionTrackerImpl.EntryPoint" projectName="PTCDTS.ActionTrackerImpl" published="false" tags="" thingTemplate="PTCDTS.ActionTrackerImpl.EntryPoint_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table to store the components core manager" isMultiRow="true" name="ComponentManager" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows><Row><id><![CDATA[ComponentManager]]></id><managerThingName><![CDATA[PTCDTS.ActionTrackerImpl.Manager]]></managerThingName></Row></Rows></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties><componentDefaultOrg><Value><![CDATA[PTCDTS.ActionTrackerImpl.Default_OR]]></Value><Timestamp>2023-05-11T20:39:50.955Z</Timestamp><Quality>GOOD</Quality></componentDefaultOrg><componentDefaultUserGroup><Value><![CDATA[PTCDTS.ActionTrackerImpl.Default_UG]]></Value><Timestamp>2023-05-11T20:39:50.955Z</Timestamp><Quality>GOOD</Quality></componentDefaultUserGroup><componentDeploymentState><Value><![CDATA[Configured]]></Value><Timestamp>2023-08-29T15:26:37.189Z</Timestamp><Quality>GOOD</Quality></componentDeploymentState><componentDescription><Value/><Timestamp>2023-07-20T12:38:59.492Z</Timestamp><Quality>GOOD</Quality></componentDescription><componentMainMashup><Value/><Timestamp>2023-05-12T14:59:07.142Z</Timestamp><Quality>GOOD</Quality></componentMainMashup><componentName><Value><![CDATA[Action Tracker]]></Value><Timestamp>2023-07-20T12:40:05.941Z</Timestamp><Quality>GOOD</Quality></componentName><componentThumbnail><Value/><Timestamp>2023-05-12T14:59:07.142Z</Timestamp><Quality>GOOD</Quality></componentThumbnail><componentType><Value><![CDATA[Implementation]]></Value><Timestamp>2023-05-11T20:39:50.956Z</Timestamp><Quality>GOOD</Quality></componentType><componentVersion><Value><![CDATA[1.0.0]]></Value><Timestamp>2023-05-11T20:39:51.095Z</Timestamp><Quality>GOOD</Quality></componentVersion><dependentComponents><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Common name of the component" name="ComponentName" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Component's project name" name="ComponentProjectName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-05-12T14:59:07.141Z</Timestamp><Quality>GOOD</Quality></dependentComponents><deployComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-05-12T14:59:07.141Z</Timestamp><Quality>GOOD</Quality></deployComponentStatus><migrateComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-05-12T14:59:07.141Z</Timestamp><Quality>GOOD</Quality></migrateComponentStatus><upgradeComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-05-12T14:59:07.142Z</Timestamp><Quality>GOOD</Quality></upgradeComponentStatus></ThingProperties><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.879Z" user="SuperUser"/></ConfigurationChanges></Thing></Things><Logs/><Authenticators/><ThingPackages/><NotificationDefinitions/><ApplicationKeys/><StateDefinitions/><ThingTemplates><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" baseThingTemplate="PTC.ActionTracker.EntryPoint_TT" description="Bridgestone Action Tracker" documentationContent="" effectiveThingPackage="ConfiguredThing" homeMashup="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:36.872Z" name="PTCDTS.ActionTrackerImpl.EntryPoint_TT" projectName="PTCDTS.ActionTrackerImpl" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table to store the components core manager" isMultiRow="true" name="ComponentManager" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows><Row><id><![CDATA[ComponentManager]]></id><managerThingName><![CDATA[PTC.ActionTracker.Manager]]></managerThingName></Row></Rows></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateMashupConfig"><ResultType baseType="NOTHING" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition></ServiceDefinitions><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="DeployComponent"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[// Return true as a default
+var result = true;
+
+me.UpdateMashupConfig();]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="UpdateMashupConfig"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[// table: INFOTABLE dataShape: ""
+let table = Things["PTC.ActionTracker.Manager"].GetConfigurationTable({
+	tableName: "MashupConfiguration" /* STRING */
+});
+
+table.rows.toArray().forEach(row => {
+    if(row.id == "PTC.ActionTracker.Grid"){
+        row.mashupName = "PTCDTS.ActionTrackerImpl.Grid_MU";
+    }
+});
+
+Things["PTC.ActionTracker.Manager"].SetMultiRowConfigurationTable({
+	configurationTable: table /* INFOTABLE */,
+	persistent: undefined /* BOOLEAN {"defaultValue":true} */,
+	tableName: "MashupConfiguration" /* STRING */
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><ImplementedShapes/><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.872Z" user="SuperUser"/></ConfigurationChanges></ThingTemplate><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" baseThingTemplate="PTC.ActionTracker.Manager_TT" description="Bridgestone Action Tracker" documentationContent="" effectiveThingPackage="ConfiguredThing" homeMashup="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:36.871Z" name="PTCDTS.ActionTrackerImpl.Manager_TT" projectName="PTCDTS.ActionTrackerImpl" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table used to identify managers that the building block should use" isMultiRow="true" name="ManagerConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="MashupConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="MASHUPNAME" description="name of the mashup to configure" name="mashupName" ordinal="2"/></FieldDefinitions></DataShape><Rows><Row><id><![CDATA[PTC.ActionTracker.Grid]]></id><mashupName/></Row><Row><id><![CDATA[PTC.ActionTracker.TrendChart]]></id><mashupName/></Row><Row><id><![CDATA[PTC.ActionTracker.AddAction]]></id><mashupName/></Row><Row><id><![CDATA[PTC.ActionTracker.EditAction]]></id><mashupName/></Row><Row><id><![CDATA[PTC.ActionTracker.DetailTrendChart]]></id><mashupName/></Row><Row><id><![CDATA[PTC.ActionTracker.ActionTaskCollection]]></id><mashupName/></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for dynamic menus. Menu Items can be specified here and they will show up for the given menu name. " isMultiRow="true" name="MenuConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuItemMashupName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="menuName" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="An optional field to indicate the ordering of the menu items" name="menuOrderPreference" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the optional section that groups like menus together" name="menuSectionKey" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the menu label" name="menuTitleKey" ordinal="1"/><FieldDefinition aspect.dataShape="PTC.Base.ComponentMenuConfiguration" aspect.isPrimaryKey="false" baseType="INFOTABLE" description="" name="submenu" ordinal="6"/></FieldDefinitions></DataShape><Rows><Row><menuItemMashupName><![CDATA[PTC.ActionTracker.MainFrame_MU]]></menuItemMashupName><menuName><![CDATA[MasterMenuNavigation]]></menuName><menuOrderPreference>0</menuOrderPreference><menuSectionKey/><menuTitleKey><![CDATA[PTC.ActionTracker.ActionTracker]]></menuTitleKey><submenu><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="GUID" description="Unique identifier used to identify the menu" name="guid" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuItemMashupName" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuName" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="An optional field to indicate the ordering of the menu items" name="menuOrderPreference" ordinal="6"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the optional section that groups like menus together" name="menuSectionKey" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the menu label" name="menuTitleKey" ordinal="2"/><FieldDefinition aspect.dataShape="PTC.Base.ComponentMenuConfiguration" aspect.isPrimaryKey="false" baseType="INFOTABLE" description="" name="submenu" ordinal="7"/></FieldDefinitions></DataShape><Rows/></infoTable></submenu></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="OwnersGroups" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="GROUPNAME" description="Group's name for the owners" name="ownerGroup" ordinal="1"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for any Things that need to be configured. This allows for OOTB things to be customized, and the new version that should be used can be configured here" isMultiRow="true" name="ThingConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="THINGNAME" description="Name of the Thing entity or Mashup entity that is to be configured" name="thingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><ImplementedShapes><ImplementedShape name="PTCDTS.ActionTrackerImpl.Management_TS" type="ThingShape"/></ImplementedShapes><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.871Z" user="SuperUser"/></ConfigurationChanges></ThingTemplate></ThingTemplates><ExtensionPackages/><Organizations><Organization aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:36.867Z" loginButtonStyle="" loginPrompt="" loginResetPassword="false" loginStyle="" mobileMashup="" name="PTCDTS.ActionTrackerImpl.Default_OR" projectName="PTCDTS.ActionTrackerImpl" resetMailContent="&lt;p&gt;[[resetemail.requestmade]]&lt;/p&gt;&lt;p&gt;[[resetemail.instructions]]&lt;/p&gt;&lt;p&gt;[[resetemail.helpneeded]]&lt;/p&gt;" resetMailServer="" resetMailSubject="[[resetemail.subject]]" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><loginImage/><Connections><Connection from="" to="Root"/><Connection from="Root" to="PTCDTS.ActionTrackerImpl.Admin_UG"/><Connection from="Root" to="PTCDTS.ActionTrackerImpl.Default_UG"/></Connections><OrganizationalUnits><OrganizationalUnit description="" name="PTCDTS.ActionTrackerImpl.Admin_UG"><Members><Members><Member name="PTCDTS.ActionTrackerImpl.Admin_UG" type="Group"/></Members></Members></OrganizationalUnit><OrganizationalUnit description="" name="PTCDTS.ActionTrackerImpl.Default_UG"><Members><Members><Member name="PTCDTS.ActionTrackerImpl.Default_UG" type="Group"/></Members></Members></OrganizationalUnit><OrganizationalUnit description="" name="Root"><Members><Members/></Members></OrganizationalUnit></OrganizationalUnits><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.867Z" user="SuperUser"/></ConfigurationChanges></Organization></Organizations><Menus/><ThingGroups/><Resources/><DataTags/><ThingShapes><ThingShape aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" className="" description="Bridgestone Action Tracker" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:36.869Z" name="PTCDTS.ActionTrackerImpl.Management_TS" projectName="PTCDTS.ActionTrackerImpl" tags=""><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><InstanceRunTimePermissions/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:36.869Z" user="SuperUser"/></ConfigurationChanges></ThingShape></ThingShapes><Subsystems/><NotificationContents/></Entities>

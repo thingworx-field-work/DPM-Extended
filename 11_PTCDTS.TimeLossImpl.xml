@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Entities build="b1495" majorVersion="9" minorVersion="3" modelPersistenceProviderPackage="MssqlPersistenceProviderPackage" revision="8" schemaVersion="1134" universal=""><StyleDefinitions/><Networks/><PersistenceProviderPackages/><Mashups/><ScriptFunctionLibraries/><Projects><Project artifactId="" aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.projectType="Component" dependsOn="{&quot;extensions&quot;:&quot;&quot;,&quot;projects&quot;:&quot;PTC.TimeLossImpl:0.0.0&quot;}" description="" documentationContent="" groupId="" homeMashup="" lastModifiedDate="2023-08-29T15:25:38.311Z" minPlatformVersion="" name="PTCDTS.TimeLossImpl" packageVersion="1.0.0" projectName="PTCDTS.TimeLossImpl" publishResult="" state="DRAFT" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.311Z" user="SuperUser"/></ConfigurationChanges></Project></Projects><Users/><DirectoryServices/><Widgets/><MediaEntities/><Groups><Group aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:38.297Z" name="PTCDTS.TimeLossImpl.Admin_UG" projectName="PTCDTS.TimeLossImpl" scimDisplayName="" scimExternalId="" scimId="" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><Members><Members><Member name="PTCDTS.Base.Permissions.ApplicationAdmin_UG" type="Group"/></Members></Members><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.297Z" user="SuperUser"/></ConfigurationChanges></Group><Group aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:38.298Z" name="PTCDTS.TimeLossImpl.Default_UG" projectName="PTCDTS.TimeLossImpl" scimDisplayName="" scimExternalId="" scimId="" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><Members><Members><Member name="PTCDTS.Base.Permissions.Default_UG" type="Group"/></Members></Members><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.298Z" user="SuperUser"/></ConfigurationChanges></Group></Groups><PersistenceProviders/><ModelTags/><LocalizationTables/><Dashboards/><StyleThemes/><DataShapes/><Things><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" description="PTCDTS.TimeLossImpl" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:38.315Z" name="PTCDTS.TimeLossImpl.EntryPoint" projectName="PTCDTS.TimeLossImpl" published="false" tags="" thingTemplate="PTCDTS.TimeLossImpl.EntryPoint_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table to store the components core manager" isMultiRow="true" name="ComponentManager" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows><Row><id><![CDATA[ComponentManager]]></id><managerThingName><![CDATA[PTCDTS.TimeLossImpl.Manager]]></managerThingName></Row></Rows></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties><componentDefaultOrg><Value><![CDATA[PTCDTS.TimeLossImpl.Default_OR]]></Value><Timestamp>2023-02-02T16:40:30.261Z</Timestamp><Quality>GOOD</Quality></componentDefaultOrg><componentDefaultUserGroup><Value><![CDATA[PTCDTS.TimeLossImpl.Default_UG]]></Value><Timestamp>2023-02-02T16:40:30.261Z</Timestamp><Quality>GOOD</Quality></componentDefaultUserGroup><componentDeploymentState><Value><![CDATA[Configured]]></Value><Timestamp>2023-08-29T15:26:42.841Z</Timestamp><Quality>GOOD</Quality></componentDeploymentState><componentDescription><Value><![CDATA[PTCDTS.TimeLossImpl]]></Value><Timestamp>2023-02-02T16:40:30.261Z</Timestamp><Quality>GOOD</Quality></componentDescription><componentMainMashup><Value/><Timestamp>2023-02-10T18:17:20.565Z</Timestamp><Quality>GOOD</Quality></componentMainMashup><componentName><Value><![CDATA[PTCDTS.TimeLossImpl]]></Value><Timestamp>2023-02-02T16:40:30.261Z</Timestamp><Quality>GOOD</Quality></componentName><componentThumbnail><Value/><Timestamp>2023-02-10T18:17:20.565Z</Timestamp><Quality>GOOD</Quality></componentThumbnail><componentType><Value><![CDATA[Implementation]]></Value><Timestamp>2023-02-02T16:40:30.261Z</Timestamp><Quality>GOOD</Quality></componentType><componentVersion><Value/><Timestamp>2023-02-10T18:17:20.565Z</Timestamp><Quality>GOOD</Quality></componentVersion><dependentComponents><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Common name of the component" name="ComponentName" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Component's project name" name="ComponentProjectName" ordinal="0"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-02-10T18:17:20.565Z</Timestamp><Quality>GOOD</Quality></dependentComponents><deployComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="0"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-02-10T18:17:20.565Z</Timestamp><Quality>GOOD</Quality></deployComponentStatus><migrateComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="0"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-02-10T18:17:20.565Z</Timestamp><Quality>GOOD</Quality></migrateComponentStatus><upgradeComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="0"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="0"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-02-10T18:17:20.565Z</Timestamp><Quality>GOOD</Quality></upgradeComponentStatus><componentAbstractBlockName><Value/><Timestamp>2023-02-10T18:17:20.565Z</Timestamp><Quality>GOOD</Quality></componentAbstractBlockName></ThingProperties><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.315Z" user="SuperUser"/></ConfigurationChanges></Thing><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" description="PTCDTS.TimeLossImpl" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:38.313Z" name="PTCDTS.TimeLossImpl.Manager" projectName="PTCDTS.TimeLossImpl" published="false" tags="" thingTemplate="PTCDTS.TimeLossImpl.Manager_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Analysis management Thing" isMultiRow="false" name="AnalysisManagement" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" aspect.thingShape="PTC.TimeLoss.AnalysisManagement_TS" baseType="THINGNAME" description="Analysis management Thing" name="analysisManagement" ordinal="1"/></FieldDefinitions></DataShape><Rows><Row><analysisManagement><![CDATA[PTCDTS.TimeLossImpl.SQLThingUtility]]></analysisManagement></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table used to identify managers that the building block should use" isMultiRow="true" name="ManagerConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="MashupConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="MASHUPNAME" description="name of the mashup to configure" name="mashupName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for dynamic menus. Menu Items can be specified here and they will show up for the given menu name. " isMultiRow="true" name="MenuConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuItemMashupName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="menuName" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="An optional field to indicate the ordering of the menu items" name="menuOrderPreference" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the optional section that groups like menus together" name="menuSectionKey" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the menu label" name="menuTitleKey" ordinal="1"/><FieldDefinition aspect.dataShape="PTC.Base.ComponentMenuConfiguration" aspect.isPrimaryKey="false" baseType="INFOTABLE" description="" name="submenu" ordinal="6"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for any Things that need to be configured. This allows for OOTB things to be customized, and the new version that should be used can be configured here" isMultiRow="true" name="ThingConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="THINGNAME" description="Name of the Thing entity or Mashup entity that is to be configured" name="thingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties><PTCAnalyticsServerPrefix><Value><![CDATA[TLA-AnalyticsServer]]></Value><Timestamp>2023-02-10T19:54:44.824Z</Timestamp><Quality>GOOD</Quality></PTCAnalyticsServerPrefix><PTCProfileMaxDepth><Value>3</Value><Timestamp>1970-01-01T00:00:00.000Z</Timestamp><Quality>UNKNOWN</Quality></PTCProfileMaxDepth><PTCProfileMinimumPercent><Value>2.0</Value><Timestamp>1970-01-01T00:00:00.000Z</Timestamp><Quality>UNKNOWN</Quality></PTCProfileMinimumPercent><PTCProfileScenarioCount><Value>25</Value><Timestamp>1970-01-01T00:00:00.000Z</Timestamp><Quality>UNKNOWN</Quality></PTCProfileScenarioCount></ThingProperties><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.313Z" user="SuperUser"/></ConfigurationChanges></Thing><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" effectiveThingPackage="SQLThingPackage" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:38.316Z" name="PTCDTS.TimeLossImpl.SQLThingUtility" projectName="PTCDTS.TimeLossImpl" published="false" tags="" thingTemplate="PTCDTS.TimeLossImpl.SQLThingUtility_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Connection Monitoring Settings" isMultiRow="false" name="ConnectionMonitoring" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="30000.0" aspect.friendlyName="Monitor Rate (milliseconds)" baseType="NUMBER" description="Monitor rate in milliseconds" name="connectionMonitorRate" ordinal="1"/><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Enable Monitoring" baseType="BOOLEAN" description="Enable connection monitoring" name="enableMonitor" ordinal="0"/><FieldDefinition aspect.defaultValue="1.0" aspect.friendlyName="Number of Retries" baseType="NUMBER" description="Number of retries" name="numberOfRetries" ordinal="2"/><FieldDefinition aspect.defaultValue="2000.0" aspect.friendlyName="Retry Delay (milliseconds)" baseType="NUMBER" description="Retry delay in milliseconds" name="retryDelay" ordinal="3"/></FieldDefinitions></DataShape><Rows><Row><connectionMonitorRate>30000.0</connectionMonitorRate><enableMonitor>false</enableMonitor><numberOfRetries>1.0</numberOfRetries><retryDelay>2000.0</retryDelay></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Connection Provider" isMultiRow="false" name="ConnectionProvider" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Participate in platform transactions" baseType="BOOLEAN" description="Participate in platform transactions" name="isTransactional" ordinal="0"/><FieldDefinition aspect.defaultValue="ThingworxPersistenceProvider" aspect.friendlyName="Persistence Provider Name" baseType="PERSISTENCEPROVIDERNAME" description="The Persistence Provider from which to retrieve connections" name="persistenceProviderName" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><isTransactional>false</isTransactional><persistenceProviderName><![CDATA[PTC.DBConnection.JdbcPersistenceProvider]]></persistenceProviderName></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Field/Column Name Aliases" isMultiRow="true" name="ColumnAliases" ordinal="1"><DataShape><FieldDefinitions><FieldDefinition aspect.friendlyName="Database Column Name" baseType="STRING" description="Database column name" name="columnName" ordinal="0"/><FieldDefinition aspect.friendlyName="Thingworx Field Name" baseType="STRING" description="Thingworx field name" name="fieldName" ordinal="1"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.316Z" user="SuperUser"/></ConfigurationChanges></Thing></Things><Logs/><Authenticators/><ThingPackages/><NotificationDefinitions/><ApplicationKeys/><StateDefinitions/><ThingTemplates><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" baseThingTemplate="PTC.TimeLossImpl.Manager_TT" description="PTCDTS.TimeLossImpl" documentationContent="" effectiveThingPackage="ConfiguredThing" homeMashup="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:38.304Z" name="PTCDTS.TimeLossImpl.Manager_TT" projectName="PTCDTS.TimeLossImpl" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Analysis management Thing" isMultiRow="false" name="AnalysisManagement" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" aspect.thingShape="PTC.TimeLoss.AnalysisManagement_TS" baseType="THINGNAME" description="Analysis management Thing" name="analysisManagement" ordinal="1"/></FieldDefinitions></DataShape><Rows><Row><analysisManagement/></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table used to identify managers that the building block should use" isMultiRow="true" name="ManagerConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="MashupConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="MASHUPNAME" description="name of the mashup to configure" name="mashupName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for dynamic menus. Menu Items can be specified here and they will show up for the given menu name. " isMultiRow="true" name="MenuConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuItemMashupName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="menuName" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="An optional field to indicate the ordering of the menu items" name="menuOrderPreference" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the optional section that groups like menus together" name="menuSectionKey" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the menu label" name="menuTitleKey" ordinal="1"/><FieldDefinition aspect.dataShape="PTC.Base.ComponentMenuConfiguration" aspect.isPrimaryKey="false" baseType="INFOTABLE" description="" name="submenu" ordinal="6"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for any Things that need to be configured. This allows for OOTB things to be customized, and the new version that should be used can be configured here" isMultiRow="true" name="ThingConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="THINGNAME" description="Name of the Thing entity or Mashup entity that is to be configured" name="thingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="CreateSynonymProfilesJob"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let serviceName="CreateSynonymProfilesJob";
+if (logger.debugEnabled){
+    logger.debug("{}: equipmentThingName={}", serviceName, equipmentThingName);
+    logger.debug("{}: startDate={}", serviceName, startDate);
+    logger.debug("{}: endDate={}", serviceName, endDate);
+    logger.debug("{}: materialUID={}", serviceName, materialUID);
+    logger.debug("{}: lossCategory={}", serviceName, lossCategory);
+}
+
+let workUnitUid = "";
+let workCenterUid="";
+let result = "failed";
+
+let equipmentThing = Things[equipmentThingName];
+let workCenterThing = equipmentThing;
+let areaThing = equipmentThing;
+
+// Determine if this is a workarea, in which case, get the parent area since that contains the dataset information.
+let modelTypeName = "Area";
+let modelType = equipmentThing.GetPTCModelType();
+
+if (modelType.name.trim().toUpperCase() === "WORKUNIT") {  
+    workUnitUid = ""+equipmentThing.GetPTCModelUid();
+    workCenterThingName = equipmentThing.GetPTCParent().thingName;
+    workCenterThing = Things[workCenterThingName];
+    modelType = workCenterThing.GetPTCModelType();   
+}
+
+if (modelType.name.trim().toUpperCase() === "WORKCENTER") {        
+    areaThing = Things[workCenterThing.GetPTCParent().thingName];
+    modelTypeName = "Workcenter";
+    workCenterUid = ""+workCenterThing.GetPTCModelUid();
+}
+
+if(workUnitUid.trim() != ""){
+    modelTypeName = "Workunit";
+}
+
+if (!equipmentThing.PTCProfileServiceLock) {
+    try {
+        equipmentThing.PTCProfileServiceLock = true;
+
+        if (!areaThing.PTCAnalyticDatasetID || areaThing.PTCAnalyticDatasetID.trim().length === 0) {
+            throw "There is no existing dataset.";
+        }
+        
+        let status = me.GetDatasetStatus({datasetId: areaThing.PTCAnalyticDatasetID});
+        if (status.trim().toUpperCase() !== "COMPLETED") {
+            if (status.trim().toUpperCase() === "FAILED") {
+                logger.error("CreateSynonymProfilesJob: Dataset creation failed!");
+                throw "Dataset creation failed";
+            } else {
+                logger.error("CreateSynonymProfilesJob: Dataset creation still in progress");
+                throw "Dataset creation in progress";
+            }
+        }
+
+        let profiles = equipmentThing.PTCProfileJobInfos;
+        let equipmentName = equipmentThing.GetPTCModel().getRow(0).name;
+
+        let maxDepth          = areaThing.PTCProfileMaxDepth;
+        let exclusions        = areaThing.PTCExcludedFeatures;
+        let numberOfScenario  = areaThing.PTCProfileScenarioCount;
+        let minDataPercentage = areaThing.PTCProfileMinimumPercent;
+        let materialName      = getMaterialName(materialUID);
+
+        let goalName = "TimeLossCurrentPB";
+        if (lossCategory && lossCategory.trim().length > 0) {
+            goalName = me.TranslateLossCategoryToFeatureName({lossCategory: lossCategory});
+        }
+
+        let profileJobId = GetProfileId(goalName, materialName, maxDepth, numberOfScenario, minDataPercentage, exclusions, profiles, startDate, endDate);
+        if (profileJobId) {
+            result = profileJobId;
+        } else {
+            let manager = Things[areaThing.GetPTCTimeLossManager()];
+            let ProfileThing = Things[manager.GetProfileThingName()];
+            let datasetRef = GetDatasetRef(areaThing, goalName, workCenterUid, workUnitUid, materialName, startDate, endDate);
+            let tags = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                infoTableName: "InfoTable",
+                dataShapeName: "GenericStringList"
+            });
+            tags.AddRow({item: "builderprofile"});
+
+            result = ProfileThing.CreateSynonymousJob({
+                tags                   : tags                     /* INFOTABLE {"dataShape":"GenericStringList"} */ ,
+                jobName                : "TLA_Synonym_Profile_For_" + modelTypeName + "_" + equipmentName /* STRING */ ,
+                maxDepth               : maxDepth                 /* INTEGER {"defaultValue":4} */ ,
+                maximize               : true                     /* BOOLEAN {"defaultValue":true} */ ,
+                goalName               : goalName                 /* STRING */ ,
+                beamWidth              : 5                        /* INTEGER {"defaultValue":5} */ ,
+                datasetRef             : datasetRef               /* INFOTABLE {"dataShape":"AnalyticsDatasetRef"} */,
+                useZScores             : true                     /* BOOLEAN {"defaultValue":true} */ ,
+                description            : "TLA_Synonym_Profile job for TLA " + modelTypeName + " " + equipmentName /* STRING */ ,
+                allowOverlap           : true                     /* BOOLEAN {"defaultValue":false} */ ,
+                maxNGramSize           : undefined                /* INTEGER {"defaultValue":1} */ ,
+                maxVocabSize           : undefined                /* INTEGER {"defaultValue":1000} */ ,
+                maxProfileCount        : numberOfScenario         /* INTEGER {"defaultValue":10} */ ,
+                binningStrategy        : "DENSITY"                /* STRING {"defaultValue":"UNIFORM"} */ ,
+                categoryToOptimize     : undefined                /* STRING */ ,
+                minDocumentFrequency   : 0                        /* NUMBER {"defaultValue":0} */ ,
+                minPopulationPercentage: minDataPercentage * 0.01 /* NUMBER {"defaultValue":0.0025} */
+            });
+            if (result.length === 36) {
+                UpdateProfileJobInfos(equipmentThing, areaThing, result, goalName, materialName, profiles);
+            } else {
+                throw "Failed to create profile job";
+            }
+        }
+    } catch (err) {
+        logger.error("CreateSynonymProfilesJob: {}.{} error at line {}: {}", me.name, err.fileName, err.lineNumber, err);
+    } finally {
+        equipmentThing.PTCProfileServiceLock = false;
+    }
+    logger.debug("Finish executing service RunSynonymProfilesJob...");
+}
+
+
+/* ========================================================================== */
+/* ======================== Private Functions =============================== */
+/* ========================================================================== */
+
+function GetProfileId(goalName, materialName, maxDepth, numberOfScenario, minDataPercentage, areaExclusions, profiles, startDate, endDateFullDay) {
+    var query = {
+        "filters": {
+            "type": "AND",
+            "filters": [
+                {"type": "EQ", "fieldName": "dateEnd",           "value": endDateFullDay.getTime()},
+                {"type": "EQ", "fieldName": "maxDepth",          "value": maxDepth},
+                {"type": "EQ", "fieldName": "material",          "value": (materialName ? materialName : "All")},
+                {"type": "EQ", "fieldName": "dateStart",         "value": startDate.getTime()},
+                {"type": "EQ", "fieldName": "lossCategory",      "value": goalName},
+                {"type": "EQ", "fieldName": "numberOfScenario",  "value": numberOfScenario},
+                {"type": "EQ", "fieldName": "minDataPercentage", "value": minDataPercentage}
+            ]
+        }
+    };
+
+    let existingJobs = Resources["InfoTableFunctions"].Query({
+        t    : profiles,
+        query: query
+    });
+
+    // If no existing profiles match the fields listed above, create a new profile
+    if (!existingJobs || existingJobs.rows.length === 0) {
+        return undefined;
+    }
+
+    // check if any profiles have all the exclusion fields requested AND
+    // does not have any extra fields excluded
+    let profileId;
+    for (let i=0; i < existingJobs.getRowCount(); i++) {
+        let job = existingJobs.getRow(i);
+        // First check, if any profile job has same list of exclusion fields
+        if (sameFieldsInList(areaExclusions.split(","), job.exclusions.split(","))) {
+            // if so, may sure this job does not have any additional fields
+            if (sameFieldsInList(job.exclusions.split(","), areaExclusions.split(","))) {
+                profileId=job.profileJobId;
+                break;
+            }
+        }
+    }
+
+    return profileId;
+}
+
+function GetDatasetRef(areaThing, goalName, workCenterUid, workUnitUid, materialName, startDate, endDate) {
+    let datasetRef = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+        infoTableName: "InfoTable",
+        dataShapeName: "AnalyticsDatasetRef"
+    });
+
+    let datasetUri = areaThing.PTCAnalyticDatasetID;
+    let filter = "(epochPBStartTime >= " + startDate.getTime() + " AND epochPBEndTime <= " + endDate.getTime() + ")";
+
+    if (workCenterUid && workCenterUid.trim().length > 0) {
+        filter += " AND WorkCenterUid="+workCenterUid;
+    }
+
+    if (workUnitUid && workUnitUid.trim().length > 0) {
+        filter += " AND WorkUnitUid="+workUnitUid;
+        filter += " AND IsAggregate=0";
+    }else{
+        filter += " AND IsPacemaker=1";
+        filter += " AND IsAggregate=1";
+    }
+
+    if (materialName && materialName.trim().length > 0) {
+        filter += " AND CurrentMaterial = '" + materialName + "'";
+    }
+
+    let exclusions = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+        infoTableName: "InfoTable",
+        dataShapeName: "GenericStringList"
+    });
+
+    areaThing.PTCExcludedFeatures.split(",").forEach(str => {
+        if (str !== goalName) {
+            let newEntry = {
+                item: str // STRING [Primary Key]
+            };
+            exclusions.AddRow(newEntry);
+        }
+    });
+    exclusions = areaThing.PTCExcludedFeatures.trim().length > 0 ? exclusions : null;
+
+    let newEntry = {
+        data      : undefined,               // INFOTABLE
+        format    : "parquet",               // STRING
+        filter    : filter,                  // STRING
+        metadata  : undefined,               // INFOTABLE {"dataShape":"AnalyticsDatasetMetadata"}
+        exclusions: exclusions,              // INFOTABLE {"dataShape":"GenericStringList"}
+        datasetUri: "dataset:/" + datasetUri // STRING
+    };
+    datasetRef.AddRow(newEntry);
+    
+    return datasetRef;
+}
+
+function UpdateProfileJobInfos(equipmentThing, areaThing, jobId, goalName, materialName, profiles) {
+    let maxDepth = areaThing.PTCProfileMaxDepth;
+    let numberOfScenario = areaThing.PTCProfileScenarioCount;
+    let minDataPercentage = areaThing.PTCProfileMinimumPercent;
+    let exclusions = areaThing.PTCExcludedFeatures;
+
+    let newEntry = {
+        dateEnd          : endDate.getTime(),   // LONG [Primary Key]
+        maxDepth         : maxDepth,            // INTEGER [Primary Key] {"minimumValue":1,"maximumValue":3}
+        material         : (materialName ? materialName : "All"),        // STRING [Primary Key]
+        dateStart        : startDate.getTime(), // LONG [Primary Key]
+        exclusions       : exclusions,          // STRING [Primary Key]
+        lossCategory     : goalName,            // STRING
+        profileJobId     : jobId,               // STRING
+        numberOfScenario : numberOfScenario,    // INTEGER [Primary Key] {"minimumValue":1,"maximumValue":100}
+        minDataPercentage: minDataPercentage    // NUMBER [Primary Key] {"minimumValue":1,"maximumValue":100}
+    };
+    profiles.AddRow(newEntry);
+    equipmentThing.PTCProfileJobInfos = profiles;
+}
+
+function getMaterialName(materialUID) {
+    if (!materialUID) {
+        return undefined;
+    }
+    
+    let materialMasterManagerName = me.GetConfiguredManagerForIdentifier({
+        identifier: "PTC.MaterialMaster.Manager"
+    });
+
+    let infoTable = Things[materialMasterManagerName].GetMaterialMaster({uid: materialUID});
+    if (!infoTable || infoTable.getRowCount() === 0) {
+        return undefined;
+    }
+    
+    return infoTable.getRow(0).id;
+}
+
+function sameFieldsInList(arrayA, arrayB) {
+    return arrayA.every(fieldName => {
+        return (arrayB.indexOf(fieldName) > -1);
+    });
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetFieldDefinitionsByArea"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let serviceName="GetFieldDefinitionsByArea";
+if (logger.debugEnabled){
+    logger.debug("{}: Entering", serviceName);
+    logger.debug("{}: areaUID={}", serviceName, areaUID);
+}
+
+if (!areaUID || areaUID.trim().length == 0) {
+    throw "Must supply areaUID";
+}
+
+let json = getJSONArray();
+getValues(json);
+
+let apcolumns = JSON.parse(me.GatherAPColumnsSQL());
+
+result = json.concat(apcolumns);
+
+if (logger.debugEnabled) {
+    logger.debug("{}: Exiting", serviceName);
+}
+
+// **************************************************************************
+// **************************************************************************
+// **************************************************************************
+
+function getValues(json) {
+    let dbThing = me.GetAnalysisManagement();
+
+    let entityList = Resources["EntityServices"].GetEntityListByRegEx({
+        type    : "Thing",
+        tags    : undefined,
+        maxItems: 5,
+        nameMask: dbThing
+    });
+
+    if (entityList.getRowCount() > 0) {
+        // Set Shift field names
+        let infoTable = Things[dbThing].CallGetDPMShifts();
+        let array=createArrayFromInfoTable(infoTable);
+        setFieldNameValues(json, array, "ShiftName");
+        setFieldNameValues(json, array, "ShiftPrevious");
+
+        // Set Material field names
+        infoTable = Things[dbThing].CallGetDPMMaterials();
+        array=createArrayFromInfoTable(infoTable);
+        setFieldNameValues(json, array, "CurrentMaterial");
+        setFieldNameValues(json, array, "PreviousMaterial");
+
+        // Set WorkCenterName field names
+        infoTable = Things[dbThing].CallGetDPMWorkCenterNames();
+        array=createArrayFromInfoTable(infoTable);
+        setFieldNameValues(json, array, "WorkCenterName");
+    }
+}
+
+function createArrayFromInfoTable(infoTable) {
+    let array=[];
+    infoTable.rows.forEach(row => {
+        array.push(row["NAME"]);
+    });
+    return array;
+}
+
+function setFieldNameValues(json, array, fieldName) {
+    let obj = json.find(o => o.fieldName === fieldName);
+    obj.values=array;
+}
+
+function getJSONArray() {
+return [
+    {"fieldName": "ProductionBlockUID",                 "dataType": "STRING",   "opType": "INFORMATIONAL" },
+    {"fieldName": "WorkCenterName",                     "dataType": "STRING",   "opType": "CATEGORICAL",    "values": []},
+    {"fieldName": "WorkCenterUid",                      "dataType": "STRING",   "opType": "INFORMATIONAL" },
+    //MMM - Add Additional Fields
+    {"fieldName": "WorkUnitName",                     "dataType": "STRING",   "opType": "CATEGORICAL",    "values": []},
+    {"fieldName": "WorkUnitUid",                      "dataType": "STRING",   "opType": "INFORMATIONAL" },
+    {"fieldName": "IsPacemaker",                     "dataType": "BOOLEAN",   "opType": "INFORMATIONAL"},
+    {"fieldName": "IsAggregate",                     "dataType": "BOOLEAN",   "opType": "INFORMATIONAL"},
+    // MMM End change
+    {"fieldName": "ProductionBlockStartTime",           "dataType": "DATETIME", "opType": "INFORMATIONAL" },
+    {"fieldName": "ProductionBlockEndTime",             "dataType": "DATETIME", "opType": "INFORMATIONAL" },
+    {"fieldName": "epochPBStartTime",                   "dataType": "DOUBLE",   "opType": "CONTINUOUS"    },
+    {"fieldName": "epochPBEndTime",                     "dataType": "DOUBLE",   "opType": "CONTINUOUS"    },
+    {"fieldName": "CurrentMaterial",                    "dataType": "STRING",   "opType": "CATEGORICAL",    "values": [] },
+    {"fieldName": "PreviousMaterial",                   "dataType": "STRING",   "opType": "CATEGORICAL",    "values": [] },
+    {"fieldName": "DayOfWeek",                          "dataType": "STRING",   "opType": "ORDINAL",        "values": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] },
+    {"fieldName": "TimeIntoJobOrder",                   "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeIntoShift",                      "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeIntoShiftOrdinal",               "dataType": "STRING",   "opType": "ORDINAL",        "values": ["1Hour","2Hour","3Hour","4Hour","5Hour","6Hour","7Hour","8Hour","9Hour","10Hour","11Hour","12Hour","Greater12Hours","TimeIntoShiftUnavailable"] },
+    {"fieldName": "TimeIntoCurrentMaterial",            "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "JobPausedAtEndofCurrentPB",          "dataType": "STRING",   "opType": "BOOLEAN",        "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "JobRestartedCurrentPB",              "dataType": "STRING",   "opType": "BOOLEAN",        "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "ShiftName",                          "dataType": "STRING",   "opType": "CATEGORICAL",    "values": [] },
+    {"fieldName": "CountProductionEventsInPB",          "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "CountProductionEventsInPreviousPB",  "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "IdealCycleTime",                     "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "ActualAsPercentOfIdealCycleTimePB",  "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "UnitsProducedInProductionBlock",     "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "ShiftPrevious",                      "dataType": "STRING",   "opType": "CATEGORICAL",    "values": [] },
+    {"fieldName": "ShiftChangeInNextPB",                "dataType": "STRING",   "opType": "BOOLEAN",        "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "NumberOfUnitsToBeProduced",          "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "ProductionBlockDuration",            "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossCurrentPB",                  "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossScrapCurrentPB",             "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossUnscheduledCurrentPB",       "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossPlannedDowntimeCurrentPB",   "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossUnplannedDowntimeCurrentPB", "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossChangeoverCurrentPB",        "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossUnaccountedTimeCurrentPB",   "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossSpeedLossCurrentPB",         "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossSmallStopsCurrentPB",        "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeSinceLastPlannedDowntime",       "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossScrapPrevious",              "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossUnscheduledPrevious",        "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossPlannedDowntimePrevious",    "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossUnplannedDowntimePrevious",  "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossChangeoverPrevious",         "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossUnaccountedTimePrevious",    "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossSpeedLossPrevious",          "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "TimeLossSmallStopsPrevious",         "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "JobCountLastShift",                  "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "JobCountLastDay",                    "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "JobCountLastWeek",                   "dataType": "STRING",   "opType": "CONTINUOUS",     "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 },
+    {"fieldName": "isOvertime",                         "dataType": "STRING",   "opType": "BOOLEAN",        "missingValueTreatment": "AS_VALUE", "missingValueReplacement": 0 }
+];
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><ImplementedShapes/><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.304Z" user="SuperUser"/></ConfigurationChanges></ThingTemplate><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" baseThingTemplate="PTC.TimeLossImpl.SQLThingUtility_TT" description="" documentationContent="" effectiveThingPackage="SQLThingPackage" homeMashup="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:38.300Z" name="PTCDTS.TimeLossImpl.SQLThingUtility_TT" projectName="PTCDTS.TimeLossImpl" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Connection Monitoring Settings" isMultiRow="false" name="ConnectionMonitoring" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="30000.0" aspect.friendlyName="Monitor Rate (milliseconds)" baseType="NUMBER" description="Monitor rate in milliseconds" name="connectionMonitorRate" ordinal="1"/><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Enable Monitoring" baseType="BOOLEAN" description="Enable connection monitoring" name="enableMonitor" ordinal="0"/><FieldDefinition aspect.defaultValue="1.0" aspect.friendlyName="Number of Retries" baseType="NUMBER" description="Number of retries" name="numberOfRetries" ordinal="2"/><FieldDefinition aspect.defaultValue="2000.0" aspect.friendlyName="Retry Delay (milliseconds)" baseType="NUMBER" description="Retry delay in milliseconds" name="retryDelay" ordinal="3"/></FieldDefinitions></DataShape><Rows><Row><connectionMonitorRate>30000.0</connectionMonitorRate><enableMonitor>false</enableMonitor><numberOfRetries>1.0</numberOfRetries><retryDelay>2000.0</retryDelay></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Connection Provider" isMultiRow="false" name="ConnectionProvider" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Participate in platform transactions" baseType="BOOLEAN" description="Participate in platform transactions" name="isTransactional" ordinal="0"/><FieldDefinition aspect.defaultValue="ThingworxPersistenceProvider" aspect.friendlyName="Persistence Provider Name" baseType="PERSISTENCEPROVIDERNAME" description="The Persistence Provider from which to retrieve connections" name="persistenceProviderName" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><isTransactional>false</isTransactional><persistenceProviderName><![CDATA[PTC.DBConnection.JdbcPersistenceProvider]]></persistenceProviderName></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Field/Column Name Aliases" isMultiRow="true" name="ColumnAliases" ordinal="1"><DataShape><FieldDefinitions><FieldDefinition aspect.friendlyName="Database Column Name" baseType="STRING" description="Database column name" name="columnName" ordinal="0"/><FieldDefinition aspect.friendlyName="Thingworx Field Name" baseType="STRING" description="Thingworx field name" name="fieldName" ordinal="1"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="CreateDBFunctions"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let services = [
+//    "CreateTLAEventType",
+//    "CreateGetAnalyticDataAllEvents",
+//    "CreateGetAnalyticDataByDay",
+//    "CreateGetAnalyticDataByProductionBlock",
+//    "CreateGetAnalyticDataByShift",
+//    "CreateGetAnalyticDataByWeek",
+//    "CreateGetAnalyticDataLastPlannedDateTime",
+//    "CreateGetAnalyticDataOpByProductionBlock",
+//    "CreateGetAnalyticPreviousMaterialByProductionBlock",
+//    "CreateGetAnalyticPreviousShiftByProductionBlock",
+    "CreateGetAnalyticDataset",
+];
+
+services.forEach(service => {
+    try {
+        me[service]();
+    } catch (err) {
+        logger.error("Thing [{}] Service [{}] error at line [{}] : {}", me.name, err.fileName, err.lineNumber, err);
+        logger.error("Error running service : [{}]", service);
+    }
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="SQLCommand" name="CreateGetAnalyticDataset"><ConfigurationTables><ConfigurationTable dataShapeName="" description="SQLCommand" isMultiRow="false" name="Query" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="NUMBER" description="maxItems" name="maxItems" ordinal="0"/><FieldDefinition baseType="STRING" description="sql" name="sql" ordinal="0"/><FieldDefinition baseType="NUMBER" description="timeout" name="timeout" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><maxItems>500.0</maxItems><sql><![CDATA[CREATE OR ALTER PROCEDURE GetAnalyticDataset(
+    @equipmentinfo AS equipmentinfotype READONLY,
+    @starttime DATETIMEOFFSET,
+    @endtime DATETIMEOFFSET,
+    @apcolumns NVARCHAR(MAX),
+    @offsetmin VARCHAR(MAX)
+)
+AS
+BEGIN
+
+DROP TABLE IF EXISTS #allevents;
+CREATE TABLE #allevents(eventuid BIGINT, modeluid BIGINT, workcenteruid BIGINT,  productionblockuid BIGINT, shiftinstanceuid BIGINT, joborderuid BIGINT, pbstarttime DATETIMEOFFSET, pbendtime DATETIMEOFFSET, eventcategoryuid BIGINT, eventcategoryname VARCHAR(255), quantity NUMERIC(18, 5), idealcycletime NUMERIC(18, 5), lastplanneddowntimetime DATETIMEOFFSET, duration NUMERIC(18, 5), eventEnded INT)
+
+DECLARE @unplannedUID VARCHAR(5);
+SET @unplannedUID = (SELECT uid FROM reasoncategory WHERE name = 'Planned Downtime')
+
+DECLARE @runningUID VARCHAR(5);
+SET @runningUID = (SELECT uid FROM reasoncategory WHERE name = 'Running')
+
+INSERT INTO #allevents
+EXEC GetAnalyticDataAllEvents @equipmentinfo, @starttime, @endtime, @unplannedUID
+
+
+DECLARE @modeluid BIGINT, @startdatetime DATETIMEOFFSET, @enddatetime DATETIMEOFFSET
+
+
+DECLARE CurName CURSOR FAST_FORWARD READ_ONLY
+FOR
+SELECT modeluid as modeluid, startdatetime as startdatetime, @starttime as enddatetime
+FROM @equipmentinfo ei
+INNER JOIN productionblock pb ON pb.modeluid = ei.equipmentuid
+WHERE pb.startdatetime < @starttime AND pb.enddatetime >= @starttime
+UNION
+Select modeluid as modeluid, pbstarttime as startdatetime, pbendtime as enddatetime
+from #allevents ae
+where pbendtime < @starttime AND ae.eventcategoryuid != @runningUID;
+
+OPEN CurName
+
+FETCH NEXT FROM CurName INTO @modeluid, @startdatetime, @enddatetime
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+
+    DECLARE @equipWorkcenter AS equipmentinfotype
+    DELETE FROM @equipWorkcenter
+    INSERT INTO @equipWorkcenter
+    VALUES (@modeluid)
+
+    ---Delete daisy chained event---
+    DROP TABLE IF EXISTS #oldevents;
+    CREATE TABLE #oldevents(eventuid BIGINT, modeluid BIGINT, workcenteruid BIGINT,  productionblockuid BIGINT, shiftinstanceuid BIGINT, joborderuid BIGINT, pbstarttime DATETIMEOFFSET, pbendtime DATETIMEOFFSET, eventcategoryuid BIGINT, eventcategoryname VARCHAR(255), quantity NUMERIC(18, 5), idealcycletime NUMERIC(18, 5), lastplanneddowntimetime DATETIMEOFFSET, duration NUMERIC(18, 5), eventEnded INT)
+
+    INSERT INTO #oldevents
+    EXEC GetAnalyticDataAllEvents @equipWorkcenter, @startdatetime, @enddatetime, @unplannedUID
+
+    DELETE FROM #oldevents where pbstarttime < @startdatetime
+    ---combine both table---
+    INSERT INTO #allevents
+    SELECT * FROM #oldevents
+
+    FETCH NEXT FROM CurName INTO @modeluid, @startdatetime, @enddatetime
+
+END
+
+CLOSE CurName
+DEALLOCATE CurName
+
+ --Delete all running availability event
+DELETE from #allevents where eventcategoryuid = @runningUID
+
+ --Delete all event from a production block where the availability event is not ended except running.
+DELETE from #allevents WHERE productionblockuid IN (
+ SELECT productionblockuid FROM #allevents ae where eventEnded = 0 AND ae.eventcategoryuid != @runningUID
+)
+ --remove duplicate events
+;WITH cte AS (
+  SELECT eventuid, eventcategoryuid,
+     row_number() OVER(PARTITION BY eventuid, eventcategoryuid ORDER BY productionblockuid) AS rn
+  FROM #allevents
+)
+DELETE cte WHERE rn > 1
+
+DECLARE @alleventtyp TLAEventType
+INSERT INTO @alleventtyp
+SELECT eventuid,
+        modeluid,
+        workcenteruid,
+        productionblockuid,
+        shiftinstanceuid,
+        joborderuid,
+        pbstarttime,
+        pbendtime,
+        eventcategoryuid,
+        eventcategoryname,
+        quantity,
+        idealcycletime,
+        null as lastplanneddowntimetime,
+        duration
+FROM #allevents where pbendtime < @endtime
+
+CREATE TABLE #EventsByProductionBlock (
+        modeluid BIGINT,
+        productionblockuid BIGINT,
+        joborderuid BIGINT,
+        shiftinstanceuid BIGINT,
+        pbstarttime DATETIMEOFFSET,
+        pbendtime DATETIMEOFFSET,
+        workcenteruid BIGINT,
+        PrevPBProduction NUMERIC(18, 5),
+        PrevPBScrap NUMERIC(18, 5),
+        PrevPBUnscheduled NUMERIC(18, 5),
+        PrevPBRunning NUMERIC(18, 5),
+        PrevPBPlannedDowntime NUMERIC(18, 5),
+        PrevPBUnplannedDowntime NUMERIC(18, 5),
+        PrevPBChangeover NUMERIC(18, 5),
+        PrevPBUnknown NUMERIC(18, 5),
+        PrevPBSpeedLoss NUMERIC(18, 5),
+        PrevPBSmallStops NUMERIC(18, 5),
+        Production NUMERIC(18, 5),
+        Scrap NUMERIC(18, 5),
+        Unscheduled NUMERIC(18, 5),
+        Running NUMERIC(18, 5),
+        PlannedDowntime NUMERIC(18, 5),
+        UnplannedDowntime NUMERIC(18, 5),
+        Changeover NUMERIC(18, 5),
+        Unknown NUMERIC(18, 5),
+        SpeedLoss NUMERIC(18, 5),
+        SmallStops NUMERIC(18, 5),
+        NextPBProduction NUMERIC(18, 5),
+        NextPBScrap NUMERIC(18, 5),
+        NextPBUnscheduled NUMERIC(18, 5),
+        NextPBRunning NUMERIC(18, 5),
+        NextPBPlannedDowntime NUMERIC(18, 5),
+        NextPBUnplannedDowntime NUMERIC(18, 5),
+        NextPBChangeover NUMERIC(18, 5),
+        NextPBUnknown NUMERIC(18, 5),
+        NextPBSpeedLoss NUMERIC(18, 5),
+        NextPBSmallStops NUMERIC(18, 5),
+        losscurrentpb NUMERIC(18, 5),
+        shiftstarttime DATETIMEOFFSET,
+        TimeIntoShift BIGINT
+);
+
+INSERT
+INTO #EventsByProductionBlock
+EXEC GetAnalyticDataByProductionBlock @alleventtyp
+
+
+CREATE TABLE #EventsByProductionBlockGroupOP (
+        productionblockuid BIGINT,
+        productioneventscount BIGINT,
+        totalquantity NUMERIC(18, 5),
+        idealcycletime NUMERIC(18, 5)
+);
+
+INSERT
+INTO #EventsByProductionBlockGroupOP
+EXEC GetAnalyticDataOpByProductionBlock @alleventtyp
+
+CREATE TABLE #PreviousMaterial (
+        productionblockuid BIGINT,
+        previousmaterial VARCHAR(255),
+        TimeIntoCurrentMaterial BIGINT
+);
+
+INSERT
+INTO #PreviousMaterial
+EXEC GetAnalyticPreviousMaterialByProductionBlock @alleventtyp
+
+--@@ tk edit
+Create table #PreviousShift(
+        productionblockuid BIGINT,
+        ShiftPrevious VARCHAR(255))
+INSERT
+INTO #PreviousShift
+EXEC GetAnalyticPreviousShiftByProductionBlock @alleventtyp;
+--@@ end tk edit
+
+CREATE TABLE #EventsByShift (
+        modeluid BIGINT,
+        shiftinstanceuid BIGINT,
+        prevshiftjobordercount BIGINT
+);
+
+INSERT
+INTO #EventsByShift
+EXEC GetAnalyticDataByShift @alleventtyp
+
+CREATE TABLE #EventsByDay (
+        modeluid BIGINT,
+        pbdate DATE,
+        prevdayjobordercount BIGINT
+);
+
+INSERT
+INTO #EventsByDay
+EXEC GetAnalyticDataByDay @alleventtyp
+
+
+CREATE TABLE #EventsByWeek (
+        modeluid BIGINT,
+        weekjobordercount BIGINT,
+        eventweek BIGINT
+);
+
+INSERT
+INTO #EventsByWeek
+EXEC GetAnalyticDataByWeek @alleventtyp
+
+
+CREATE TABLE #DateLastUnplanned (
+        productionblockuid BIGINT,
+        TimeSinceLastPlannedDowntime BIGINT
+);
+
+INSERT
+INTO #DateLastUnplanned
+EXEC GetAnalyticDataLastPlannedDateTime @alleventtyp
+
+
+DECLARE @v_count AS INT
+DECLARE @selectJson NVARCHAR(MAX) = '' COLLATE DATABASE_DEFAULT
+
+SELECT @v_count = COUNT(*)
+FROM OPENJSON(@apcolumns, '$') j1
+
+DECLARE @i INT = 0
+DECLARE @num VARCHAR(10) = CAST(@i AS VARCHAR) COLLATE DATABASE_DEFAULT
+
+WHILE (@i < @v_count)
+BEGIN
+    SET @num = CAST(@i AS VARCHAR)
+
+    IF JSON_VALUE(@apcolumns, '$['+@num+'].isLag') = 'true'
+        set @selectJson += ',LAG('+JSON_VALUE(@apcolumns, '$['+@num+'].columnName')+') OVER (PARTITION BY r.modeluid ORDER BY pbstarttime) AS '+ JSON_VALUE(@apcolumns, '$['+@num+'].fieldName')
+    ELSE
+        set @selectJson += ','+JSON_VALUE(@apcolumns, '$['+@num+'].columnName')+' AS '+ JSON_VALUE(@apcolumns, '$['+@num+'].fieldName')
+    SET @i = @i + 1
+END
+
+
+DROP TABLE IF EXISTS #result
+CREATE TABLE #result (
+        ProductionBlockUID BIGINT,
+        WorkCenterName NVARCHAR(255),
+        WorkCenterUid BIGINT,
+		WorkUnitName NVARCHAR(255),
+		WorkUnitUid BIGINT,
+		IsPacemaker BIT,
+		IsAggregate BIT,
+		ProductionBlockStartTime DATETIMEOFFSET,
+		ProductionBlockEndTime DATETIMEOFFSET,
+		epochPBStartTime BIGINT,
+		epochPBEndTime BIGINT,
+		CurrentMaterial NVARCHAR(255),
+		PreviousMaterial NVARCHAR(255),
+		DayOfWeek NVARCHAR(255),
+		TimeIntoJobOrder BIGINT,
+		TimeIntoShift BIGINT,
+		TimeIntoShiftOrdinal NVARCHAR(255),
+		TimeIntoCurrentMaterial BIGINT,
+		JobPausedAtEndofCurrentPB BIT,
+		JobRestartedCurrentPB BIT,
+		ShiftName NVARCHAR(255),
+		CountProductionEventsInPB BIGINT,
+		CountProductionEventsInPreviousPB BIGINT,
+		IdealCycleTime NUMERIC(18, 5),
+		ActualAsPercentOfIdealCycleTimePB NUMERIC(18, 5),
+		UnitsProducedInProductionBlock NUMERIC(18, 5),
+		ShiftPrevious NVARCHAR(255),
+		ShiftChangeInNextPB NVARCHAR(255),
+		NumberOfUnitsToBeProduced NUMERIC(18, 5),
+		ProductionBlockDuration BIGINT,
+		TimeLossCurrentPB NUMERIC(18, 5),
+		TimeLossScrapCurrentPB NUMERIC(18, 5),
+		TimeLossUnscheduledCurrentPB NUMERIC(18, 5),
+		TimeLossPlannedDowntimeCurrentPB NUMERIC(18, 5),
+		TimeLossUnplannedDowntimeCurrentPB NUMERIC(18, 5),
+		TimeLossChangeoverCurrentPB NUMERIC(18, 5),
+		TimeLossUnaccountedTimeCurrentPB NUMERIC(18, 5),
+		TimeLossSpeedLossCurrentPB NUMERIC(18, 5),
+		TimeLossSmallStopsCurrentPB NUMERIC(18, 5),
+		TimeSinceLastPlannedDowntime NUMERIC(18, 5),
+		TimeLossScrapPrevious NUMERIC(18, 5),
+		TimeLossUnscheduledPrevious NUMERIC(18, 5),
+		TimeLossPlannedDowntimePrevious NUMERIC(18, 5),
+		TimeLossUnplannedDowntimePrevious NUMERIC(18, 5),
+		TimeLossChangeoverPrevious NUMERIC(18, 5),
+		TimeLossUnaccountedTimePrevious NUMERIC(18, 5),
+		TimeLossSpeedLossPrevious NUMERIC(18, 5),
+		TimeLossSmallStopsPrevious NUMERIC(18, 5),
+		JobCountLastShift BIGINT,
+		JobCountLastDay BIGINT,
+		JobCountLastWeek BIGINT,
+		isOvertime BIT,
+		mmap_uid BIGINT,
+		mmapPrev_uid BIGINT,
+		joap_uid BIGINT,
+		joapPrev_uid BIGINT,
+		shap_uid BIGINT,
+		shapPrev_uid BIGINT
+);
+
+DECLARE @sqlSelect AS NVARCHAR(MAX) = '' COLLATE DATABASE_DEFAULT
+DECLARE @sqlColumn AS NVARCHAR(MAX) = '' COLLATE DATABASE_DEFAULT
+DECLARE @sqlFrom AS NVARCHAR(MAX) = '' COLLATE DATABASE_DEFAULT
+DECLARE @sqlQuery AS NVARCHAR(MAX) = '' COLLATE DATABASE_DEFAULT
+
+set @sqlSelect = 'SELECT '
+set @sqlcolumn = '
+    r.productionblockuid AS ProductionBlockUID,
+    wcm.name AS WorkCenterName,
+    r.workcenteruid AS WorkCenterUid,
+    wum.name as WorkUnitName,
+	r.modeluid AS WorkUnitUid,
+	COALESCE(wum.ispacemaker,0) AS IsPacemaker,
+	0 AS IsAggregate,
+    r.pbstarttime as ProductionBlockStartTime,
+    r.pbendtime as ProductionBlockEndTime,
+    convert(bigint,CONCAT(DATEDIFF(s, ''1970-01-01 00:00:00'',r.pbstarttime),right(''000''+convert(varchar(3),DATEPART(ms, r.pbstarttime)),3))) AS epochPBStartTime,
+    convert(bigint,CONCAT(DATEDIFF(s, ''1970-01-01 00:00:00'',r.pbendtime),right(''000''+convert(varchar(3),DATEPART(ms, r.pbendtime)),3))) AS epochPBEndTime,
+    COALESCE(mm.description, ''MaterialNotAvailable'') AS CurrentMaterial,
+    COALESCE(pm.previousmaterial, ''MaterialNotAvailable'') AS PreviousMaterial,
+    DATENAME(WEEKDAY, SWITCHOFFSET(r.pbstarttime, '+@offsetmin+')) as DayOfWeek,
+    DATEDIFF(MINUTE, MIN(r.pbstarttime) OVER (PARTITION BY r.modeluid, r.joborderuid), r.pbstarttime) AS TimeIntoJobOrder,
+    TimeIntoShift,
+    CASE
+        WHEN TimeIntoShift BETWEEN 0 and 59 THEN ''1Hour''
+        WHEN TimeIntoShift BETWEEN 60 and 119 THEN ''2Hour''
+        WHEN TimeIntoShift BETWEEN 120 and 179 THEN ''3Hour''
+        WHEN TimeIntoShift BETWEEN 180 and 239 THEN ''4Hour''
+        WHEN TimeIntoShift BETWEEN 240 and 299 THEN ''5Hour''
+        WHEN TimeIntoShift BETWEEN 300 and 359 THEN ''6Hour''
+        WHEN TimeIntoShift BETWEEN 360 and 419 THEN ''7Hour''
+        WHEN TimeIntoShift BETWEEN 420 and 479 THEN ''8Hour''
+        WHEN TimeIntoShift BETWEEN 480 and 539 THEN ''9Hour''
+        WHEN TimeIntoShift BETWEEN 540 and 599 THEN ''10Hour''
+        WHEN TimeIntoShift BETWEEN 600 and 659 THEN ''11Hour''
+        WHEN TimeIntoShift BETWEEN 660 and 719 THEN ''12Hour''
+        WHEN TimeIntoShift > 720 THEN ''Greater12Hours''
+        ELSE ''TimeIntoShiftUnavailable''
+    END as TimeIntoShiftOrdinal,
+    pm.TimeIntoCurrentMaterial AS TimeIntoCurrentMaterial,
+    IIF(
+        LEAD(r.joborderuid) OVER (PARTITION BY r.workcenteruid, r.modeluid ORDER BY pbstarttime) IS NOT NULL AND
+        LEAD(r.joborderuid) OVER (PARTITION BY r.workcenteruid, r.modeluid ORDER BY pbstarttime) <> r.joborderuid AND
+        MAX(pbstarttime) OVER (PARTITION BY r.modeluid, r.joborderuid) <> pbstarttime,
+        1, 0
+    ) AS JobPausedAtEndofCurrentPB,
+    IIF(
+        LEAD(r.joborderuid) OVER (PARTITION BY r.workcenteruid, r.modeluid ORDER BY pbstarttime) IS NOT NULL AND
+        LEAD(r.joborderuid) OVER (PARTITION BY r.workcenteruid, r.modeluid ORDER BY pbstarttime) <> r.joborderuid AND
+        MIN(pbstarttime) OVER (PARTITION BY r.modeluid, r.joborderuid) <> r.pbstarttime,
+        1, 0
+    ) AS JobRestartedCurrentPB,
+    COALESCE(sh.name, ''ShiftNotAvailable'') AS ShiftName,
+    productioneventscount AS CountProductionEventsInPB,
+    LAG(productioneventscount) OVER (ORDER BY pbstarttime) AS CountProductionEventsInPreviousPB,
+    idealcycletime AS IdealCycleTime,
+    IIF (
+        totalquantity != 0 AND (DATEDIFF(SECOND, r.pbstarttime, r.pbendtime) != 0), (idealcycletime/(DATEDIFF(SECOND, r.pbstarttime, r.pbendtime)/totalquantity))*100, -99
+    ) AS ActualAsPercentOfIdealCycleTimePB,
+    totalquantity AS UnitsProducedInProductionBlock,
+    COALESCE(ps.ShiftPrevious, ''Not Available'') AS ShiftPrevious,
+    IIF(sh.name = LEAD(sh.name) OVER (PARTITION BY r.modeluid ORDER BY pbstarttime), ''No'', ''Yes'') AS ShiftChangeInNextPB,
+    jomr.quantity AS NumberOfUnitsToBeProduced,
+    DATEDIFF(MINUTE, r.pbstarttime, r.pbendtime) AS ProductionBlockDuration,
+    losscurrentpb as TimeLossCurrentPB,
+    Scrap AS TimeLossScrapCurrentPB,
+    Unscheduled AS TimeLossUnscheduledCurrentPB,
+    PlannedDowntime AS TimeLossPlannedDowntimeCurrentPB,
+    UnplannedDowntime AS TimeLossUnplannedDowntimeCurrentPB,
+    Changeover AS TimeLossChangeoverCurrentPB,
+    Unknown AS TimeLossUnaccountedTimeCurrentPB,
+    SpeedLoss AS TimeLossSpeedLossCurrentPB,
+    SmallStops AS TimeLossSmallStopsCurrentPB,
+    TimeSinceLastPlannedDowntime AS TimeSinceLastPlannedDowntime,
+    PrevPBScrap AS TimeLossScrapPrevious,
+    PrevPBUnscheduled AS TimeLossUnscheduledPrevious,
+    PrevPBPlannedDowntime AS TimeLossPlannedDowntimePrevious,
+    PrevPBUnplannedDowntime AS TimeLossUnplannedDowntimePrevious,
+    PrevPBChangeover AS TimeLossChangeoverPrevious,
+    PrevPBUnknown AS TimeLossUnaccountedTimePrevious,
+    PrevPBSpeedLoss AS TimeLossSpeedLossPrevious,
+    PrevPBSmallStops AS TimeLossSmallStopsPrevious,
+    prevshiftjobordercount AS JobCountLastShift,
+    prevdayjobordercount AS JobCountLastDay,
+    weekjobordercount AS JobCountLastWeek,
+    ISNULL(si.isovertime, ''false'') AS isOvertime'
+set @sqlfrom = '
+FROM
+    #EventsByProductionBlock r LEFT JOIN
+    model wum ON r.modeluid = wum.uid LEFT JOIN
+    #EventsByShift she ON r.shiftinstanceuid = she.shiftinstanceuid LEFT JOIN
+    #EventsByDay daye ON daye.modeluid = r.modeluid AND daye.pbdate = CAST(pbstarttime AS DATE) LEFT JOIN
+    #EventsByProductionBlockGroupOP pbop ON r.productionblockuid = pbop.productionblockuid LEFT JOIN
+    #EventsByWeek weekev ON weekev.modeluid = r.modeluid AND weekev.eventweek = DATEPART(ISO_WEEK, pbstarttime) LEFT JOIN
+    productionblock pb ON r.productionblockuid = pb.uid LEFT JOIN
+    materialmaster mm ON mm.uid = pb.materialmasteruid LEFT JOIN
+    model AS wcm ON wcm.uid = r.workcenteruid LEFT JOIN
+    shiftinstance si ON she.shiftinstanceuid = si.uid LEFT JOIN
+    shift sh ON si.shiftuid = sh.uid LEFT JOIN
+    shift_ap shap ON shap.uid = sh.uid LEFT JOIN
+    jobordermaterialrequirement jomr ON jomr.joborderuid = r.joborderuid LEFT JOIN
+    #PreviousMaterial pm ON pm.productionblockuid = r.productionblockuid LEFT JOIN
+    #PreviousShift ps ON ps.productionblockuid = r.productionblockuid LEFT JOIN 
+    materialmaster_ap mmap ON mmap.uid = mm.uid LEFT JOIN
+    joborder_ap joap ON joap.uid = r.joborderuid LEFT JOIN
+    #DateLastUnplanned dlu ON dlu.productionblockuid =  r.productionblockuid
+ORDER BY
+    pbstarttime,
+    WorkCenterUid'
+
+
+
+	-- MMM RAW DATA input
+set @sqlQuery =  @sqlSelect+@sqlColumn+@selectJson+@sqlFrom;
+INSERT INTO #result
+exec sp_executesql @sqlQuery;
+
+set @sqlcolumn = '
+    r.productionblockuid*-1 AS ProductionBlockUID,
+    wcm.name AS WorkCenterName,
+    r.workcenteruid AS WorkCenterUid,
+    wum.name as WorkUnitName,
+	r.modeluid AS WorkUnitUid,
+	COALESCE(wum.ispacemaker,0) AS IsPacemaker,
+	1 AS IsAggregate,
+    r.pbstarttime as ProductionBlockStartTime,
+    r.pbendtime as ProductionBlockEndTime,
+    convert(bigint,CONCAT(DATEDIFF(s, ''1970-01-01 00:00:00'',r.pbstarttime),right(''000''+convert(varchar(3),DATEPART(ms, r.pbstarttime)),3))) AS epochPBStartTime,
+    convert(bigint,CONCAT(DATEDIFF(s, ''1970-01-01 00:00:00'',r.pbendtime),right(''000''+convert(varchar(3),DATEPART(ms, r.pbendtime)),3))) AS epochPBEndTime,
+    COALESCE(mm.description, ''MaterialNotAvailable'') AS CurrentMaterial,
+    COALESCE(pm.previousmaterial, ''MaterialNotAvailable'') AS PreviousMaterial,
+    DATENAME(WEEKDAY, SWITCHOFFSET(r.pbstarttime, '+@offsetmin+')) as DayOfWeek,
+    DATEDIFF(MINUTE, MIN(r.pbstarttime) OVER (PARTITION BY r.modeluid, r.joborderuid), r.pbstarttime) AS TimeIntoJobOrder,
+    TimeIntoShift,
+    CASE
+        WHEN TimeIntoShift BETWEEN 0 and 59 THEN ''1Hour''
+        WHEN TimeIntoShift BETWEEN 60 and 119 THEN ''2Hour''
+        WHEN TimeIntoShift BETWEEN 120 and 179 THEN ''3Hour''
+        WHEN TimeIntoShift BETWEEN 180 and 239 THEN ''4Hour''
+        WHEN TimeIntoShift BETWEEN 240 and 299 THEN ''5Hour''
+        WHEN TimeIntoShift BETWEEN 300 and 359 THEN ''6Hour''
+        WHEN TimeIntoShift BETWEEN 360 and 419 THEN ''7Hour''
+        WHEN TimeIntoShift BETWEEN 420 and 479 THEN ''8Hour''
+        WHEN TimeIntoShift BETWEEN 480 and 539 THEN ''9Hour''
+        WHEN TimeIntoShift BETWEEN 540 and 599 THEN ''10Hour''
+        WHEN TimeIntoShift BETWEEN 600 and 659 THEN ''11Hour''
+        WHEN TimeIntoShift BETWEEN 660 and 719 THEN ''12Hour''
+        WHEN TimeIntoShift > 720 THEN ''Greater12Hours''
+        ELSE ''TimeIntoShiftUnavailable''
+    END as TimeIntoShiftOrdinal,
+    pm.TimeIntoCurrentMaterial AS TimeIntoCurrentMaterial,
+    IIF(
+        LEAD(r.joborderuid) OVER (PARTITION BY r.workcenteruid, r.modeluid ORDER BY pbstarttime) IS NOT NULL AND
+        LEAD(r.joborderuid) OVER (PARTITION BY r.workcenteruid, r.modeluid ORDER BY pbstarttime) <> r.joborderuid AND
+        MAX(pbstarttime) OVER (PARTITION BY r.modeluid, r.joborderuid) <> pbstarttime,
+        1, 0
+    ) AS JobPausedAtEndofCurrentPB,
+    IIF(
+        LEAD(r.joborderuid) OVER (PARTITION BY r.workcenteruid, r.modeluid ORDER BY pbstarttime) IS NOT NULL AND
+        LEAD(r.joborderuid) OVER (PARTITION BY r.workcenteruid, r.modeluid ORDER BY pbstarttime) <> r.joborderuid AND
+        MIN(pbstarttime) OVER (PARTITION BY r.modeluid, r.joborderuid) <> r.pbstarttime,
+        1, 0
+    ) AS JobRestartedCurrentPB,
+    COALESCE(sh.name, ''ShiftNotAvailable'') AS ShiftName,
+    productioneventscount AS CountProductionEventsInPB,
+    LAG(productioneventscount) OVER (ORDER BY pbstarttime) AS CountProductionEventsInPreviousPB,
+    idealcycletime AS IdealCycleTime,
+    IIF (
+        totalquantity != 0 AND (DATEDIFF(SECOND, r.pbstarttime, r.pbendtime) != 0), (idealcycletime/((DATEDIFF(SECOND, r.pbstarttime, r.pbendtime))/totalquantity))*100, -99
+    ) AS ActualAsPercentOfIdealCycleTimePB,
+    totalquantity AS UnitsProducedInProductionBlock,
+    COALESCE(ps.ShiftPrevious, ''Not Available'') AS ShiftPrevious,
+    IIF(sh.name = LEAD(sh.name) OVER (PARTITION BY r.modeluid ORDER BY pbstarttime), ''No'', ''Yes'') AS ShiftChangeInNextPB,
+    jomr.quantity AS NumberOfUnitsToBeProduced,
+    DATEDIFF(MINUTE, r.pbstarttime, r.pbendtime)/ppd.divisor AS ProductionBlockDuration,
+    losscurrentpb/ppd.divisor as TimeLossCurrentPB,
+    Scrap/ppd.divisor AS TimeLossScrapCurrentPB,
+    Unscheduled/ppd.divisor AS TimeLossUnscheduledCurrentPB,
+    PlannedDowntime/ppd.divisor AS TimeLossPlannedDowntimeCurrentPB,
+    UnplannedDowntime/ppd.divisor AS TimeLossUnplannedDowntimeCurrentPB,
+    Changeover/ppd.divisor AS TimeLossChangeoverCurrentPB,
+    Unknown/ppd.divisor AS TimeLossUnaccountedTimeCurrentPB,
+    SpeedLoss/ppd.divisor AS TimeLossSpeedLossCurrentPB,
+    SmallStops/ppd.divisor AS TimeLossSmallStopsCurrentPB,
+    TimeSinceLastPlannedDowntime AS TimeSinceLastPlannedDowntime,
+    PrevPBScrap/ppd.divisor AS TimeLossScrapPrevious,
+    PrevPBUnscheduled/ppd.divisor AS TimeLossUnscheduledPrevious,
+    PrevPBPlannedDowntime/ppd.divisor AS TimeLossPlannedDowntimePrevious,
+    PrevPBUnplannedDowntime/ppd.divisor AS TimeLossUnplannedDowntimePrevious,
+    PrevPBChangeover/ppd.divisor AS TimeLossChangeoverPrevious,
+    PrevPBUnknown/ppd.divisor AS TimeLossUnaccountedTimePrevious,
+    PrevPBSpeedLoss/ppd.divisor AS TimeLossSpeedLossPrevious,
+    PrevPBSmallStops/ppd.divisor AS TimeLossSmallStopsPrevious,
+    prevshiftjobordercount AS JobCountLastShift,
+    prevdayjobordercount AS JobCountLastDay,
+    weekjobordercount AS JobCountLastWeek,
+    ISNULL(si.isovertime, ''false'') AS isOvertime'
+set @sqlfrom = '
+FROM
+    #EventsByProductionBlock r LEFT JOIN
+    model wum ON r.modeluid = wum.uid LEFT JOIN
+    #EventsByShift she ON r.shiftinstanceuid = she.shiftinstanceuid LEFT JOIN
+    #EventsByDay daye ON daye.modeluid = r.modeluid AND daye.pbdate = CAST(pbstarttime AS DATE) LEFT JOIN
+    #EventsByProductionBlockGroupOP pbop ON r.productionblockuid = pbop.productionblockuid LEFT JOIN
+    #EventsByWeek weekev ON weekev.modeluid = r.modeluid AND weekev.eventweek = DATEPART(ISO_WEEK, pbstarttime) LEFT JOIN
+    productionblock pb ON r.productionblockuid = pb.uid LEFT JOIN
+    materialmaster mm ON mm.uid = pb.materialmasteruid LEFT JOIN
+    model AS wcm ON wcm.uid = r.workcenteruid LEFT JOIN
+    shiftinstance si ON she.shiftinstanceuid = si.uid LEFT JOIN
+    shift sh ON si.shiftuid = sh.uid LEFT JOIN
+    shift_ap shap ON shap.uid = sh.uid LEFT JOIN
+    jobordermaterialrequirement jomr ON jomr.joborderuid = r.joborderuid LEFT JOIN
+    #PreviousMaterial pm ON pm.productionblockuid = r.productionblockuid LEFT JOIN
+    #PreviousShift ps ON ps.productionblockuid = r.productionblockuid LEFT JOIN 
+    materialmaster_ap mmap ON mmap.uid = mm.uid LEFT JOIN
+    joborder_ap joap ON joap.uid = r.joborderuid LEFT JOIN
+    #DateLastUnplanned dlu ON dlu.productionblockuid =  r.productionblockuid
+	CROSS APPLY GetParallelPacemakerDivisor(r.modeluid,r.joborderuid,0) AS ppd
+WHERE wum.ispacemaker = 1
+ORDER BY
+    pbstarttime,
+    WorkCenterUid'
+
+	-- MMM Averaged DATA input
+set @sqlQuery =  @sqlSelect+@sqlColumn+@selectJson+@sqlFrom;
+INSERT INTO #result
+exec sp_executesql @sqlQuery;
+
+SELECT * FROM #result 
+
+END]]></sql><timeout>60.0</timeout></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><ImplementedShapes/><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.300Z" user="SuperUser"/></ConfigurationChanges></ThingTemplate><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" baseThingTemplate="PTC.TimeLossImpl.EntryPoint_TT" description="PTCDTS.TimeLossImpl" documentationContent="" effectiveThingPackage="ConfiguredThing" homeMashup="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:38.309Z" name="PTCDTS.TimeLossImpl.EntryPoint_TT" projectName="PTCDTS.TimeLossImpl" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table to store the components core manager" isMultiRow="true" name="ComponentManager" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateGlobalManagerConfig"><ResultType baseType="NOTHING" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition></ServiceDefinitions><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="DeployComponent"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[logger.info("Entering {}:DeployComponent::Entry", me.name);
+let implementationProjectName = me.GetProjectName();
+if (!implementationProjectName) {
+	throw "Implementation building block project name is missing";
+}
+let manager = implementationProjectName + ".Manager";
+let managerThing = Things[manager];
+if (!managerThing) {
+	throw "Manager [" + manager + "] is missing";
+}
+
+    me.UpdateGlobalManagerConfig();
+    let databaseUtility = managerThing.GetAnalysisManagement();
+    Things[databaseUtility].CreateDBFunctions();
+
+logger.info("Exiting {}:DeployComponent::Exit", me.name);
+
+let result = true;]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetComponentDeployConfigurationParameters"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[var result = {};]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="UpdateGlobalManagerConfig"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[try{
+    // table: INFOTABLE dataShape: ""
+    let table = Things["PTC.Base.Manager"].GetConfigurationTable({
+        tableName: "DefaultGlobalManagerConfiguration" /* STRING */
+    });
+
+    table.rows.toArray().forEach(row => {
+        if(row.id == "PTC.TimeLoss.Manager") {
+            row.managerThingName = "PTCDTS.TimeLossImpl.Manager";
+        }
+    });
+
+    Things["PTC.Base.Manager"].SetMultiRowConfigurationTable({
+        configurationTable: table /* INFOTABLE */,
+        persistent: true /* BOOLEAN {"defaultValue":true} */,
+        tableName: "DefaultGlobalManagerConfiguration" /* STRING */
+    });
+} catch (err) {
+	logger.error("Thing [{}] Service [{}] error at line [{}] : {}", me.name, err.fileName, err.lineNumber, err);
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><ImplementedShapes/><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.309Z" user="SuperUser"/></ConfigurationChanges></ThingTemplate></ThingTemplates><ExtensionPackages/><Organizations><Organization aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:38.299Z" loginButtonStyle="" loginPrompt="" loginResetPassword="false" loginStyle="" mobileMashup="" name="PTCDTS.TimeLossImpl.Default_OR" projectName="PTCDTS.TimeLossImpl" resetMailContent="&lt;p&gt;[[resetemail.requestmade]]&lt;/p&gt;&lt;p&gt;[[resetemail.instructions]]&lt;/p&gt;&lt;p&gt;[[resetemail.helpneeded]]&lt;/p&gt;" resetMailServer="" resetMailSubject="[[resetemail.subject]]" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><loginImage/><Connections><Connection from="" to="Root"/><Connection from="Root" to="PTCDTS.TimeLossImpl.Admin_UG"/><Connection from="Root" to="PTCDTS.TimeLossImpl.Default_UG"/></Connections><OrganizationalUnits><OrganizationalUnit description="" name="PTCDTS.TimeLossImpl.Admin_UG"><Members><Members><Member name="PTCDTS.TimeLossImpl.Admin_UG" type="Group"/></Members></Members></OrganizationalUnit><OrganizationalUnit description="" name="PTCDTS.TimeLossImpl.Default_UG"><Members><Members><Member name="PTCDTS.TimeLossImpl.Default_UG" type="Group"/></Members></Members></OrganizationalUnit><OrganizationalUnit description="" name="Root"><Members><Members/></Members></OrganizationalUnit></OrganizationalUnits><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:38.299Z" user="SuperUser"/></ConfigurationChanges></Organization></Organizations><Menus/><ThingGroups/><Resources/><DataTags/><ThingShapes/><Subsystems/><NotificationContents/></Entities>

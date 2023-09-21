@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Entities build="b1495" majorVersion="9" minorVersion="3" modelPersistenceProviderPackage="MssqlPersistenceProviderPackage" revision="8" schemaVersion="1134" universal=""><StyleDefinitions/><Networks/><PersistenceProviderPackages/><Mashups/><ScriptFunctionLibraries/><Projects><Project artifactId="" aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.projectType="Component" dependsOn="{&quot;extensions&quot;:&quot;&quot;,&quot;projects&quot;:&quot;PTC.BottleneckImpl:0.0.0&quot;}" description="" documentationContent="" groupId="" homeMashup="" lastModifiedDate="2023-08-29T15:25:37.138Z" minPlatformVersion="" name="PTCDTS.BottleneckImpl" packageVersion="1.0.0" projectName="PTCDTS.BottleneckImpl" publishResult="" state="DRAFT" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.138Z" user="SuperUser"/></ConfigurationChanges></Project></Projects><Users/><DirectoryServices/><Widgets/><MediaEntities/><Groups><Group aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:37.128Z" name="PTCDTS.BottleneckImpl.Admin_UG" projectName="PTCDTS.BottleneckImpl" scimDisplayName="" scimExternalId="" scimId="" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><Members><Members><Member name="PTCDTS.Base.Permissions.ApplicationAdmin_UG" type="Group"/></Members></Members><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.128Z" user="SuperUser"/></ConfigurationChanges></Group><Group aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:37.127Z" name="PTCDTS.BottleneckImpl.Default_UG" projectName="PTCDTS.BottleneckImpl" scimDisplayName="" scimExternalId="" scimId="" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><Members><Members><Member name="PTCDTS.Base.Permissions.Default_UG" type="Group"/></Members></Members><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.127Z" user="SuperUser"/></ConfigurationChanges></Group></Groups><PersistenceProviders/><ModelTags/><LocalizationTables/><Dashboards/><StyleThemes/><DataShapes/><Things><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" description="MMM changes to PTC.BottleneckImpl" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:37.141Z" name="PTCDTS.BottleneckImpl.EntryPoint" projectName="PTCDTS.BottleneckImpl" published="false" tags="" thingTemplate="PTCDTS.BottleneckImpl.EntryPoint_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table to store the components core manager" isMultiRow="true" name="ComponentManager" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows><Row><id><![CDATA[ComponentManager]]></id><managerThingName><![CDATA[PTCDTS.BottleneckImpl.Manager]]></managerThingName></Row></Rows></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties><componentDefaultOrg><Value><![CDATA[PTCDTS.BottleneckImpl.Default_OR]]></Value><Timestamp>2023-03-13T18:44:14.310Z</Timestamp><Quality>GOOD</Quality></componentDefaultOrg><componentDefaultUserGroup><Value><![CDATA[PTCDTS.BottleneckImpl.Default_UG]]></Value><Timestamp>2023-03-13T18:44:14.310Z</Timestamp><Quality>GOOD</Quality></componentDefaultUserGroup><componentDeploymentState><Value><![CDATA[Configured]]></Value><Timestamp>2023-08-29T15:26:48.301Z</Timestamp><Quality>GOOD</Quality></componentDeploymentState><componentDescription><Value><![CDATA[MMM changes to PTC.BottleneckImpl]]></Value><Timestamp>2023-03-13T18:44:14.310Z</Timestamp><Quality>GOOD</Quality></componentDescription><componentMainMashup><Value/><Timestamp>2023-08-29T15:25:37.168Z</Timestamp><Quality>GOOD</Quality></componentMainMashup><componentName><Value><![CDATA[PTCDTS.BottleneckImpl]]></Value><Timestamp>2023-03-13T18:44:14.311Z</Timestamp><Quality>GOOD</Quality></componentName><componentThumbnail><Value/><Timestamp>2023-08-29T15:25:37.168Z</Timestamp><Quality>GOOD</Quality></componentThumbnail><componentType><Value><![CDATA[Implementation]]></Value><Timestamp>2023-03-13T18:44:14.311Z</Timestamp><Quality>GOOD</Quality></componentType><componentVersion><Value/><Timestamp>2023-08-29T15:25:37.168Z</Timestamp><Quality>GOOD</Quality></componentVersion><dependentComponents><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Common name of the component" name="ComponentName" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Component's project name" name="ComponentProjectName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-08-29T15:25:37.168Z</Timestamp><Quality>GOOD</Quality></dependentComponents><deployComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-08-29T15:25:37.168Z</Timestamp><Quality>GOOD</Quality></deployComponentStatus><migrateComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-08-29T15:25:37.168Z</Timestamp><Quality>GOOD</Quality></migrateComponentStatus><upgradeComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2023-08-29T15:25:37.168Z</Timestamp><Quality>GOOD</Quality></upgradeComponentStatus><componentAbstractBlockName><Value/><Timestamp>2023-08-29T15:25:37.168Z</Timestamp><Quality>GOOD</Quality></componentAbstractBlockName></ThingProperties><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.141Z" user="SuperUser"/></ConfigurationChanges></Thing><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" description="MMM changes to PTC.BottleneckImpl" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:37.142Z" name="PTCDTS.BottleneckImpl.Manager" projectName="PTCDTS.BottleneckImpl" published="false" tags="" thingTemplate="PTCDTS.BottleneckImpl.Manager_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="AnalysisManagement" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" aspect.thingShape="PTC.Bottleneck.AnalysisManagement_TS" baseType="THINGNAME" description="Analysis management Thing" name="analysisManagement" ordinal="1"/></FieldDefinitions></DataShape><Rows><Row><analysisManagement><![CDATA[PTCDTS.BottleneckImpl.SQLThingUtility]]></analysisManagement></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table used to identify managers that the building block should use" isMultiRow="true" name="ManagerConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="MashupConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="MASHUPNAME" description="name of the mashup to configure" name="mashupName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for dynamic menus. Menu Items can be specified here and they will show up for the given menu name. " isMultiRow="true" name="MenuConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuItemMashupName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="menuName" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="An optional field to indicate the ordering of the menu items" name="menuOrderPreference" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the optional section that groups like menus together" name="menuSectionKey" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the menu label" name="menuTitleKey" ordinal="1"/><FieldDefinition aspect.dataShape="PTC.Base.ComponentMenuConfiguration" aspect.isPrimaryKey="false" baseType="INFOTABLE" description="" name="submenu" ordinal="6"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for any Things that need to be configured. This allows for OOTB things to be customized, and the new version that should be used can be configured here" isMultiRow="true" name="ThingConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="THINGNAME" description="Name of the Thing entity or Mashup entity that is to be configured" name="thingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.142Z" user="SuperUser"/></ConfigurationChanges></Thing><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" effectiveThingPackage="SQLThingPackage" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:37.140Z" name="PTCDTS.BottleneckImpl.SQLThingUtility" projectName="PTCDTS.BottleneckImpl" published="false" tags="" thingTemplate="PTCDTS.BottleneckImpl.SQLThingUtility_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Connection Monitoring Settings" isMultiRow="false" name="ConnectionMonitoring" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="30000.0" aspect.friendlyName="Monitor Rate (milliseconds)" baseType="NUMBER" description="Monitor rate in milliseconds" name="connectionMonitorRate" ordinal="1"/><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Enable Monitoring" baseType="BOOLEAN" description="Enable connection monitoring" name="enableMonitor" ordinal="0"/><FieldDefinition aspect.defaultValue="1.0" aspect.friendlyName="Number of Retries" baseType="NUMBER" description="Number of retries" name="numberOfRetries" ordinal="2"/><FieldDefinition aspect.defaultValue="2000.0" aspect.friendlyName="Retry Delay (milliseconds)" baseType="NUMBER" description="Retry delay in milliseconds" name="retryDelay" ordinal="3"/></FieldDefinitions></DataShape><Rows><Row><connectionMonitorRate>30000.0</connectionMonitorRate><enableMonitor>false</enableMonitor><numberOfRetries>1.0</numberOfRetries><retryDelay>2000.0</retryDelay></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Connection Provider" isMultiRow="false" name="ConnectionProvider" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Participate in platform transactions" baseType="BOOLEAN" description="Participate in platform transactions" name="isTransactional" ordinal="0"/><FieldDefinition aspect.defaultValue="ThingworxPersistenceProvider" aspect.friendlyName="Persistence Provider Name" baseType="PERSISTENCEPROVIDERNAME" description="The Persistence Provider from which to retrieve connections" name="persistenceProviderName" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><isTransactional>false</isTransactional><persistenceProviderName><![CDATA[PTC.DBConnection.JdbcPersistenceProvider]]></persistenceProviderName></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Field/Column Name Aliases" isMultiRow="true" name="ColumnAliases" ordinal="1"><DataShape><FieldDefinitions><FieldDefinition aspect.friendlyName="Database Column Name" baseType="STRING" description="Database column name" name="columnName" ordinal="0"/><FieldDefinition aspect.friendlyName="Thingworx Field Name" baseType="STRING" description="Thingworx field name" name="fieldName" ordinal="1"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties><minJobOrderAgeInDays><Value>14</Value><Timestamp>1970-01-01T00:00:00.000Z</Timestamp><Quality>UNKNOWN</Quality></minJobOrderAgeInDays></ThingProperties><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.140Z" user="SuperUser"/></ConfigurationChanges></Thing></Things><Logs/><Authenticators/><ThingPackages/><NotificationDefinitions/><ApplicationKeys/><StateDefinitions/><ThingTemplates><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" baseThingTemplate="PTC.BottleneckImpl.EntryPoint_TT" description="MMM changes to PTC.BottleneckImpl" documentationContent="" effectiveThingPackage="ConfiguredThing" homeMashup="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:37.131Z" name="PTCDTS.BottleneckImpl.EntryPoint_TT" projectName="PTCDTS.BottleneckImpl" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table to store the components core manager" isMultiRow="true" name="ComponentManager" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateGlobalManagerConfig"><ResultType baseType="NOTHING" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition></ServiceDefinitions><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="DeployComponent"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let implementationProjectName = me.GetProjectName();
+if (!implementationProjectName) {
+	throw new Error("Implementation building block project name is missing");
+}
+
+let managerName = implementationProjectName + ".Manager";
+let managerThing = Things[managerName];
+if (!managerThing) {
+	throw new Error("Manager [" + managerName + "] is missing");
+}
+me.UpdateGlobalManagerConfig();
+let databaseUtility = managerThing.GetAnalysisManagement();
+Things[databaseUtility].CreateDBFunctions();
+
+let result = true;]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetComponentDeployConfigurationParameters"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[var result = {};]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="UpdateGlobalManagerConfig"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[try{
+    // table: INFOTABLE dataShape: ""
+    let table = Things["PTC.Base.Manager"].GetConfigurationTable({
+        tableName: "DefaultGlobalManagerConfiguration" /* STRING */
+    });
+
+    table.rows.toArray().forEach(row => {
+        if(row.id == "PTC.Bottleneck.Manager") {
+            row.managerThingName = "PTCDTS.BottleneckImpl.Manager";
+        }
+    });
+
+    Things["PTC.Base.Manager"].SetMultiRowConfigurationTable({
+        configurationTable: table /* INFOTABLE */,
+        persistent: true /* BOOLEAN {"defaultValue":true} */,
+        tableName: "DefaultGlobalManagerConfiguration" /* STRING */
+    });
+} catch (err) {
+	logger.error("Thing [{}] Service [{}] error at line [{}] : {}", me.name, err.fileName, err.lineNumber, err);
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><ImplementedShapes/><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.131Z" user="SuperUser"/></ConfigurationChanges></ThingTemplate><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" baseThingTemplate="PTC.BottleneckImpl.Manager_TT" description="MMM changes to PTC.BottleneckImpl" documentationContent="" effectiveThingPackage="ConfiguredThing" homeMashup="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:37.134Z" name="PTCDTS.BottleneckImpl.Manager_TT" projectName="PTCDTS.BottleneckImpl" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="AnalysisManagement" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" aspect.thingShape="PTC.Bottleneck.AnalysisManagement_TS" baseType="THINGNAME" description="Analysis management Thing" name="analysisManagement" ordinal="1"/></FieldDefinitions></DataShape><Rows><Row><analysisManagement><![CDATA[PTC.BottleneckImpl.SQLThingUtility]]></analysisManagement></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table used to identify managers that the building block should use" isMultiRow="true" name="ManagerConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="MashupConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="MASHUPNAME" description="name of the mashup to configure" name="mashupName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for dynamic menus. Menu Items can be specified here and they will show up for the given menu name. " isMultiRow="true" name="MenuConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuItemMashupName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="menuName" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="An optional field to indicate the ordering of the menu items" name="menuOrderPreference" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the optional section that groups like menus together" name="menuSectionKey" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the menu label" name="menuTitleKey" ordinal="1"/><FieldDefinition aspect.dataShape="PTC.Base.ComponentMenuConfiguration" aspect.isPrimaryKey="false" baseType="INFOTABLE" description="" name="submenu" ordinal="6"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for any Things that need to be configured. This allows for OOTB things to be customized, and the new version that should be used can be configured here" isMultiRow="true" name="ThingConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="THINGNAME" description="Name of the Thing entity or Mashup entity that is to be configured" name="thingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><ImplementedShapes/><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.134Z" user="SuperUser"/></ConfigurationChanges></ThingTemplate><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" baseThingTemplate="PTC.BottleneckImpl.SQLThingUtility_TT" description="" documentationContent="" effectiveThingPackage="SQLThingPackage" homeMashup="" inheritedValueStream="" lastModifiedDate="2023-08-29T15:25:37.135Z" name="PTCDTS.BottleneckImpl.SQLThingUtility_TT" projectName="PTCDTS.BottleneckImpl" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Connection Monitoring Settings" isMultiRow="false" name="ConnectionMonitoring" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="30000.0" aspect.friendlyName="Monitor Rate (milliseconds)" baseType="NUMBER" description="Monitor rate in milliseconds" name="connectionMonitorRate" ordinal="1"/><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Enable Monitoring" baseType="BOOLEAN" description="Enable connection monitoring" name="enableMonitor" ordinal="0"/><FieldDefinition aspect.defaultValue="1.0" aspect.friendlyName="Number of Retries" baseType="NUMBER" description="Number of retries" name="numberOfRetries" ordinal="2"/><FieldDefinition aspect.defaultValue="2000.0" aspect.friendlyName="Retry Delay (milliseconds)" baseType="NUMBER" description="Retry delay in milliseconds" name="retryDelay" ordinal="3"/></FieldDefinitions></DataShape><Rows><Row><connectionMonitorRate>30000.0</connectionMonitorRate><enableMonitor>false</enableMonitor><numberOfRetries>1.0</numberOfRetries><retryDelay>2000.0</retryDelay></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Connection Provider" isMultiRow="false" name="ConnectionProvider" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Participate in platform transactions" baseType="BOOLEAN" description="Participate in platform transactions" name="isTransactional" ordinal="0"/><FieldDefinition aspect.defaultValue="ThingworxPersistenceProvider" aspect.friendlyName="Persistence Provider Name" baseType="PERSISTENCEPROVIDERNAME" description="The Persistence Provider from which to retrieve connections" name="persistenceProviderName" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><isTransactional>false</isTransactional><persistenceProviderName><![CDATA[PTC.DBConnection.JdbcPersistenceProvider]]></persistenceProviderName></Row></Rows></ConfigurationTable><ConfigurationTable dataShapeName="" description="Field/Column Name Aliases" isMultiRow="true" name="ColumnAliases" ordinal="1"><DataShape><FieldDefinitions><FieldDefinition aspect.friendlyName="Database Column Name" baseType="STRING" description="Database column name" name="columnName" ordinal="0"/><FieldDefinition aspect.friendlyName="Thingworx Field Name" baseType="STRING" description="Thingworx field name" name="fieldName" ordinal="1"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="CreateDBFunctions"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[//execution of those services need to respect that order for dependecy and avoid failing
+let services = [
+	//"CreateDurationType",
+	//"CreateBOMDemandType",
+	//"CreateAddMaterialDemandWindowData",
+	//"CreateGetBOMDemands",
+	//"CreateGetMaterialDemands",
+	//"CreateGetWorkcenterDemands",
+	//"CreateGetWorkcenterTaktAndDemand",
+	//"CreateGetWorkCenterActualCycles",
+	//"CreateGetDemandWeightedImpact",
+	"CreateGetWorkCenterOEE",
+	//"CreateIndexes"
+];
+
+services.forEach(service => {
+	try {
+		me[service]();
+	} catch (err) {
+		logger.error("Thing [{}] Service [{}] error at line [{}] : {}", me.name, err.fileName, err.lineNumber, err);
+		logger.error("Error running service : [{}]", service);
+	}
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="SQLCommand" name="CreateGetWorkCenterOEE"><ConfigurationTables><ConfigurationTable dataShapeName="" description="SQLCommand" isMultiRow="false" name="Query" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="NUMBER" description="maxItems" name="maxItems" ordinal="0"/><FieldDefinition baseType="STRING" description="sql" name="sql" ordinal="0"/><FieldDefinition baseType="NUMBER" description="timeout" name="timeout" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><maxItems>500.0</maxItems><sql><![CDATA[CREATE OR ALTER FUNCTION GetWorkCenterOEE(
+    @wcuids uidlist READONLY,
+    @timeperiods timeperiodtype READONLY
+)
+RETURNS @result TABLE(
+    workcenteruid BIGINT,
+    timeperiodid BIGINT,
+    oee NUMERIC(18, 5)
+)
+AS BEGIN
+
+DECLARE @workcentertimeperiods modeltimeperiodtype
+
+INSERT INTO @workcentertimeperiods(modeluid, id, starttime, endtime)
+SELECT wc.uid, tp.id, tp.starttime, tp.endtime
+FROM @wcuids wc
+CROSS JOIN @timeperiods tp
+
+DECLARE @jobruntime TABLE(
+    workcenteruid BIGINT,
+    joborderuid BIGINT,
+    durationid BIGINT,
+    jostarttime DATETIMEOFFSET,
+    joendtime DATETIMEOFFSET,
+    timeperiodid BIGINT,
+    duration NUMERIC(18, 5),
+
+    INDEX jobruntime_workcenteruid_jostarttime_joendtime_idx NONCLUSTERED (workcenteruid, jostarttime, joendtime) INCLUDE (joborderuid, durationid),
+    INDEX jobruntime_joborderuid_durationid_idx NONCLUSTERED (joborderuid, durationid) INCLUDE (workcenteruid, duration))
+
+INSERT INTO @jobruntime(
+    workcenteruid,
+    joborderuid,
+    timeperiodid,
+    durationid,
+    jostarttime,
+    joendtime,
+    duration
+)
+SELECT
+    A.modeluid,
+    A.joborderuid,
+    A.timeperiodid,
+    A.durationid,
+    A.jostarttime,
+    A.joendtime,
+    DATEDIFF(SECOND, A.jostarttime, A.joendtime) AS duration
+FROM
+    GetJobOrderStatusPeriods(@workcentertimeperiods) A
+WHERE
+    status = 'Running'
+
+
+DECLARE @shiftperiods TABLE(
+    workcenteruid BIGINT,
+    shiftstarttime DATETIMEOFFSET,
+    shiftendtime DATETIMEOFFSET,
+    duration NUMERIC(18, 5),
+    timeperiodid BIGINT
+)
+
+INSERT INTO @shiftperiods(
+    workcenteruid,
+    timeperiodid,
+    shiftstarttime,
+    shiftendtime,
+    duration
+)
+SELECT
+    modeluid,
+    timeperiodid,
+    shiftstarttime,
+    shiftendtime,
+    DATEDIFF(SECOND, shiftstarttime, shiftendtime)
+FROM
+    GetShiftPeriods(@workcentertimeperiods)
+WHERE
+    COALESCE(isovertime, 0) = 0
+
+DECLARE @shiftinstanceduration TABLE(
+    workcenteruid BIGINT,
+    timeperiodid BIGINT,
+    duration INT
+)
+
+INSERT INTO @shiftinstanceduration(
+    workcenteruid,
+    timeperiodid,
+    duration
+)
+SELECT
+    workcenteruid,
+    timeperiodid,
+    SUM(duration)
+FROM
+    @shiftperiods
+GROUP BY
+    workcenteruid,
+    timeperiodid
+
+DECLARE @plannedproduction TABLE(
+    workcenteruid BIGINT,
+    joborderuid BIGINT,
+    durationid INT,
+    duration NUMERIC(18, 5),
+    timeperiodid BIGINT,
+
+    INDEX plannedproduction_joborderuid_durationid_idx NONCLUSTERED (joborderuid, durationid) INCLUDE (workcenteruid, duration)
+)
+
+INSERT INTO @plannedproduction(
+    workcenteruid,
+    joborderuid,
+    durationid,
+    timeperiodid,
+    duration
+)
+SELECT
+    A.workcenteruid,
+    A.joborderuid,
+    A.durationid,
+    A.timeperiodid,
+    SUM(DATEDIFF(SECOND, A.starttime, A.endtime))
+FROM (
+    SELECT
+        jr.workcenteruid,
+        jr.joborderuid,
+        jr.durationid,
+        IIF(jr.jostarttime < sp.shiftstarttime, sp.shiftstarttime, jr.jostarttime) AS starttime,
+        IIF(jr.joendtime > sp.shiftendtime, sp.shiftendtime, jr.joendtime) AS endtime,
+        jr.timeperiodid
+    FROM
+        @jobruntime jr INNER JOIN
+        @shiftperiods sp ON sp.workcenteruid = jr.workcenteruid AND sp.timeperiodid = jr.timeperiodid AND (sp.shiftstarttime < jr.joendtime AND sp.shiftendtime > jr.jostarttime)
+) A
+GROUP BY
+    A.workcenteruid,
+    A.joborderuid,
+    A.durationid,
+    A.timeperiodid
+
+DECLARE @unplannedproduction TABLE(
+    workcenteruid BIGINT,
+    timeperiodid BIGINT,
+    duration NUMERIC(18, 5)
+)
+
+INSERT INTO @unplannedproduction(
+    workcenteruid,
+    timeperiodid,
+    duration
+)
+SELECT
+    jr.workcenteruid,
+    jr.timeperiodid,
+    SUM(jr.duration - COALESCE(pp.duration, 0))
+FROM
+    @jobruntime jr LEFT JOIN
+    @plannedproduction pp ON jr.joborderuid = pp.joborderuid AND jr.durationid = pp.durationid
+GROUP BY
+    jr.workcenteruid,
+    jr.timeperiodid
+
+
+DECLARE @joproduction TABLE(
+    workcenteruid BIGINT,
+    timeperiodid BIGINT,
+    quantitytime NUMERIC(38, 5)
+)
+
+INSERT INTO @joproduction(
+    workcenteruid,
+    timeperiodid,
+    quantitytime
+)
+SELECT
+    tp.modeluid,
+    tp.id,
+    SUM((quantity*idealcycletime)/ppd.divisor)
+FROM
+    @workcentertimeperiods tp INNER JOIN
+    modellink ml ON tp.modeluid = ml.parentuid INNER JOIN
+    productionevent pe ON ml.childuid = pe.modeluid AND (tp.starttime <= pe.eventtime AND pe.eventtime < tp.endtime) INNER JOIN
+    reasontype rt ON pe.eventtypeuid = rt.uid
+    INNER JOIN model m ON m.uid = pe.modeluid
+    CROSS APPLY GetParallelPacemakerDivisor(pe.modeluid, pe.joborderuid,0) AS ppd 
+WHERE
+    (pe.joborderuid IS NOT NULL OR pe.shiftinstanceuid IS NOT NULL) AND
+    rt.name = 'Production' AND m.ispacemaker = 1
+GROUP BY
+    tp.modeluid,
+    tp.id;
+
+
+WITH oee(workcenteruid, timeperiodid, effectivetime, plannedtime, unplannedtime, oee) AS (
+    SELECT
+        jp.workcenteruid,
+        jp.timeperiodid,
+        jp.quantitytime,
+        sd.duration,
+        unp.duration,
+        IIF((COALESCE(sd.duration, 0) + COALESCE(unp.duration, 0)) = 0, NULL, jp.quantitytime / (COALESCE(sd.duration, 0) + COALESCE(unp.duration, 0)))
+    FROM
+        @joproduction jp LEFT JOIN
+        @shiftinstanceduration sd ON jp.workcenteruid = sd.workcenteruid AND jp.timeperiodid = sd.timeperiodid LEFT JOIN
+        @unplannedproduction unp ON jp.workcenteruid = unp.workcenteruid AND jp.timeperiodid = unp.timeperiodid
+)
+INSERT INTO @result(
+    workcenteruid,
+    timeperiodid,
+    oee
+)
+SELECT
+    wc.uid,
+    o.timeperiodid,
+    o.oee
+FROM
+    @wcuids wc LEFT JOIN
+    oee o ON wc.uid = o.workcenteruid
+
+RETURN
+END]]></sql></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><ImplementedShapes/><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.135Z" user="SuperUser"/></ConfigurationChanges></ThingTemplate></ThingTemplates><ExtensionPackages/><Organizations><Organization aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2023-08-29T15:25:37.130Z" loginButtonStyle="" loginPrompt="" loginResetPassword="false" loginStyle="" mobileMashup="" name="PTCDTS.BottleneckImpl.Default_OR" projectName="PTCDTS.BottleneckImpl" resetMailContent="&lt;p&gt;[[resetemail.requestmade]]&lt;/p&gt;&lt;p&gt;[[resetemail.instructions]]&lt;/p&gt;&lt;p&gt;[[resetemail.helpneeded]]&lt;/p&gt;" resetMailServer="" resetMailSubject="[[resetemail.subject]]" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><loginImage/><Connections><Connection from="" to="Root"/><Connection from="Root" to="PTCDTS.BottleneckImpl.Admin_UG"/><Connection from="Root" to="PTCDTS.BottleneckImpl.Default_UG"/></Connections><OrganizationalUnits><OrganizationalUnit description="" name="PTCDTS.BottleneckImpl.Admin_UG"><Members><Members><Member name="PTCDTS.BottleneckImpl.Admin_UG" type="Group"/></Members></Members></OrganizationalUnit><OrganizationalUnit description="" name="PTCDTS.BottleneckImpl.Default_UG"><Members><Members><Member name="PTCDTS.BottleneckImpl.Default_UG" type="Group"/></Members></Members></OrganizationalUnit><OrganizationalUnit description="" name="Root"><Members><Members/></Members></OrganizationalUnit></OrganizationalUnits><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2023-08-29T15:25:37.130Z" user="SuperUser"/></ConfigurationChanges></Organization></Organizations><Menus/><ThingGroups/><Resources/><DataTags/><ThingShapes/><Subsystems/><NotificationContents/></Entities>
