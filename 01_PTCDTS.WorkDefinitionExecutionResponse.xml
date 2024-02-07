@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Entities build="b141" majorVersion="9" minorVersion="5" modelPersistenceProviderPackage="MssqlPersistenceProviderPackage" revision="0" schemaVersion="1150" universal=""><StyleDefinitions/><Networks/><PersistenceProviderPackages/><Mashups/><ScriptFunctionLibraries/><Projects><Project artifactId="" aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.projectType="Component" dependsOn="{&quot;extensions&quot;:&quot;&quot;,&quot;projects&quot;:&quot;PTC.Base:0.0.0,PTC.DBConnection:0.0.0&quot;}" description="" documentationContent="" groupId="" homeMashup="" lastModifiedDate="2024-01-23T19:43:00.288Z" minPlatformVersion="" name="PTCDTS.WorkDefinitionExecutionResponse" packageVersion="1.0.0" projectName="PTCDTS.WorkDefinitionExecutionResponse" publishResult="" state="DRAFT" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility/></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.288Z" user="SuperUser"/></ConfigurationChanges></Project></Projects><Users/><DirectoryServices/><Widgets/><MediaEntities/><Groups><Group aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2024-01-23T19:48:38.922Z" name="PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" projectName="PTCDTS.WorkDefinitionExecutionResponse" scimDisplayName="" scimExternalId="" scimId="" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><Members><Members><Member name="PTCDTS.Base.Permissions.ApplicationAdmin_UG" type="Group"/></Members></Members><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.266Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.919Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.923Z" user="Administrator"/></ConfigurationChanges></Group><Group aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2024-01-23T19:48:38.935Z" name="PTCDTS.WorkDefinitionExecutionResponse.Default_UG" projectName="PTCDTS.WorkDefinitionExecutionResponse" scimDisplayName="" scimExternalId="" scimId="" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><Members><Members><Member name="PTCDTS.Base.Permissions.Default_UG" type="Group"/></Members></Members><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.268Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.932Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.936Z" user="Administrator"/></ConfigurationChanges></Group></Groups><PersistenceProviders/><ModelTags/><LocalizationTables/><Dashboards/><StyleThemes/><DataShapes><DataShape aspect.isEditableExtensionObject="true" aspect.isExtension="true" baseDataShape="" description="" documentationContent="" homeMashup="" lastModifiedDate="2024-01-23T19:48:38.914Z" name="PTCDTS.WorkDefinitionExecutionResponse" projectName="PTCDTS.WorkDefinitionExecutionResponse" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="NUMBER" description="" name="actualcycletime" ordinal="11"/><FieldDefinition aspect.isPrimaryKey="false" baseType="BOOLEAN" description="" name="enabled" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="DATETIME" description="" name="inserttimestamp" ordinal="7"/><FieldDefinition aspect.isPrimaryKey="false" baseType="LONG" description="" name="joborderuid" ordinal="8"/><FieldDefinition aspect.isPrimaryKey="false" baseType="LONG" description="" name="materialdefinitionuid" ordinal="9"/><FieldDefinition aspect.isPrimaryKey="false" baseType="LONG" description="" name="materialmasteruid" ordinal="10"/><FieldDefinition aspect.isPrimaryKey="false" baseType="LONG" description="" name="modeluid" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="LONG" description="" name="status" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="DATETIME" description="" name="timestamp" ordinal="6"/><FieldDefinition aspect.isPrimaryKey="true" baseType="LONG" description="" name="uid" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="LONG" description="" name="workdefinitionuid" ordinal="2"/></FieldDefinitions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.270Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.904Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.908Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.912Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.915Z" user="Administrator"/></ConfigurationChanges></DataShape></DataShapes><Things><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" description="DB Transactions for Work Definition Execution Responses" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2024-01-23T19:48:39.084Z" name="PTCDTS.WorkDefinitionExecutionResponse.Manager" projectName="PTCDTS.WorkDefinitionExecutionResponse" published="false" tags="" thingTemplate="PTCDTS.WorkDefinitionExecutionResponse.Manager_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table used to identify managers that the building block should use" isMultiRow="true" name="ManagerConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="MashupConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="MASHUPNAME" description="name of the mashup to configure" name="mashupName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for dynamic menus. Menu Items can be specified here and they will show up for the given menu name. " isMultiRow="true" name="MenuConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuItemMashupName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="menuName" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="An optional field to indicate the ordering of the menu items" name="menuOrderPreference" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the optional section that groups like menus together" name="menuSectionKey" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the menu label" name="menuTitleKey" ordinal="1"/><FieldDefinition aspect.dataShape="PTC.Base.ComponentMenuConfiguration" aspect.isPrimaryKey="false" baseType="INFOTABLE" description="" name="submenu" ordinal="6"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="ServiceConfigurationSettings" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="createServiceName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="DATASHAPENAME" description="" name="dataShapeName" ordinal="1"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for any Things that need to be configured. This allows for OOTB things to be customized, and the new version that should be used can be configured here" isMultiRow="true" name="ThingConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="THINGNAME" description="Name of the Thing entity or Mashup entity that is to be configured" name="thingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.290Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.957Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.960Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.064Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.066Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.069Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.071Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.073Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.076Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.078Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.080Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.082Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.085Z" user="Administrator"/></ConfigurationChanges></Thing><Thing aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" description="DB Transactions for Work Definition Execution Responses" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" inheritedValueStream="" lastModifiedDate="2024-01-23T19:48:38.999Z" name="PTCDTS.WorkDefinitionExecutionResponse.EntryPoint" projectName="PTCDTS.WorkDefinitionExecutionResponse" published="false" tags="" thingTemplate="PTCDTS.WorkDefinitionExecutionResponse.EntryPoint_TT" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table to store the components core manager" isMultiRow="true" name="ComponentManager" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows><Row><id><![CDATA[ComponentManager]]></id><managerThingName><![CDATA[PTCDTS.WorkDefinitionExecutionResponse.Manager]]></managerThingName></Row></Rows></ConfigurationTable></ConfigurationTables><ThingShape><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/></ThingShape><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ImplementedShapes/><ThingProperties><componentDefaultOrg><Value><![CDATA[PTCDTS.WorkDefinitionExecutionResponse.Default_OR]]></Value><Timestamp>2022-11-09T13:18:50.508Z</Timestamp><Quality>GOOD</Quality></componentDefaultOrg><componentDefaultUserGroup><Value><![CDATA[PTCDTS.WorkDefinitionExecutionResponse.Default_UG]]></Value><Timestamp>2022-11-09T13:18:50.509Z</Timestamp><Quality>GOOD</Quality></componentDefaultUserGroup><componentDeploymentState><Value><![CDATA[Configured]]></Value><Timestamp>2024-01-23T19:43:05.046Z</Timestamp><Quality>GOOD</Quality></componentDeploymentState><componentDescription><Value><![CDATA[DB Transactions for Work Definition Execution Responses]]></Value><Timestamp>2022-11-09T13:18:50.509Z</Timestamp><Quality>GOOD</Quality></componentDescription><componentMainMashup><Value/><Timestamp>2024-01-23T19:43:00.319Z</Timestamp><Quality>GOOD</Quality></componentMainMashup><componentName><Value><![CDATA[PTCDTS.WorkDefinitionExecutionResponse]]></Value><Timestamp>2022-11-09T13:18:50.509Z</Timestamp><Quality>GOOD</Quality></componentName><componentThumbnail><Value/><Timestamp>2024-01-23T19:43:00.319Z</Timestamp><Quality>GOOD</Quality></componentThumbnail><componentType><Value><![CDATA[Standard]]></Value><Timestamp>2022-11-09T13:18:50.510Z</Timestamp><Quality>GOOD</Quality></componentType><componentVersion><Value><![CDATA[9.5.0]]></Value><Timestamp>2024-01-23T19:43:00.319Z</Timestamp><Quality>GOOD</Quality></componentVersion><dependentComponents><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Common name of the component" name="ComponentName" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Component's project name" name="ComponentProjectName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2024-01-23T19:43:00.319Z</Timestamp><Quality>GOOD</Quality></dependentComponents><deployComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2024-01-23T19:43:00.320Z</Timestamp><Quality>GOOD</Quality></deployComponentStatus><migrateComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2024-01-23T19:43:00.320Z</Timestamp><Quality>GOOD</Quality></migrateComponentStatus><upgradeComponentStatus><Value><infoTable><DataShape><FieldDefinitions><FieldDefinition aspect.defaultValue="{}" aspect.isPrimaryKey="false" baseType="JSON" description="Information about the internal status." name="additionalInfo" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Name of the Component" name="name" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="config status of the component" name="status" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Type of action." name="type" ordinal="2"/></FieldDefinitions></DataShape><Rows/></infoTable></Value><Timestamp>2024-01-23T19:43:00.320Z</Timestamp><Quality>GOOD</Quality></upgradeComponentStatus></ThingProperties><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.292Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.939Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.942Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:38.979Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:38.981Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:38.983Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:38.986Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:38.988Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:38.990Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:38.993Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:38.995Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:38.997Z" user="Administrator"/><ConfigurationChange changeAction="DELETE" changeReason="DeleteRunTimePermissions" timestamp="2024-01-23T19:48:39.000Z" user="Administrator"/></ConfigurationChanges></Thing></Things><Logs/><Authenticators/><ThingPackages/><NotificationDefinitions/><ApplicationKeys/><StateDefinitions/><ThingTemplates><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" baseThingTemplate="PTC.Base.CommonManager_TT" description="DB Transactions for Work Definition Execution Responses" documentationContent="" effectiveThingPackage="ConfiguredThing" homeMashup="" inheritedValueStream="" lastModifiedDate="2024-01-23T19:48:38.966Z" name="PTCDTS.WorkDefinitionExecutionResponse.Manager_TT" projectName="PTCDTS.WorkDefinitionExecutionResponse" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table used to identify managers that the building block should use" isMultiRow="true" name="ManagerConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="MashupConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="MASHUPNAME" description="name of the mashup to configure" name="mashupName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for dynamic menus. Menu Items can be specified here and they will show up for the given menu name. " isMultiRow="true" name="MenuConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="menuItemMashupName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="menuName" ordinal="3"/><FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="An optional field to indicate the ordering of the menu items" name="menuOrderPreference" ordinal="5"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the optional section that groups like menus together" name="menuSectionKey" ordinal="4"/><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="Localization table key for the menu label" name="menuTitleKey" ordinal="1"/><FieldDefinition aspect.dataShape="PTC.Base.ComponentMenuConfiguration" aspect.isPrimaryKey="false" baseType="INFOTABLE" description="" name="submenu" ordinal="6"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="" isMultiRow="true" name="ServiceConfigurationSettings" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="createServiceName" ordinal="2"/><FieldDefinition aspect.isPrimaryKey="true" baseType="DATASHAPENAME" description="" name="dataShapeName" ordinal="1"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable><ConfigurationTable dataShapeName="" description="Configuration table for any Things that need to be configured. This allows for OOTB things to be customized, and the new version that should be used can be configured here" isMultiRow="true" name="ThingConfiguration" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier used to identify the thing or mashup that is being configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" baseType="THINGNAME" description="Name of the Thing entity or Mashup entity that is to be configured" name="thingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetLatestWorkDefinitionExecutionResponse"><ResultType aspect.dataShape="PTCDTS.WorkDefinitionExecutionResponse" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="JSON" description="" name="filter" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetLatestWorkDefinitionExecutionResponseForModel"><ResultType aspect.dataShape="PTCDTS.WorkDefinitionExecutionResponse" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="JSON" description="" name="filter" ordinal="2"/><FieldDefinition baseType="STRING" description="" name="modelUid" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetRunningWorkDefinitionExecutionResponsesForJobOrder"><ResultType baseType="NOTHING" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="DATETIME" description="" name="endTime" ordinal="3"/><FieldDefinition baseType="STRING" description="" name="jobOrderUid" ordinal="1"/><FieldDefinition baseType="DATETIME" description="" name="startTime" ordinal="2"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetRunningWorkDefinitionExecutionResponsesForWorkUnit"><ResultType baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="DATETIME" description="" name="endTime" ordinal="3"/><FieldDefinition baseType="STRING" description="" name="modeluid" ordinal="1"/><FieldDefinition baseType="DATETIME" description="" name="startTime" ordinal="2"/></ParameterDefinitions></ServiceDefinition></ServiceDefinitions><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="GetDBInfo"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[var dbInfo = {
+	dbInfo: []
+};
+
+Array.prototype.push.apply(dbInfo.dbInfo, me.GetWorkDefinitionExecutionResponseDBInfo().dbInfo);
+
+
+var result = dbInfo;]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetLatestWorkDefinitionExecutionResponse"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let finalfilter;
+let latestFilter = {
+	sorts: [{
+		dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse",
+		fieldName: "timestamp",
+		isAscending: false
+	},{
+		dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse",
+		fieldName: "inserttimestamp",
+		isAscending: false
+	}]
+};
+if (filter) {
+	finalfilter = Things["PTC.DBConnection.QueryUtils"].CombineFilters({
+		combineTypeOperator: "AND",
+		filter1: latestFilter,
+		filter2: filter
+	});
+} else {
+	finalfilter = latestFilter;
+}
+var result = me.GetWorkDefinitionExecutionResponses({
+	filter: finalfilter,
+	limit: 1,
+	offset: undefined
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetLatestWorkDefinitionExecutionResponseForModel"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let finalFilter;
+let modelFilter = {
+	"filters": {
+		"filters": [{
+			fieldName: "modeluid",
+			type: "EQ",
+			value: modelUid
+		}],
+		type: "AND"
+	}
+};
+if (filter) {
+	finalfilter = Things["PTC.DBConnection.QueryUtils"].CombineFilters({
+		combineTypeOperator: "AND",
+		filter1: modelFilter,
+		filter2: filter
+	});
+} else {
+	finalfilter = modelFilter;
+}
+
+var result = me.GetLatestWorkDefinitionExecutionResponse({
+	filter: finalfilter
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetRunningWorkDefinitionExecutionResponsesForJobOrder"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let filter = {
+    "filters": {
+        "filters": [
+            {
+                "dataShapeName": "PTCDTS.WorkDefinitionExecutionResponse",
+                "fieldName": "joborderuid",
+                "type": "EQ",
+                "value": jobOrderUid
+            },
+            {
+                "dataShapeName": "PTCDTS.WorkDefinitionExecutionResponse",
+                "fieldName": "timestamp",
+                "type": "GE",
+                "value": startTime
+            },
+            {
+                "dataShapeName": "PTCDTS.WorkDefinitionExecutionResponse",
+                "fieldName": "timestamp",
+                "type": "LE",
+                "value": endTime
+            },
+            {
+                "dataShapeName": "PTCDTS.WorkDefinitionExecutionResponse",
+                "fieldName": "status",
+                "type": "EQ",
+                "value": 9
+            }
+        ],
+        "type": "AND"
+    }
+};
+
+// result: INFOTABLE dataShape: "PTCDTS.WorkDefinitionExecutionResponse"
+let result = me.GetWorkDefinitionExecutionResponses({
+	filter: filter /* JSON */,
+	offset: undefined /* INTEGER */,
+	limit: undefined /* INTEGER */
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetRunningWorkDefinitionExecutionResponsesForWorkUnit"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let filter = {
+    "filters": {
+        "filters": [
+            {
+                "dataShapeName": "PTCDTS.WorkDefinitionExecutionResponse",
+                "fieldName": "modeluid",
+                "type": "EQ",
+                "value": modeluid
+            },
+            {
+                "dataShapeName": "PTCDTS.WorkDefinitionExecutionResponse",
+                "fieldName": "timestamp",
+                "type": "GE",
+                "value": startTime
+            },
+            {
+                "dataShapeName": "PTCDTS.WorkDefinitionExecutionResponse",
+                "fieldName": "timestamp",
+                "type": "LE",
+                "value": endTime
+            },
+            {
+                "dataShapeName": "PTCDTS.WorkDefinitionExecutionResponse",
+                "fieldName": "status",
+                "type": "EQ",
+                "value": 9
+            }
+        ],
+        "type": "AND"
+    }
+};
+
+// result: INFOTABLE dataShape: "PTCDTS.WorkDefinitionExecutionResponse"
+let result = me.GetWorkDefinitionExecutionResponses({
+	filter: filter /* JSON */,
+	offset: undefined /* INTEGER */,
+	limit: undefined /* INTEGER */
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><ImplementedShapes><ImplementedShape name="PTC.DBConnection.ServiceConfiguration_TS" type="ThingShape"/><ImplementedShape name="PTC.DBConnection.DBManagement_TS" type="ThingShape"/><ImplementedShape name="PTCDTS.WorkDefinitionExecutionResponse.Management_TS" type="ThingShape"/></ImplementedShapes><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.284Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.963Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.967Z" user="Administrator"/></ConfigurationChanges></ThingTemplate><ThingTemplate aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" baseThingTemplate="PTC.Base.ComponentEntryPoint_TT" description="DB Transactions for Work Definition Execution Responses" documentationContent="" effectiveThingPackage="ConfiguredThing" homeMashup="" inheritedValueStream="" lastModifiedDate="2024-01-23T19:48:38.947Z" name="PTCDTS.WorkDefinitionExecutionResponse.EntryPoint_TT" projectName="PTCDTS.WorkDefinitionExecutionResponse" tags="" thingPackage="" valueStream=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables><ConfigurationTable dataShapeName="" description="Configuration table to store the components core manager" isMultiRow="true" name="ComponentManager" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="unique identifier for the manager that needs to be configured" name="id" ordinal="1"/><FieldDefinition aspect.isPrimaryKey="false" aspect.thingShape="PTC.Base.CommonManagement_TS" baseType="THINGNAME" description="Name of the Manager Thing to be configured" name="managerThingName" ordinal="2"/></FieldDefinitions></DataShape><Rows/></ConfigurationTable></ConfigurationTables><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><ThingShape><PropertyDefinitions/><ServiceDefinitions><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateDBSchema"><ResultType baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateGlobalManagerConfig"><ResultType baseType="NOTHING" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateOnActionProcessor"><ResultType baseType="NOTHING" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition></ServiceDefinitions><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="DeployComponent"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[logger.info("Entering {}:DeployComponent::Entry", me.name);                                        
+let implementationProjectName = me.GetProjectName();
+if (!implementationProjectName) {
+	throw "Implementation building block project name is missing";
+}
+let manager = implementationProjectName + ".Manager";
+if (!Things[manager]) {
+	throw "Manager [" + manager + "] is missing";
+}
+try {
+    me.UpdateGlobalManagerConfig();
+    me.UpdateDBSchema();
+    me.UpdateOnActionProcessor();
+    
+} catch (err) {
+	logger.error("Thing [{}] Service [{}] error at line [{}] : {}", me.name, err.fileName, err.lineNumber, err);
+}
+
+logger.info("Exiting {}:DeployComponent::Exit", me.name);
+
+let result = true;]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="UpdateDBSchema"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let manager = Things[me.GetConfiguredComponentManager()];
+
+// result: THINGNAME
+let dbManager = Things[manager.GetConfiguredManagerForIdentifier({
+	identifier: "PTC.DBConnection.Manager" /* STRING */
+})];
+
+// result: INFOTABLE dataShape: "PTC.DBConnection.DatabaseSchemaValidation"
+let result = dbManager.UpdateDBSchema();]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="UpdateGlobalManagerConfig"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[Things["PTC.Base.Manager"].AddGlobalManagerConfigurationEntry({
+	managerName: "PTCDTS.WorkDefinitionExecutionResponse.Manager" /* THINGNAME */,
+	key: "PTC.WorkDefinitionExecutionResponse.Manager" /* STRING */
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="UpdateOnActionProcessor"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let onActionProcessor = Things["PTC.DBConnection.OnActionProcessor"];
+
+// table: INFOTABLE dataShape: ""
+let table = onActionProcessor.GetConfigurationTable({
+	tableName: "ActionConfigurationSettings" /* STRING */
+});
+
+
+// MMM - Add OnUpdateWorkDefinition to On Action Processor
+let newEntry = {
+    DataShapeName: "PTC.SCA.SCO.WorkDefinition", // DATASHAPENAME [Primary Key]
+    Action: "Update", // STRING [Primary Key]
+    ThingName: "PTCDTS.WorkDefinitionExecutionResponse.Manager", // THINGNAME
+    ServiceName: "OnUpdateWorkDefinition" // STRING
+};
+
+let doesExistFlag = false;
+
+table.rows.toArray().forEach(row => {
+    if(row.DataShapeName == newEntry.DataShapeName && row.Action == newEntry.Action && row.ThingName == newEntry.ThingName && row.ServiceName == newEntry.ServiceName){
+    	doesExistFlag = true;
+    }
+});
+
+if(!doesExistFlag){
+	table.AddRow(newEntry);
+}
+
+// MMM - Add UpdateActualCycleTimeForWorkDefinition to On Action Processor
+newEntry = {
+    DataShapeName: "PTCDTS.WorkDefinitionExecutionResponse", // DATASHAPENAME [Primary Key]
+    Action: "Create", // STRING [Primary Key]
+    ThingName: "PTCDTS.WorkDefinitionExecutionResponse.Manager", // THINGNAME
+    ServiceName: "UpdateActualCycleTimeForWorkDefinition" // STRING
+};
+
+doesExistFlag = false;
+
+table.rows.toArray().forEach(row => {
+    if(row.DataShapeName == newEntry.DataShapeName && row.Action == newEntry.Action && row.ThingName == newEntry.ThingName && row.ServiceName == newEntry.ServiceName){
+    	doesExistFlag = true;
+    }
+});
+
+if(!doesExistFlag){
+	table.AddRow(newEntry);
+}
+
+onActionProcessor.SetMultiRowConfigurationTable({
+    configurationTable: table /* INFOTABLE */,
+    persistent: true /* BOOLEAN {"defaultValue":true} */,
+    tableName: "ActionConfigurationSettings" /* STRING */
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/></ThingShape><ImplementedShapes/><SharedConfigurationTables/><InstanceDesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></InstanceDesignTimePermissions><InstanceRunTimePermissions/><InstanceVisibilityPermissions><Visibility/></InstanceVisibilityPermissions><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.280Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.945Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.948Z" user="Administrator"/></ConfigurationChanges></ThingTemplate></ThingTemplates><ExtensionPackages/><Organizations><Organization aspect.isEditableExtensionObject="true" aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2024-01-23T19:48:38.929Z" loginButtonStyle="" loginPrompt="" loginResetPassword="false" loginStyle="" mobileMashup="" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" projectName="PTCDTS.WorkDefinitionExecutionResponse" resetMailContent="&lt;p&gt;[[resetemail.requestmade]]&lt;/p&gt;&lt;p&gt;[[resetemail.instructions]]&lt;/p&gt;&lt;p&gt;[[resetemail.helpneeded]]&lt;/p&gt;" resetMailServer="" resetMailSubject="[[resetemail.subject]]" tags=""><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><loginImage/><Connections><Connection from="" to="Root"/><Connection from="Root" to="PTCDTS.WorkDefinitionExecutionResponse.Admin_UG"/><Connection from="Root" to="PTCDTS.WorkDefinitionExecutionResponse.Default_UG"/></Connections><OrganizationalUnits><OrganizationalUnit description="" name="PTCDTS.WorkDefinitionExecutionResponse.Admin_UG"><Members><Members><Member name="PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="Group"/></Members></Members></OrganizationalUnit><OrganizationalUnit description="" name="PTCDTS.WorkDefinitionExecutionResponse.Default_UG"><Members><Members><Member name="PTCDTS.WorkDefinitionExecutionResponse.Default_UG" type="Group"/></Members></Members></OrganizationalUnit><OrganizationalUnit description="" name="Root"><Members><Members/></Members></OrganizationalUnit></OrganizationalUnits><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.269Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.926Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.930Z" user="Administrator"/></ConfigurationChanges></Organization></Organizations><Menus/><ThingGroups/><Resources/><DataTags/><ThingShapes><ThingShape aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" className="" description="DB Transactions for Work Definition Execution Responses" documentationContent="" homeMashup="" lastModifiedDate="2024-01-23T19:48:38.954Z" name="PTCDTS.WorkDefinitionExecutionResponse.Management_TS" projectName="PTCDTS.WorkDefinitionExecutionResponse" tags=""><PropertyDefinitions/><ServiceDefinitions><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CalculateActualCycleTime"><ResultType baseType="NUMBER" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="DATETIME" description="" name="endDateTime" ordinal="2"/><FieldDefinition baseType="STRING" description="" name="jobOrderUid" ordinal="4"/><FieldDefinition baseType="STRING" description="" name="modelUid" ordinal="3"/><FieldDefinition baseType="STRING" description="" name="workDefinitionUid" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreateWorkDefinitionExecutionResponse"><ResultType aspect.dataShape="PTCDTS.WorkDefinitionExecutionResponse" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition aspect.dataShape="PTCDTS.WorkDefinitionExecutionResponse" baseType="INFOTABLE" description="" name="workDefinitionExecutionRepsonse" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="DeleteWorkDefinitionExecutionResponse"><ResultType aspect.dataShape="PTCDTS.WorkDefinitionExecutionResponse" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="STRING" description="" name="uid" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetJobOrderForWorkDefinition"><ResultType baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="STRING" description="" name="workDefinitionUid" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetParentWorkDefinition"><ResultType baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="STRING" description="" name="workDefinitionUid" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetWorkDefinitionDispatchStatusTime"><ResultType aspect.dataShape="PTC.JobOrder.DispatchStatusTime" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="STRING" description="" name="model" ordinal="3"/><FieldDefinition baseType="DATETIME" description="" name="time" ordinal="2"/><FieldDefinition baseType="STRING" description="" name="workDefinitionUid" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetWorkDefinitionDispatchStatusTimeForDispatchStatus"><ResultType baseType="NUMBER" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="STRING" description="" name="dispatchStatusUid" ordinal="1"/><FieldDefinition baseType="STRING" description="" name="model" ordinal="4"/><FieldDefinition baseType="DATETIME" description="" name="time" ordinal="2"/><FieldDefinition baseType="STRING" description="" name="workDefinitionUid" ordinal="3"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetWorkDefinitionExecutionResponse"><ResultType aspect.dataShape="PTCDTS.WorkDefinitionExecutionResponse" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="STRING" description="" name="uid" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetWorkDefinitionExecutionResponseDBInfo"><ResultType baseType="JSON" description="" name="result" ordinal="0"/><ParameterDefinitions/></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetWorkDefinitionExecutionResponses"><ResultType aspect.dataShape="PTCDTS.WorkDefinitionExecutionResponse" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="JSON" description="" name="filter" ordinal="1"/><FieldDefinition baseType="INTEGER" description="" name="limit" ordinal="3"/><FieldDefinition baseType="INTEGER" description="" name="offset" ordinal="2"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="OnUpdateWorkDefinition"><ResultType baseType="NOTHING" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="INFOTABLE" description="" name="DataChanges" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateActualCycleTimeForWorkDefinition"><ResultType baseType="NOTHING" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="INFOTABLE" description="" name="DataChanges" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateWorkDefinitionExecutionResponse"><ResultType aspect.dataShape="PTCDTS.WorkDefinitionExecutionResponse" baseType="INFOTABLE" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition aspect.dataShape="PTCDTS.WorkDefinitionExecutionResponse" baseType="INFOTABLE" description="" name="workDefinitionExecutionResponse" ordinal="1"/></ParameterDefinitions></ServiceDefinition><ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateWorkDefinitionExecutionResponsesForWorkDefinitions"><ResultType baseType="NOTHING" description="" name="result" ordinal="0"/><ParameterDefinitions><FieldDefinition baseType="INFOTABLE" description="" name="workDefinitions" ordinal="1"/></ParameterDefinitions></ServiceDefinition></ServiceDefinitions><EventDefinitions/><ServiceMappings/><ServiceImplementations><ServiceImplementation description="" handlerName="Script" name="CalculateActualCycleTime"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[try {
+	const jobOrderManager = Things[me.GetConfiguredManagerForIdentifier({
+        identifier: "PTC.JobOrder.Manager" /* STRING */
+    })];
+    const operationKPIManager = Things[me.GetConfiguredManagerForIdentifier({
+        identifier: "PTC.OperationKPI.Manager" /* STRING */
+    })];
+
+	if (!endDateTime) {
+		endDateTime = Date.now();
+	}
+    
+	let totalRunningTime = getWorkDefinitionRunningTime(workDefinitionUid, endDateTime, modelUid);
+	let totalProducedQuantity = operationKPIManager.GetJobOrderProducedQuantity({
+		jobOrderUid: jobOrderUid,
+		modelUid: modelUid,
+		time: endDateTime
+	});
+    
+	if (totalRunningTime && totalProducedQuantity) {
+		result = (totalRunningTime / totalProducedQuantity);
+	} else {
+		result = null;
+	}
+} catch (err) {
+	logger.error("{} - {}:{} - {}", me.name, err.fileName, err.lineNumber, err);
+	throw ("An error has occurred. Please check the script logs for more details.");
+}
+
+//TODO move to a service in joborder
+function getWorkDefinitionRunningTime(workDefinitionUid, time, modelUid) {
+	let runningDispatchStatusUid = jobOrderManager.GetJobOrderDispatchStatuses().Find({
+		statusName: "Running"
+	}).uid;
+    
+	return me.GetWorkDefinitionDispatchStatusTimeForDispatchStatus({
+        dispatchStatusUid: runningDispatchStatusUid /* STRING */,
+        time: time /* DATETIME */,
+        workDefinitionUid: workDefinitionUid /* STRING */,
+        model: modelUid /* STRING */
+    });
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="CreateWorkDefinitionExecutionResponse"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[var insertParams = {
+    infoTable: workDefinitionExecutionRepsonse,
+    dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse"
+};
+
+var result = Things[me.GetDatabaseThingName()].Insert(insertParams);]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="DeleteWorkDefinitionExecutionResponse"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[var params = {
+    UID: uid,
+    dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse"
+};
+
+var result = Things[me.GetDatabaseThingName()].Delete(params);]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetJobOrderForWorkDefinition"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let jobOrdermanager = Things[me.GetConfiguredManagerForIdentifier({
+	identifier: "PTC.JobOrder.Manager" /* STRING */
+})];
+
+//Get Parent Work Def
+let parentWorkDefinitionUid;
+
+let parentWorkDefinition = me.GetParentWorkDefinition({
+	workDefinitionUid: workDefinitionUid /* STRING */
+});
+
+if(parentWorkDefinition && parentWorkDefinition.rows && parentWorkDefinition.rows.length >0){
+   parentWorkDefinitionUid = parentWorkDefinition.ParentUID;
+}else{
+    //The work definition is the parent
+    parentWorkDefinitionUid = workDefinitionUid;
+}
+
+let result = jobOrdermanager.GetJobOrders({
+    filter: createJobOrderFilter(parentWorkDefinitionUid)
+});
+
+
+function createJobOrderFilter(workDefinitionUid) {
+	return {
+        alias: "JO",
+		select: [{
+			dataShapeName: "PTC.JobOrder.JobOrder",
+			fieldName: "uid",
+			as: "jobOrderUid",
+			alias: "JO"
+		}, {
+			dataShapeName: "PTC.SCA.SCO.MaterialDefinition",
+			fieldName: "MaterialMasterUID",
+			as: "materialMasterUid",
+			alias: "MD"
+		}, {
+			dataShapeName: "PTC.SCA.SCO.MaterialDefinition",
+			fieldName: "UID",
+			as: "materialDefinitionUid",
+			alias: "MD"
+		}],
+		filters: {
+			filters: [{
+				dataShapeName: "PTC.JobOrder.JobOrderWorkDefinitionLink",
+				fieldName: "workDefinitionUid",
+				type: "EQ",
+				value: parentWorkDefinitionUid,
+				alias: "WDL_P"
+			}],
+			type: "AND"
+		},
+		joins: [
+            {
+			type: "LEFT",
+			sourceDataShapeName: "PTC.JobOrder.JobOrder",
+			sourceAlias: "JO",
+			sourceFieldName: "uid",
+			targetDataShapeName: "PTC.JobOrder.JobOrderMaterialRequirement",
+			targetAlias: "JOMR",
+			targetFieldName: "jobOrderUid"
+		}, {
+			type: "LEFT",
+			sourceDataShapeName: "PTC.JobOrder.JobOrderMaterialRequirement",
+			sourceAlias: "JOMR",
+			sourceFieldName: "materialDefinitionUid",
+			targetDataShapeName: "PTC.SCA.SCO.MaterialDefinition",
+			targetAlias: "MD",
+			targetFieldName: "UID"
+		},{
+			type: "LEFT",
+			sourceDataShapeName: "PTC.JobOrder.JobOrder",
+			sourceAlias: "JO",
+			sourceFieldName: "uid",
+			targetDataShapeName: "PTC.JobOrder.JobOrderWorkDefinitionLink",
+			targetAlias: "WDL_P",
+			targetFieldName: "jobOrderUid"
+		}]
+	};
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetParentWorkDefinition"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let filters = {
+   "select":[
+      {
+         "fieldName":"ChildUID",
+         "dataShapeName":"PTC.SCA.SCO.WorkDefinitionLink"
+      },
+      {
+         "fieldName":"ParentUID",
+         "dataShapeName":"PTC.SCA.SCO.WorkDefinitionLink"
+      }
+   ],
+   "filters":{
+               "fieldName":"ChildUID",
+               "type":"EQ",
+               "value":workDefinitionUid
+            }
+    
+};
+
+let result = me.Query({
+	dataShapeName: "PTC.SCA.SCO.WorkDefinitionLink" /* DATASHAPENAME */,
+	filter: filters /* JSON */,
+	offset: undefined /* LONG */,
+	limit: undefined /* LONG */
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetWorkDefinitionDispatchStatusTime"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[const JOBORDER_MANAGER = Things[me.GetConfiguredManagerForIdentifier({
+	identifier: "PTC.JobOrder.Manager" /* STRING */
+})];
+
+let result = DataShapes["PTC.JobOrder.DispatchStatusTime"].CreateValues();
+
+try {
+
+	if (!time) {
+		time = new Date();
+	}
+	const filter = getFilterForWorkDefinitionExecutionResponses(workDefinitionUid, time, model);
+	let workDefinitionsExecutions = me.GetWorkDefinitionExecutionResponses({
+		filter: filter /* JSON */
+	});
+
+
+	if (workDefinitionsExecutions.rows.length) {
+		let workDefinitionDispatchStatuses = JOBORDER_MANAGER.GetJobOrderDispatchStatuses();
+		let workDefinitionDispatchStatusTime = getWorkDefinitionDispatchStatusTime(workDefinitionsExecutions);
+		groupResultByDispatchStatusUid(workDefinitionDispatchStatusTime).forEach(entry => result.AddRow({
+			dispatchStatusUid: entry.dispatchStatusUid,
+			time: entry.time,
+			dispatchStatusName: getDispatchStatusNameFromUid(entry.dispatchStatusUid, workDefinitionDispatchStatuses)
+		}));
+
+
+	}
+} catch (err) {
+	logger.error("{} - {}:{} - {}", me.name, err.fileName, err.lineNumber, err);
+	throw ("An error has occurred. Please check the script logs for more details.");
+}
+
+
+function getWorkDefinitionDispatchStatusTime(workDefinitionsExecutions) {
+	let workDefinitionDispatchStatusTime = [];
+	const tableLength = workDefinitionsExecutions.rows.length;
+	for (let x = 0; x < tableLength; x++) {
+		if (x + 1 == tableLength) {
+			let lastRow = workDefinitionsExecutions.rows[tableLength - 1];
+			//recording time diffrence between given input time and last row
+			workDefinitionDispatchStatusTime.push({
+				dispatchStatusUid: lastRow.status,
+				time: dateDifference(time, lastRow.timestamp)
+			});
+		} else {
+			let currentRow = workDefinitionsExecutions.rows[x];
+			//recording time diffrence between next row and current row
+			workDefinitionDispatchStatusTime.push({
+				dispatchStatusUid: currentRow.status,
+				time: dateDifference(workDefinitionsExecutions.rows[x + 1].timestamp, currentRow.timestamp)
+			});
+		}
+	}
+	return workDefinitionDispatchStatusTime;
+}
+
+function groupResultByDispatchStatusUid(workDefinitionDispatchStatusTime) {
+	//Group by uid and aggregate sum of time
+	let reducedResult = [];
+	workDefinitionDispatchStatusTime.reduce(function(res, value) {
+		if (!res[value.dispatchStatusUid]) {
+			res[value.dispatchStatusUid] = {
+				dispatchStatusUid: value.dispatchStatusUid,
+				time: 0
+			};
+			reducedResult.push(res[value.dispatchStatusUid]);
+		}
+		res[value.dispatchStatusUid].time += value.time;
+		return res;
+	}, {});
+	return reducedResult;
+}
+
+function getDispatchStatusNameFromUid(dispatchStatusUid, workDefinitionDispatchStatuses) {
+	return workDefinitionDispatchStatuses.Find({
+		uid: dispatchStatusUid
+	}).statusName;
+}
+
+function getFilterForWorkDefinitionExecutionResponses(workDefinitionUid, time, model) {
+	return {
+		"filters": {
+			"filters": [{
+					fieldName: "workdefinitionuid",
+					type: "EQ",
+					value: workDefinitionUid
+				},
+				{
+					fieldName: "timestamp",
+					type: "LE",
+					value: time
+				},
+				{
+					fieldName: "modeluid",
+					type: "EQ",
+					value: model
+				}
+			],
+			type: "AND"
+		},
+		"sorts": [{
+			fieldName: "timestamp",
+			isAscending: true,
+			dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse"
+		}, {
+			fieldName: "inserttimestamp",
+			isAscending: true,
+			dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse"
+		}]
+	};
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetWorkDefinitionDispatchStatusTimeForDispatchStatus"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[const MS_TO_SEC = 1000;
+let result = 0;
+
+let dispatchStatusTime = me.GetWorkDefinitionDispatchStatusTime({
+	workDefinitionUid: workDefinitionUid /* STRING */,
+	time: time /* DATETIME */,
+	model: model /* STRING */
+});
+
+if (dispatchStatusTime.rows.length) {
+	dispatchStatusTime.Filter({
+		dispatchStatusUid: dispatchStatusUid
+	});
+	if (dispatchStatusTime.time) {
+		result = dispatchStatusTime.time / MS_TO_SEC;
+		result = result.toFixed(1);
+	}
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetWorkDefinitionExecutionResponse"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[var params = {
+    UID: uid,
+    dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse"
+};
+
+var result = Things[me.GetDatabaseThingName()].GetEntity(params);]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetWorkDefinitionExecutionResponseDBInfo"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[var dbInfo = {
+	"dbInfo": [{
+		"dataShapeName": "PTCDTS.WorkDefinitionExecutionResponse",
+		"indexedFields": 
+        [
+            {"name": "workdefinitionuid"},
+            {"name": "modeluid"}
+        ],
+		"fields": [],
+		"foreignKeys": 
+        [
+            {
+                "name": "workdefinitionuid",
+                "referenceDataShapeName": "PTC.SCA.SCO.WorkDefinition",
+                "referenceFieldName": "UID"
+			}, 
+            {
+                "name": "modeluid",
+                "referenceDataShapeName": "PTC.MfgModel.Model",
+                "referenceFieldName": "uid"
+			}, 
+            {
+                "name": "joborderuid",
+                "referenceDataShapeName": "PTC.JobOrder.JobOrder",
+                "referenceFieldName": "uid"
+			}
+        ]
+	}]
+};
+
+var result = dbInfo;]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="GetWorkDefinitionExecutionResponses"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[var params = {
+    filter: filter,
+    dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse",
+    offset: offset,
+    limit: limit
+};
+
+var result = Things[me.GetDatabaseThingName()].Query(params);]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="OnUpdateWorkDefinition"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let result = me.UpdateWorkDefinitionExecutionResponsesForWorkDefinitions({
+	workDefinitions: DataChanges.getFirstRow().Values /* INFOTABLE */
+});]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="UpdateActualCycleTimeForWorkDefinition"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[logger.debug("Entering {}:UpdateActualCycleTimeForWorkDefinition", me.name);
+
+const JOBORDER_MANAGER = Things[me.GetConfiguredManagerForIdentifier({
+	identifier: "PTC.JobOrder.Manager" /* STRING */
+})];
+const COMPLETED_STATUS = getCompletedDispatchStatusUid();
+
+try {
+	let updates = getUpdates(DataChanges);
+
+	if (updates.rows.length > 0) {
+		me.UpdateWorkDefinitionExecutionResponse({
+            workDefinitionExecutionResponse: updates /* INFOTABLE {"dataShape":"PTCDTS.WorkDefinitionExecutionResponse"} */
+        });
+	}
+} catch (err) {
+	logger.error("{} - {}:{} - {}", me.name, err.fileName, err.lineNumber, err);
+	throw ("An error has occurred. Please check the script logs for more details.");
+}
+
+logger.debug("Exiting {}:UpdateActualCycleTimeForJobOrder", me.name);
+
+function getUpdates(DataChanges) {
+	let updates = DataShapes["PTCDTS.WorkDefinitionExecutionResponse"].CreateValues();
+
+	if (DataChanges.rows) {
+		DataChanges.rows.forEach((data) => {
+			if (data.Values && data.Values.rows) {
+				data.Values.rows.forEach((workDefinitionExecutionResponse) => {
+					if (updateActualCycleTimeForJobOrder(workDefinitionExecutionResponse)) {
+						updates.AddRow(workDefinitionExecutionResponse);
+					}
+				});
+			}
+		});
+	}
+	return updates;
+}
+
+function updateActualCycleTimeForJobOrder(workDefinitionExecutionResponse) {
+	if (workDefinitionExecutionResponse.status == COMPLETED_STATUS && workDefinitionExecutionResponse.joborderuid != null) {
+
+		let actualCycleTime = me.CalculateActualCycleTime({
+            workDefinitionUid: workDefinitionExecutionResponse.workdefinitionuid /* STRING */,
+            endDateTime: Date.now() /* DATETIME */,
+            modelUid: workDefinitionExecutionResponse.modeluid /* STRING */,
+            jobOrderUid: workDefinitionExecutionResponse.joborderuid /* STRING */
+        });
+
+		if (actualCycleTime != null) {
+			workDefinitionExecutionResponse.actualcycletime = actualCycleTime;
+			return true;
+		}
+	}
+	return false;
+}
+
+function getCompletedDispatchStatusUid() {
+	let statuses = JOBORDER_MANAGER.GetJobOrderDispatchStatuses();
+	completedStatusUid = statuses.Find({
+		statusName: 'Completed'
+	}).uid;
+	return completedStatusUid;
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="UpdateWorkDefinitionExecutionResponse"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[var params = {
+    infoTable: workDefinitionExecutionResponse,
+    dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse"
+};
+
+var result = Things[me.GetDatabaseThingName()].Update(params);]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation><ServiceImplementation description="" handlerName="Script" name="UpdateWorkDefinitionExecutionResponsesForWorkDefinitions"><ConfigurationTables><ConfigurationTable dataShapeName="" description="" isMultiRow="false" name="Script" ordinal="0"><DataShape><FieldDefinitions><FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/></FieldDefinitions></DataShape><Rows><Row><code><![CDATA[let timeStamp = Date.now();
+
+let workDefinitionExecutionResponses = Things["PTC.DBConnection.Manager"].CreateInfoTable({
+	dataShapeName: "PTCDTS.WorkDefinitionExecutionResponse" /* DATASHAPENAME */
+});
+
+let operationKPIManager = Things[me.GetConfiguredManagerForIdentifier({
+	identifier: "PTC.OperationKPI.Manager" /* STRING */
+})];
+
+workDefinitions.rows.toArray().forEach(workDefinition => {
+    //Get Latest WDERs
+    let latestWorkDefinitionExecutionResponses;
+    
+    let latestWorkDefinitionExecutionResponse = null;
+	if (latestWorkDefinitionExecutionResponses && latestWorkDefinitionExecutionResponses.rows && latestWorkDefinitionExecutionResponses.rows.length > 0) {
+		latestWorkDefinitionExecutionResponse = latestWorkDefinitionExecutionResponses.rows[0];
+	}
+    
+    if ((latestWorkDefinitionExecutionResponse == null || latestWorkDefinitionExecutionResponse.status != workDefinition.dispatchStatus) && workDefinition.dispatchStatus) {
+    
+        // result: STRING
+        let model = operationKPIManager.GetModelFromWorkDefinition({
+            workDefinitionUid: workDefinition.UID /* STRING */
+        });
+        
+        let jobOrderData = me.GetJobOrderForWorkDefinition({
+            workDefinitionUid: workDefinition.UID /* STRING */
+        });
+                
+        // PTCDTS.WorkDefinitionExecutionResponse entry object
+        let newEntry = {
+            workdefinitionuid: workDefinition.UID, // LONG
+            enabled: true, // BOOLEAN
+            modeluid: model, // LONG
+            status: workDefinition.dispatchStatus, // LONG
+            timestamp: workDefinition.__TimeStamp ? workDefinition.__TimeStamp : timeStamp, // DATETIME
+            inserttimestamp: timeStamp, // DATETIME
+            joborderuid: jobOrderData.jobOrderUid, // LONG
+            materialdefinitionuid: jobOrderData.materialDefinitionUid,
+            materialmasteruid: jobOrderData.materialMasterUid
+        };
+        workDefinitionExecutionResponses.AddRow(newEntry);
+        
+    }
+});
+
+let result;
+// avoid passing empty infotable to AddJobOrderExecutionResponses
+if (workDefinitionExecutionResponses.rows.length) {
+	result = me.CreateWorkDefinitionExecutionResponse({
+        workDefinitionExecutionRepsonse: workDefinitionExecutionResponses /* INFOTABLE {"dataShape":"PTCDTS.WorkDefinitionExecutionResponse"} */
+    });
+} else {
+	result = DataShapes["PTCDTS.WorkDefinitionExecutionResponse"].CreateValues();
+}]]></code></Row></Rows></ConfigurationTable></ConfigurationTables></ServiceImplementation></ServiceImplementations><Subscriptions/><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><InstanceRunTimePermissions/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.271Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.951Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.954Z" user="Administrator"/></ConfigurationChanges></ThingShape><ThingShape aspect.isEditableExtensionObject="true" aspect.isExtension="true" aspect.isSystemObject="false" className="" description="DB Transactions for Work Definition Execution Responses" documentationContent="" homeMashup="" lastModifiedDate="2024-01-23T19:48:38.972Z" name="PTCDTS.WorkDefinitionExecutionResponse.ModelLogic_TS" projectName="PTCDTS.WorkDefinitionExecutionResponse" tags=""><PropertyDefinitions/><ServiceDefinitions/><EventDefinitions/><ServiceMappings/><ServiceImplementations/><Subscriptions/><Owner name="SuperUser" type="User"/><avatar/><DesignTimePermissions><Create/><Read/><Update/><Delete/><Metadata/></DesignTimePermissions><RunTimePermissions/><VisibilityPermissions><Visibility><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR" type="Organization"/><Principal isPermitted="true" name="PTCDTS.WorkDefinitionExecutionResponse.Default_OR:PTCDTS.WorkDefinitionExecutionResponse.Admin_UG" type="OrganizationalUnit"/></Visibility></VisibilityPermissions><ConfigurationTableDefinitions/><ConfigurationTables/><PropertyBindings/><RemotePropertyBindings/><RemoteServiceBindings/><RemoteEventBindings/><AlertConfigurations/><InstanceRunTimePermissions/><ConfigurationChanges><ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2024-01-23T19:43:00.279Z" user="SuperUser"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.970Z" user="Administrator"/><ConfigurationChange changeAction="MODIFY" changeReason="AddVisibilityPermission" timestamp="2024-01-23T19:48:38.973Z" user="Administrator"/></ConfigurationChanges></ThingShape></ThingShapes><Subsystems/><NotificationContents/></Entities>
