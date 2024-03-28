@@ -1,5 +1,27 @@
 # Overview 
-A combination of various customizations and extensions that modify the Base DPM Experience
+DPM Extended contains a group of customizations that solve common problems found across multiple customers. The following list details each customization:
+
+Multi-Machine Management (MMM): A customization that allows for data entry at every work unit as well as handling multiple pacemakers working in parallel. Use this solution to:
+
+    Collect data at every work unit both manually and using automation
+    Mark multiple work units as pacemakers working in parallel
+
+Job Order Steps: A customization that allows for individual step tracking within each work unit
+
+Status Timeline Chart: A customization that displays a timeline of the status of the machine on the Production Dashboard. Can be used either with Automation or with the Manual Availability Events customization
+
+Manual Availability Events: A customization that allows the operator to enter specific start and end times for loss events
+
+Editable Automation Events: A customization that allows the user to modify automation events to change the reason, comment, and work unit causing event
+
+Enable/Disable Metrics: A customization that allows the user to enable or disable certain metrics so that they do not appear in the Scorecard List
+
+New Custom Metrics: A customization that adds many new metrics to the Scorecard view including APQ and Loss Percentages
+
+New Custom Reports: A customization that adds new reports to DPM including the Shift Summary, Summary Dashboard, and Time Loss Pareto reports
+
+New Action Tracker Task Types: A customization that adds new task types to action tracker including the ability to create ServiceMax Work Orders and Navigate Problem Reports
+
 
 
 # Authors
