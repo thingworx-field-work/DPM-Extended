@@ -1,3 +1,5 @@
+# NOTE: THIS REPO IS NO LONGER MAINTAINED. PLEASE CHECK THE OFFICIAL PTC GITHUB FOR THE LATEST RELEASES
+
 # Overview 
 DPM Extended contains a group of customizations that solve common problems found across multiple customers. The following list details each customization:
 
